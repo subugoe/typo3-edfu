@@ -1,0 +1,29 @@
+plugin.tx_edfu {
+	view {
+		# cat=plugin.tx_edfu/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:edfu/Resources/Private/Templates/
+		# cat=plugin.tx_edfu/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:edfu/Resources/Private/Partials/
+		# cat=plugin.tx_edfu/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:edfu/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_edfu//a; type=string; label=Default storage PID
+		storagePid = 
+	}
+}
+
+module.tx_edfu {
+	view {
+		# cat=module.tx_edfu/file; type=string; label=Path to template root (BE)
+		templateRootPath = EXT:edfu/Resources/Private/Backend/Templates/
+		# cat=module.tx_edfu/file; type=string; label=Path to template partials (BE)
+		partialRootPath = EXT:edfu/Resources/Private/Backend/Partials/
+		# cat=module.tx_edfu/file; type=string; label=Path to template layouts (BE)
+		layoutRootPath = EXT:edfu/Resources/Private/Backend/Layouts/
+	}
+	persistence {
+		# cat=module.tx_edfu//a; type=string; label=Default storage PID
+		storagePid = 
+	}
+}

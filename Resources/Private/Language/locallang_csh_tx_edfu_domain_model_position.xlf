@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-11-07T11:31:07Z" product-name="edfu">
+		<header/>
+		<body>
+
+			<trans-unit id="page_start.description">
+				<source>Start page</source>
+			</trans-unit>
+			<trans-unit id="end_page.description">
+				<source>End page</source>
+			</trans-unit>
+			<trans-unit id="line_start.description">
+				<source>Start line</source>
+			</trans-unit>
+			<trans-unit id="line_end.description">
+				<source>End line</source>
+			</trans-unit>
+			<trans-unit id="note.description">
+				<source>Notes</source>
+			</trans-unit>
+			<trans-unit id="stop_doubtful.description">
+				<source>Doubtful stop</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

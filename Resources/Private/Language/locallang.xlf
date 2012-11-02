@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-11-07T11:31:07Z" product-name="edfu">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_edfu_domain_model_word">
+				<source>Wordlist</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_word.transliteration">
+				<source>Transliteration</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_word.translation">
+				<source>Translation</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_word.notes">
+				<source>Notes</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_word.hieroglyph">
+				<source>Hieroglyph</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_word.berlin">
+				<source>Berlin dictionary</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_word.position">
+				<source>Position in chassinat</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_edfu_domain_model_god">
+				<source>God list</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_god.transliteration">
+				<source>Transliteration</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_god.place">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_god.eponym">
+				<source>Eponym</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_god.relation">
+				<source>Relation</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_god.function">
+				<source>Function</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_edfu_domain_model_form">
+				<source>Forms</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_form.transliteration">
+				<source>Transliteration</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_form.translation">
+				<source>Translation</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_form.text_type">
+				<source>Text type</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_form.photos">
+				<source>Photos</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_form.literature">
+				<source>Literature</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_edfu_domain_model_place">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_place.translation">
+				<source>Translation</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_place.description">
+				<source>Place description</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_place.position">
+				<source>Position</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_edfu_domain_model_photo">
+				<source>Photos</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_photo.filename">
+				<source>Filename</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_photo.year">
+				<source>Year</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_edfu_domain_model_berlin">
+				<source>Berlin Dictionary</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_berlin.volume">
+				<source>Volume</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_berlin.page_start">
+				<source>Start page</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_berlin.end_page">
+				<source>End page</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_berlin.start_number">
+				<source>Start number</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_berlin.end_number">
+				<source>End Number</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_edfu_domain_model_literature">
+				<source>Literature</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_literature.description">
+				<source>Description</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_edfu_domain_model_position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_position.page_start">
+				<source>Start page</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_position.end_page">
+				<source>End page</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_position.line_start">
+				<source>Start line</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_position.line_end">
+				<source>End line</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_position.note">
+				<source>Notes</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_position.stop_doubtful">
+				<source>Doubtful stop</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>

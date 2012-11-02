@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-11-07T11:31:07Z" product-name="edfu">
+		<header/>
+		<body>
+
+			<trans-unit id="transliteration.description">
+				<source>Transliteration</source>
+			</trans-unit>
+			<trans-unit id="place.description">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="eponym.description">
+				<source>Eponym</source>
+			</trans-unit>
+			<trans-unit id="relation.description">
+				<source>Relation</source>
+			</trans-unit>
+			<trans-unit id="function.description">
+				<source>Function</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

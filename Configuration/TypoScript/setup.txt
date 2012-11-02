@@ -1,0 +1,46 @@
+plugin.tx_edfu {
+	view {
+		templateRootPath = {$plugin.tx_edfu.view.templateRootPath}
+		partialRootPath = {$plugin.tx_edfu.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_edfu.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_edfu.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+}
+
+plugin.tx_edfu._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-edfu table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-edfu table th {
+		font-weight:bold;
+	}
+
+	.tx-edfu table td {
+		vertical-align:top;
+	}
+)
+
+ # Module configuration
+module.tx_edfu {
+	persistence {
+		storagePid = {$module.tx_edfu.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_edfu.view.templateRootPath}
+		partialRootPath = {$module.tx_edfu.view.partialRootPath}
+		layoutRootPath = {$module.tx_edfu.view.layoutRootPath}
+	}
+}
