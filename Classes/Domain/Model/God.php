@@ -70,6 +70,38 @@ class Tx_Edfu_Domain_Model_God extends Tx_Extbase_DomainObject_AbstractEntity {
 	protected $function;
 
 	/**
+	 * Position
+	 *
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Position>
+	 * @lazy
+	 */
+	protected $position;
+
+	/**
+	 * __construct
+	 *
+	 * @return void
+	 */
+	public function __construct() {
+		//Do not remove the next line: It would break the functionality
+		$this->initStorageObjects();
+	}
+
+	/**
+	 * Initializes all Tx_Extbase_Persistence_ObjectStorage properties.
+	 *
+	 * @return void
+	 */
+	protected function initStorageObjects() {
+		/**
+		 * Do not modify this method!
+		 * It will be rewritten on each save in the extension builder
+		 * You may modify the constructor of this class instead
+		 */
+		$this->position = new Tx_Extbase_Persistence_ObjectStorage();
+	}
+
+	/**
 	 * Returns the transliteration
 	 *
 	 * @return string $transliteration
@@ -162,6 +194,45 @@ class Tx_Edfu_Domain_Model_God extends Tx_Extbase_DomainObject_AbstractEntity {
 	 */
 	public function setFunction($function) {
 		$this->function = $function;
+	}
+
+	/**
+	 * Adds a Position
+	 *
+	 * @param Tx_Edfu_Domain_Model_Position $position
+	 * @return void
+	 */
+	public function addPosition(Tx_Edfu_Domain_Model_Position $position) {
+		$this->position->attach($position);
+	}
+
+	/**
+	 * Removes a Position
+	 *
+	 * @param Tx_Edfu_Domain_Model_Position $positionToRemove The Position to be removed
+	 * @return void
+	 */
+	public function removePosition(Tx_Edfu_Domain_Model_Position $positionToRemove) {
+		$this->position->detach($positionToRemove);
+	}
+
+	/**
+	 * Returns the position
+	 *
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Position> $position
+	 */
+	public function getPosition() {
+		return $this->position;
+	}
+
+	/**
+	 * Sets the position
+	 *
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Position> $position
+	 * @return void
+	 */
+	public function setPosition(Tx_Extbase_Persistence_ObjectStorage $position) {
+		$this->position = $position;
 	}
 
 }

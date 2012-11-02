@@ -57,6 +57,7 @@ CREATE TABLE tx_edfu_domain_model_god (
 	eponym text NOT NULL,
 	relation text NOT NULL,
 	function text NOT NULL,
+	position int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -102,6 +103,7 @@ CREATE TABLE tx_edfu_domain_model_form (
 	text_type text NOT NULL,
 	photos int(11) unsigned DEFAULT '0' NOT NULL,
 	literature int(11) unsigned DEFAULT '0' NOT NULL,
+	position int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -374,6 +376,19 @@ CREATE TABLE tx_edfu_word_position_mm (
 );
 
 #
+# Table structure for table 'tx_edfu_god_position_mm'
+#
+CREATE TABLE tx_edfu_god_position_mm (
+	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+	KEY uid_local (uid_local),
+	KEY uid_foreign (uid_foreign)
+);
+
+#
 # Table structure for table 'tx_edfu_form_photo_mm'
 #
 CREATE TABLE tx_edfu_form_photo_mm (
@@ -390,6 +405,19 @@ CREATE TABLE tx_edfu_form_photo_mm (
 # Table structure for table 'tx_edfu_form_literature_mm'
 #
 CREATE TABLE tx_edfu_form_literature_mm (
+	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+	KEY uid_local (uid_local),
+	KEY uid_foreign (uid_foreign)
+);
+
+#
+# Table structure for table 'tx_edfu_form_position_mm'
+#
+CREATE TABLE tx_edfu_form_position_mm (
 	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
 	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) unsigned DEFAULT '0' NOT NULL,

@@ -137,5 +137,63 @@ class Tx_Edfu_Domain_Model_GodTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 		);
 	}
 	
+	/**
+	 * @test
+	 */
+	public function getPositionReturnsInitialValueForObjectStorageContainingTx_Edfu_Domain_Model_Position() { 
+		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->assertEquals(
+			$newObjectStorage,
+			$this->fixture->getPosition()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setPositionForObjectStorageContainingTx_Edfu_Domain_Model_PositionSetsPosition() { 
+		$position = new Tx_Edfu_Domain_Model_Position();
+		$objectStorageHoldingExactlyOnePosition = new Tx_Extbase_Persistence_ObjectStorage();
+		$objectStorageHoldingExactlyOnePosition->attach($position);
+		$this->fixture->setPosition($objectStorageHoldingExactlyOnePosition);
+
+		$this->assertSame(
+			$objectStorageHoldingExactlyOnePosition,
+			$this->fixture->getPosition()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function addPositionToObjectStorageHoldingPosition() {
+		$position = new Tx_Edfu_Domain_Model_Position();
+		$objectStorageHoldingExactlyOnePosition = new Tx_Extbase_Persistence_ObjectStorage();
+		$objectStorageHoldingExactlyOnePosition->attach($position);
+		$this->fixture->addPosition($position);
+
+		$this->assertEquals(
+			$objectStorageHoldingExactlyOnePosition,
+			$this->fixture->getPosition()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function removePositionFromObjectStorageHoldingPosition() {
+		$position = new Tx_Edfu_Domain_Model_Position();
+		$localObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+		$localObjectStorage->attach($position);
+		$localObjectStorage->detach($position);
+		$this->fixture->addPosition($position);
+		$this->fixture->removePosition($position);
+
+		$this->assertEquals(
+			$localObjectStorage,
+			$this->fixture->getPosition()
+		);
+	}
+	
 }
 ?>

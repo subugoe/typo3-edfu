@@ -85,7 +85,7 @@ $TCA['tx_edfu_domain_model_god'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'transliteration,place,eponym,relation,function,',
+		'searchFields' => 'transliteration,place,eponym,relation,function,position,',
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/God.php',
 		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_god.gif'
 	),
@@ -114,7 +114,7 @@ $TCA['tx_edfu_domain_model_form'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'transliteration,translation,text_type,photos,literature,',
+		'searchFields' => 'transliteration,translation,text_type,photos,literature,position,',
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Form.php',
 		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_form.gif'
 	),

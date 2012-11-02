@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2012-11-07T11:31:07Z" product-name="edfu">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-11-22T11:44:22Z" product-name="edfu">
 		<header/>
 		<body>
 
@@ -44,6 +44,9 @@
 			<trans-unit id="tx_edfu_domain_model_god.function">
 				<source>Function</source>
 			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_god.position">
+				<source>Position</source>
+			</trans-unit>
 
 			<trans-unit id="tx_edfu_domain_model_form">
 				<source>Form</source>
@@ -62,6 +65,9 @@
 			</trans-unit>
 			<trans-unit id="tx_edfu_domain_model_form.literature">
 				<source>Literature</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_form.position">
+				<source>Position</source>
 			</trans-unit>
 
 			<trans-unit id="tx_edfu_domain_model_place">

@@ -72,6 +72,14 @@ class Tx_Edfu_Domain_Model_Form extends Tx_Extbase_DomainObject_AbstractEntity {
 	protected $literature;
 
 	/**
+	 * Position
+	 *
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Position>
+	 * @lazy
+	 */
+	protected $position;
+
+	/**
 	 * __construct
 	 *
 	 * @return void
@@ -95,6 +103,8 @@ class Tx_Edfu_Domain_Model_Form extends Tx_Extbase_DomainObject_AbstractEntity {
 		$this->photos = new Tx_Extbase_Persistence_ObjectStorage();
 		
 		$this->literature = new Tx_Extbase_Persistence_ObjectStorage();
+		
+		$this->position = new Tx_Extbase_Persistence_ObjectStorage();
 	}
 
 	/**
@@ -230,6 +240,45 @@ class Tx_Edfu_Domain_Model_Form extends Tx_Extbase_DomainObject_AbstractEntity {
 	 */
 	public function setLiterature(Tx_Extbase_Persistence_ObjectStorage $literature) {
 		$this->literature = $literature;
+	}
+
+	/**
+	 * Adds a Position
+	 *
+	 * @param Tx_Edfu_Domain_Model_Position $position
+	 * @return void
+	 */
+	public function addPosition(Tx_Edfu_Domain_Model_Position $position) {
+		$this->position->attach($position);
+	}
+
+	/**
+	 * Removes a Position
+	 *
+	 * @param Tx_Edfu_Domain_Model_Position $positionToRemove The Position to be removed
+	 * @return void
+	 */
+	public function removePosition(Tx_Edfu_Domain_Model_Position $positionToRemove) {
+		$this->position->detach($positionToRemove);
+	}
+
+	/**
+	 * Returns the position
+	 *
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Position> $position
+	 */
+	public function getPosition() {
+		return $this->position;
+	}
+
+	/**
+	 * Sets the position
+	 *
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Position> $position
+	 * @return void
+	 */
+	public function setPosition(Tx_Extbase_Persistence_ObjectStorage $position) {
+		$this->position = $position;
 	}
 
 }

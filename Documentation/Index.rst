@@ -18,7 +18,7 @@ Extension Name
 :Language: en
 :Author: Ingo Pfennigstorf, Sven-S. Porst
 :Creation: 2012-11-02
-:Generation: 11:31
+:Generation: 11:44
 :Licence: Open Content License available from `www.opencontent.org/opl.shtml <http://www.opencontent.org/opl.shtml>`_
 
 The content of this document is related to TYPO3, a GNU/GPL CMS/Framework available from `www.typo3.org
