@@ -25,7 +25,9 @@
 			<trans-unit id="tx_edfu_domain_model_word.position">
 				<source>Position in chassinat</source>
 			</trans-unit>
-			
+			<trans-unit id="tx_edfu_domain_model_form.form">
+				<source>Form</source>
+			</trans-unit>
 			<trans-unit id="tx_edfu_domain_model_god">
 				<source>God list</source>
 			</trans-unit>
@@ -142,5 +144,13 @@
 			</trans-unit>
 			
 		</body>
+	</file>
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-11-22T11:44:22Z" product-name="edfu">
+			<header/>
+			<body>
+				<trans-unit id="tx_edfu_domain_model_form">
+					<source>Formular</source>
+				</trans-unit>
+					</body>
 	</file>
 </xliff>

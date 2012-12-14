@@ -16,15 +16,22 @@ if (TYPO3_MODE === 'BE') {
 	 */
 	Tx_Extbase_Utility_Extension::registerModule(
 		$_EXTKEY,
-		'web',	 // Make module a submodule of 'web'
-		'edfu',	// Submodule key
-		'',						// Position
+		'web', // Make module a submodule of 'web'
+		'edfu', // Submodule key
+		'', // Position
 		array(
-			'Word' => 'list, show','God' => 'list, show','Form' => 'list, show','Place' => 'list, show','Photo' => '','Berlin' => '','Literature' => '','Position' => '',
+			'Form' => 'list, show, new, create',
+			'God' => 'list, show ,new, create',
+			'Word' => 'list, show, new, create',
+			'Place' => 'list, show, new, create',
+			'Photo' => '',
+			'Berlin' => '',
+			'Literature' => '',
+			'Position' => '',
 		),
 		array(
 			'access' => 'user,group',
-			'icon'   => 'EXT:' . $_EXTKEY . '/ext_icon.gif',
+			'icon' => 'EXT:' . $_EXTKEY . '/ext_icon.gif',
 			'labels' => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_edfu.xlf',
 		)
 	);
@@ -37,7 +44,7 @@ t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_word', 'EXT:edfu/Resourc
 t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_word');
 $TCA['tx_edfu_domain_model_word'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_word',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_word',
 		'label' => 'transliteration',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -66,7 +73,7 @@ t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_god', 'EXT:edfu/Resource
 t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_god');
 $TCA['tx_edfu_domain_model_god'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_god',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_god',
 		'label' => 'transliteration',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -95,7 +102,7 @@ t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_form', 'EXT:edfu/Resourc
 t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_form');
 $TCA['tx_edfu_domain_model_form'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_form',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_form',
 		'label' => 'transliteration',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -124,7 +131,7 @@ t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_place', 'EXT:edfu/Resour
 t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_place');
 $TCA['tx_edfu_domain_model_place'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_place',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_place',
 		'label' => 'translation',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -153,7 +160,7 @@ t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_photo', 'EXT:edfu/Resour
 t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_photo');
 $TCA['tx_edfu_domain_model_photo'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_photo',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_photo',
 		'label' => 'filename',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -182,7 +189,7 @@ t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_berlin', 'EXT:edfu/Resou
 t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_berlin');
 $TCA['tx_edfu_domain_model_berlin'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_berlin',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_berlin',
 		'label' => 'volume',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -211,7 +218,7 @@ t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_literature', 'EXT:edfu/R
 t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_literature');
 $TCA['tx_edfu_domain_model_literature'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_literature',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_literature',
 		'label' => 'description',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -240,7 +247,7 @@ t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_position', 'EXT:edfu/Res
 t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_position');
 $TCA['tx_edfu_domain_model_position'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_position',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_position',
 		'label' => 'page_start',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',

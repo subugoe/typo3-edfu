@@ -1,40 +1,34 @@
 <f:layout name="Default" />
 
-This Template is responsible for creating a table of domain objects.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        List.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
 <f:section name="content">
-<h1>Listing for Form</h1>
+<h1><f:translate key="tx_edfu_domain_model_form" /></h1>
 
 <f:flashMessages />
+<f:form name="hrdr" action="create">
+	<div class="formLine">
+		<p><span class="fakeLabel">Start</span> <f:form.textfield name="Band" placeholder="Band" class="smallInt"/> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/></p>
+	</div>
+	<div class="formLine">
+	<p>
+		<span class="fakeLabel">Stop</span> <f:form.textfield name="Band" placeholder="Band" class="smallInt" /> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/>
+	</p>
+	</div>
+	<div class="formLine">
+		<label class="fakeLabel">Transliteration</label> <f:form.textfield name="transliteration" class="transliteration stringInput"/>
+		<br />
+	</div>
+	<div class="formLine">
+		<label class="fakeLabel">Übersetzung</label> <f:form.textfield name="uebersetzung" class="stringInput"/>
+		<br />
+	</div>
+	<div class="formLine">
+		<label class="fakeLabel">Texttyp</label> <f:form.textfield name="texttyp" class="stringInput"/>
+		<br />
+	</div>
+	<div class="formLine">
+		<f:form.submit value="Speichern" />
+	</div>
+</f:form>
 
-<table  class="tx_edfu" >
-	<tr>
-		<th><f:translate key="tx_edfu_domain_model_form.transliteration" /></th>
-		<th><f:translate key="tx_edfu_domain_model_form.translation" /></th>
-		<th><f:translate key="tx_edfu_domain_model_form.text_type" /></th>
-		<th> </th>
-		<th> </th>
-	</tr>
 
-	<f:for each="{forms}" as="form">
-		<tr>
-			<td><f:link.action action="show" arguments="{form : form}"> {form.transliteration}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{form : form}"> {form.translation}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{form : form}"> {form.textType}</f:link.action></td>
-			<td><f:link.action action="edit" arguments="{form : form}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{form : form}">Delete</f:link.action></td>
-		</tr>
-	</f:for>
-</table>
-
-<f:link.action action="new">New Form</f:link.action>
 </f:section>
