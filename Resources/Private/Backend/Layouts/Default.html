@@ -1,28 +1,4 @@
-<style>
-	.fakelabel {
-		width: 100px;
-		float: left;
-		clear: left;
-	}
-	.hrdr h1 {
-		text-align: left;
-	}
-	input.smallInt {
-		width: 50px;;
-	}
-	input.stringInput {
-		width: 400px;
-	}
-	.formLine {
-		margin: 10px 0;
-	}
-	.transliteration {
-		font-family: Transliteration Times Italic;
-		font-size: 14px;
-	}
-</style>
-
-<f:be.container>
+<f:be.container addCssFile="{f:uri.resource(path:'CSS/Edfu.css')}">
 	<div class="typo3-fullDoc">
 		<div id="typo3-docheader">
 			<div id="typo3-docheader-row1">
@@ -38,10 +14,10 @@
 					<f:be.buttons.csh />
 					<f:be.menus.actionMenu>
 						<f:be.menus.actionMenuItem label="Overview" controller="" action="list" />
-						<f:be.menus.actionMenuItem label="Formular" action="new" controller="Form" />
-								<f:be.menus.actionMenuItem label="Götterliste" action="new" controller="God" />
-								<f:be.menus.actionMenuItem label="Wortliste" action="new" controller="Word" />
-								<f:be.menus.actionMenuItem label="Ortsliste" action="new" controller="Place" />
+						<f:be.menus.actionMenuItem label="Formular" action="list" controller="Form" />
+						<f:be.menus.actionMenuItem label="Götterliste" action="list" controller="God" />
+						<f:be.menus.actionMenuItem label="Wortliste" action="list" controller="Word" />
+						<f:be.menus.actionMenuItem label="Ortsliste" action="list" controller="Place" />
 					</f:be.menus.actionMenu>
 				</div>
 				<div class="docheader-row2-right">
