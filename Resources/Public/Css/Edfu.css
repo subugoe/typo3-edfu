@@ -1,0 +1,31 @@
+.hrdr h1 {
+  text-align: left;
+}
+.hrdr fieldset {
+  border: 0;
+  border-bottom: 1px solid #666;
+  width: 60%;
+}
+.hrdr fieldset legend {
+  font-weight: bold;
+  padding: 0;
+  margin: 10px 0;
+}
+.hrdr input.smallInt {
+  width: 50px;
+}
+.hrdr input.stringInput {
+  width: 400px;
+}
+.hrdr .formLine {
+  margin: 10px 0;
+}
+.hrdr .transliteration {
+  font-family: 'Transliteration Times Italic';
+  font-size: 14px;
+}
+.hrdr .fakelabel {
+  width: 100px;
+  float: left;
+  clear: left;
+}

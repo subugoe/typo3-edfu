@@ -1,31 +1,35 @@
-.fakelabel {
-	width: 100px;
-	float: left;
-	clear: left;
-}
-.hrdr h1 {
-	text-align: left;
-}
-input.smallInt {
-	width: 50px;;
-}
-input.stringInput {
-	width: 400px;
-}
-.formLine {
-	margin: 10px 0;
-}
-.transliteration {
-	font-family: Transliteration Times Italic;
-	font-size: 14px;
-}
-.hrdr fieldset {
-	border: 0;
-	border-bottom: 1px solid #666;
-	width: 60%;
-}
-.hrdr fieldset legend {
-	font-weight: bold;
-	padding: 0;
-	margin: 10px 0;
+.hrdr {
+	h1 {
+		text-align: left;
+	}
+	fieldset {
+		border: 0;
+		border-bottom: 1px solid #666;
+		width: 60%;
+		legend {
+			font-weight: bold;
+			padding: 0;
+			margin: 10px 0;
+		}
+	}
+	input {
+		&.smallInt {
+			width: 50px;
+		}
+		&.stringInput {
+			width: 400px;
+		}
+	}
+	.formLine {
+		margin: 10px 0;
+	}
+	.transliteration {
+		font-family: 'Transliteration Times Italic';
+		font-size: 14px;
+	}
+	.fakelabel {
+		width: 100px;
+		float: left;
+		clear: left;
+	}
 }
