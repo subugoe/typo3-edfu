@@ -38,18 +38,15 @@ class Tx_Edfu_Controller_GodController extends Tx_Extbase_MVC_Controller_ActionC
 	 * godRepository
 	 *
 	 * @var Tx_Edfu_Domain_Repository_GodRepository
+	 * @inject
 	 */
 	protected $godRepository;
 
 	/**
-	 * injectGodRepository
-	 *
-	 * @param Tx_Edfu_Domain_Repository_GodRepository $godRepository
-	 * @return void
+	 * @var Tx_Edfu_Domain_Model_Position
+	 * @inject
 	 */
-	public function injectGodRepository(Tx_Edfu_Domain_Repository_GodRepository $godRepository) {
-		$this->godRepository = $godRepository;
-	}
+	protected $position;
 
 	/**
 	 * action list
@@ -58,7 +55,9 @@ class Tx_Edfu_Controller_GodController extends Tx_Extbase_MVC_Controller_ActionC
 	 */
 	public function listAction() {
 		$gods = $this->godRepository->findAll();
-		$this->view->assign('gods', $gods);
+		$this->view
+				->assign('gods', $gods)
+				->assign('position', $this->position);
 	}
 
 	/**

@@ -26,7 +26,7 @@
  ***************************************************************/
 
 /**
- * Test case for class Tx_Edfu_Domain_Model_Form.
+ * Test case for class tx_edfu_domain_model_formular.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -40,12 +40,12 @@
  */
 class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var Tx_Edfu_Domain_Model_Form
+	 * @var tx_edfu_domain_model_formular
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Edfu_Domain_Model_Form();
+		$this->fixture = new tx_edfu_domain_model_formular();
 	}
 
 	public function tearDown() {

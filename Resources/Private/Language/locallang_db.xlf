@@ -48,25 +48,25 @@
 				<source>Position</source>
 			</trans-unit>
 
-			<trans-unit id="tx_edfu_domain_model_form">
-				<source>Form</source>
+			<trans-unit id="tx_edfu_domain_model_formular">
+				<source>Formular</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.transliteration">
+			<trans-unit id="tx_edfu_domain_model_formular.transliteration">
 				<source>Transliteration</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.translation">
+			<trans-unit id="tx_edfu_domain_model_formular.translation">
 				<source>Translation</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.text_type">
+			<trans-unit id="tx_edfu_domain_model_formular.text_type">
 				<source>Text Type</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.photos">
+			<trans-unit id="tx_edfu_domain_model_formular.photos">
 				<source>Photos</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.literature">
+			<trans-unit id="tx_edfu_domain_model_formular.literature">
 				<source>Literature</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.position">
+			<trans-unit id="tx_edfu_domain_model_formular.position">
 				<source>Position</source>
 			</trans-unit>
 

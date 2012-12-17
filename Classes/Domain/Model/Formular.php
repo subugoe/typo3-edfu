@@ -32,7 +32,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Model_Form extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEntity {
 
 	/**
 	 * Transliteration

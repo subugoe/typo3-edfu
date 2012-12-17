@@ -25,7 +25,7 @@
 			<trans-unit id="tx_edfu_domain_model_word.position">
 				<source>Position in chassinat</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.form">
+			<trans-unit id="tx_edfu_domain_model_formular.form">
 				<source>Form</source>
 			</trans-unit>
 			<trans-unit id="tx_edfu_domain_model_god">
@@ -50,25 +50,25 @@
 				<source>Position</source>
 			</trans-unit>
 			
-			<trans-unit id="tx_edfu_domain_model_form">
+			<trans-unit id="tx_edfu_domain_model_formular">
 				<source>Forms</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.transliteration">
+			<trans-unit id="tx_edfu_domain_model_formular.transliteration">
 				<source>Transliteration</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.translation">
+			<trans-unit id="tx_edfu_domain_model_formular.translation">
 				<source>Translation</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.text_type">
+			<trans-unit id="tx_edfu_domain_model_formular.text_type">
 				<source>Text type</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.photos">
+			<trans-unit id="tx_edfu_domain_model_formular.photos">
 				<source>Photos</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.literature">
+			<trans-unit id="tx_edfu_domain_model_formular.literature">
 				<source>Literature</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_form.position">
+			<trans-unit id="tx_edfu_domain_model_formular.position">
 				<source>Position</source>
 			</trans-unit>
 			
@@ -148,7 +148,7 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2012-11-22T11:44:22Z" product-name="edfu">
 			<header/>
 			<body>
-				<trans-unit id="tx_edfu_domain_model_form">
+				<trans-unit id="tx_edfu_domain_model_formular">
 					<source>Formular</source>
 				</trans-unit>
 					</body>

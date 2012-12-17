@@ -20,7 +20,7 @@ if (TYPO3_MODE === 'BE') {
 		'edfu', // Submodule key
 		'', // Position
 		array(
-			'Form' => 'list, show, new, create',
+			'Formular' => 'list, show, new, create',
 			'God' => 'list, show ,new, create',
 			'Word' => 'list, show, new, create',
 			'Place' => 'list, show, new, create',
@@ -98,17 +98,16 @@ $TCA['tx_edfu_domain_model_god'] = array(
 	),
 );
 
-t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_form', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_form.xlf');
-t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_form');
-$TCA['tx_edfu_domain_model_form'] = array(
+t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_formular', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_form.xlf');
+t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_formular');
+$TCA['tx_edfu_domain_model_formular'] = array(
 	'ctrl' => array(
-		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_form',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_formular',
 		'label' => 'transliteration',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => TRUE,
-		'sortby' => 'sorting',
 		'versioningWS' => 2,
 		'versioning_followPages' => TRUE,
 		'origUid' => 't3_origuid',
@@ -121,9 +120,9 @@ $TCA['tx_edfu_domain_model_form'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'transliteration,translation,text_type,photos,literature,position,',
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Form.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_form.gif'
+		'searchFields' => 'transliteration,uebersetzung,texttyp,',
+		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Formular.php',
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_formular.gif'
 	),
 );
 

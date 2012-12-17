@@ -3,13 +3,13 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_edfu_domain_model_form'] = array(
-	'ctrl' => $TCA['tx_edfu_domain_model_form']['ctrl'],
+$TCA['tx_edfu_domain_model_formular'] = array(
+	'ctrl' => $TCA['tx_edfu_domain_model_formular']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, transliteration, translation, text_type, photos, literature, position',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, transliteration, uebersetzung, texttyp, photos, literature, position',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, transliteration, translation, text_type, photos, literature, position,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, transliteration, uebersetzung, texttyp, photos, literature, position,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -37,8 +37,8 @@ $TCA['tx_edfu_domain_model_form'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_edfu_domain_model_form',
-				'foreign_table_where' => 'AND tx_edfu_domain_model_form.pid=###CURRENT_PID### AND tx_edfu_domain_model_form.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_edfu_domain_model_formular',
+				'foreign_table_where' => 'AND tx_edfu_domain_model_formular.pid=###CURRENT_PID### AND tx_edfu_domain_model_formular.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -95,7 +95,7 @@ $TCA['tx_edfu_domain_model_form'] = array(
 		),
 		'transliteration' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_form.transliteration',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_formular.transliteration',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -103,9 +103,9 @@ $TCA['tx_edfu_domain_model_form'] = array(
 				'eval' => 'trim'
 			),
 		),
-		'translation' => array(
+		'uebersetzung' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_form.translation',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_formular.uebersetzung',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -113,9 +113,9 @@ $TCA['tx_edfu_domain_model_form'] = array(
 				'eval' => 'trim'
 			),
 		),
-		'text_type' => array(
+		'texttyp' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_form.text_type',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_formular.texttyp',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -125,7 +125,7 @@ $TCA['tx_edfu_domain_model_form'] = array(
 		),
 		'photos' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_form.photos',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_formular.photos',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_edfu_domain_model_photo',
@@ -161,7 +161,7 @@ $TCA['tx_edfu_domain_model_form'] = array(
 		),
 		'literature' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_form.literature',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_formular.literature',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_edfu_domain_model_literature',
@@ -197,7 +197,7 @@ $TCA['tx_edfu_domain_model_form'] = array(
 		),
 		'position' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_form.position',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_formular.position',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_edfu_domain_model_position',

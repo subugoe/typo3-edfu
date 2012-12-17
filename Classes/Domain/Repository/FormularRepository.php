@@ -32,7 +32,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Repository_FormRepository extends Tx_Extbase_Persistence_Repository {
+class Tx_Edfu_Domain_Repository_FormularRepository extends Tx_Extbase_Persistence_Repository {
 
 }
 ?>

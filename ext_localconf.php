@@ -9,7 +9,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	array(
 		'Word' => 'list, show',
 		'God' => 'list, show',
-		'Form' => 'list, show',
+		'Formular' => 'list, show',
 		'Place' => 'list, show',
 		'Photo' => '',
 		'Berlin' => '',
@@ -21,7 +21,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	array(
 		'Word' => '',
 		'God' => '',
-		'Form' => '',
+		'Formular' => '',
 		'Place' => '',
 		'Photo' => '',
 		'Berlin' => '',
