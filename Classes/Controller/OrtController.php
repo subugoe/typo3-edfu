@@ -32,24 +32,15 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Controller_PlaceController extends Tx_Extbase_MVC_Controller_ActionController {
+class Tx_Edfu_Controller_OrtController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
 	 * placeRepository
 	 *
-	 * @var Tx_Edfu_Domain_Repository_PlaceRepository
+	 * @var Tx_Edfu_Domain_Repository_OrtRepository
+	 * @inject
 	 */
-	protected $placeRepository;
-
-	/**
-	 * injectPlaceRepository
-	 *
-	 * @param Tx_Edfu_Domain_Repository_PlaceRepository $placeRepository
-	 * @return void
-	 */
-	public function injectPlaceRepository(Tx_Edfu_Domain_Repository_PlaceRepository $placeRepository) {
-		$this->placeRepository = $placeRepository;
-	}
+	protected $ortRepository;
 
 	/**
 	 * action list
@@ -57,17 +48,17 @@ class Tx_Edfu_Controller_PlaceController extends Tx_Extbase_MVC_Controller_Actio
 	 * @return void
 	 */
 	public function listAction() {
-		$places = $this->placeRepository->findAll();
+		$places = $this->ortRepository->findAll();
 		$this->view->assign('places', $places);
 	}
 
 	/**
 	 * action show
 	 *
-	 * @param Tx_Edfu_Domain_Model_Place $place
+	 * @param Tx_Edfu_Domain_Model_Ort $place
 	 * @return void
 	 */
-	public function showAction(Tx_Edfu_Domain_Model_Place $place) {
+	public function showAction(Tx_Edfu_Domain_Model_Ort $place) {
 		$this->view->assign('place', $place);
 	}
 

@@ -32,21 +32,31 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Model_Place extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_Edfu_Domain_Model_Ort extends Tx_Extbase_DomainObject_AbstractEntity {
+
+	/**
+	 * @var string
+	 */
+	protected $transliteration;
 
 	/**
 	 * Translation
 	 *
 	 * @var string
 	 */
-	protected $translation;
+	protected $uebersetzung;
 
 	/**
 	 * Place description
 	 *
 	 * @var string
 	 */
-	protected $description;
+	protected $ortsbeschreibung;
+
+	/**
+	 * @var string
+	 */
+	protected $anmerkung;
 
 	/**
 	 * Position
@@ -85,8 +95,8 @@ class Tx_Edfu_Domain_Model_Place extends Tx_Extbase_DomainObject_AbstractEntity 
 	 *
 	 * @return string $translation
 	 */
-	public function getTranslation() {
-		return $this->translation;
+	public function getUebersetzung() {
+		return $this->uebersetzung;
 	}
 
 	/**
@@ -95,8 +105,8 @@ class Tx_Edfu_Domain_Model_Place extends Tx_Extbase_DomainObject_AbstractEntity 
 	 * @param string $translation
 	 * @return void
 	 */
-	public function setTranslation($translation) {
-		$this->translation = $translation;
+	public function setUebersetzung($translation) {
+		$this->uebersetzung = $translation;
 	}
 
 	/**
@@ -104,8 +114,8 @@ class Tx_Edfu_Domain_Model_Place extends Tx_Extbase_DomainObject_AbstractEntity 
 	 *
 	 * @return string $description
 	 */
-	public function getDescription() {
-		return $this->description;
+	public function getOrtsbeschreibung() {
+		return $this->ortsbeschreibung;
 	}
 
 	/**
@@ -114,8 +124,8 @@ class Tx_Edfu_Domain_Model_Place extends Tx_Extbase_DomainObject_AbstractEntity 
 	 * @param string $description
 	 * @return void
 	 */
-	public function setDescription($description) {
-		$this->description = $description;
+	public function setOrtsbeschreibung($description) {
+		$this->ortsbeschreibung = $description;
 	}
 
 	/**
@@ -155,6 +165,34 @@ class Tx_Edfu_Domain_Model_Place extends Tx_Extbase_DomainObject_AbstractEntity 
 	 */
 	public function setPosition(Tx_Extbase_Persistence_ObjectStorage $position) {
 		$this->position = $position;
+	}
+
+	/**
+	 * @param string $transliteration
+	 */
+	public function setTransliteration($transliteration) {
+		$this->transliteration = $transliteration;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getTransliteration() {
+		return $this->transliteration;
+	}
+
+	/**
+	 * @param string $anmerkung
+	 */
+	public function setAnmerkung($anmerkung) {
+		$this->anmerkung = $anmerkung;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getAnmerkung() {
+		return $this->anmerkung;
 	}
 
 }

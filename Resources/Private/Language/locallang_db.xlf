@@ -70,16 +70,16 @@
 				<source>Position</source>
 			</trans-unit>
 
-			<trans-unit id="tx_edfu_domain_model_place">
+			<trans-unit id="tx_edfu_domain_model_ort">
 				<source>Place</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_place.translation">
+			<trans-unit id="tx_edfu_domain_model_ort.translation">
 				<source>Translation</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_place.description">
+			<trans-unit id="tx_edfu_domain_model_ort.description">
 				<source>Description</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_place.position">
+			<trans-unit id="tx_edfu_domain_model_ort.position">
 				<source>Position</source>
 			</trans-unit>
 

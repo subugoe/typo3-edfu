@@ -26,7 +26,7 @@
  ***************************************************************/
 
 /**
- * Test case for class Tx_Edfu_Domain_Model_Place.
+ * Test case for class Tx_Edfu_Domain_Model_Ort.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -38,14 +38,14 @@
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  * @author Sven-S. Porst <porst@sub.uni-goettingen.de>
  */
-class Tx_Edfu_Domain_Model_PlaceTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class Tx_Edfu_Domain_Model_OrtTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var Tx_Edfu_Domain_Model_Place
+	 * @var Tx_Edfu_Domain_Model_Ort
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Edfu_Domain_Model_Place();
+		$this->fixture = new Tx_Edfu_Domain_Model_Ort();
 	}
 
 	public function tearDown() {
@@ -61,11 +61,11 @@ class Tx_Edfu_Domain_Model_PlaceTest extends Tx_Extbase_Tests_Unit_BaseTestCase 
 	 * @test
 	 */
 	public function setTranslationForStringSetsTranslation() { 
-		$this->fixture->setTranslation('Conceived at T3CON10');
+		$this->fixture->setUebersetzung('Conceived at T3CON10');
 
 		$this->assertSame(
 			'Conceived at T3CON10',
-			$this->fixture->getTranslation()
+			$this->fixture->getUebersetzung()
 		);
 	}
 	
@@ -78,11 +78,11 @@ class Tx_Edfu_Domain_Model_PlaceTest extends Tx_Extbase_Tests_Unit_BaseTestCase 
 	 * @test
 	 */
 	public function setDescriptionForStringSetsDescription() { 
-		$this->fixture->setDescription('Conceived at T3CON10');
+		$this->fixture->setOrtsbeschreibung('Conceived at T3CON10');
 
 		$this->assertSame(
 			'Conceived at T3CON10',
-			$this->fixture->getDescription()
+			$this->fixture->getOrtsbeschreibung()
 		);
 	}
 	

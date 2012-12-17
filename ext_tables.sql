@@ -102,9 +102,9 @@ CREATE TABLE `tx_edfu_domain_model_formular` (
 
 
 #
-# Table structure for table 'tx_edfu_domain_model_place'
+# Table structure for table 'tx_edfu_domain_model_ort'
 #
-CREATE TABLE tx_edfu_domain_model_place (
+CREATE TABLE tx_edfu_domain_model_ort (
 
 		uid INT(11) NOT NULL AUTO_INCREMENT,
 		pid INT(11) DEFAULT '0' NOT NULL,

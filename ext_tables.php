@@ -23,7 +23,7 @@ if (TYPO3_MODE === 'BE') {
 			'Formular' => 'list, show, new, create',
 			'Gott' => 'list, show ,new, create',
 			'Wort' => 'list, show, new, create',
-			'Place' => 'list, show, new, create',
+			'Ort' => 'list, show, new, create',
 			'Photo' => '',
 			'WbBerlin' => '',
 			'Literatur' => '',
@@ -124,17 +124,16 @@ $TCA['tx_edfu_domain_model_formular'] = array(
 	),
 );
 
-t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_place', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_place.xlf');
-t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_place');
-$TCA['tx_edfu_domain_model_place'] = array(
+t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_ort', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_ort.xlf');
+t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_ort');
+$TCA['tx_edfu_domain_model_ort'] = array(
 	'ctrl' => array(
-		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_place',
-		'label' => 'translation',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_ort',
+		'label' => 'transliteration',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => TRUE,
-		'sortby' => 'sorting',
 		'versioningWS' => 2,
 		'versioning_followPages' => TRUE,
 		'origUid' => 't3_origuid',
@@ -147,9 +146,9 @@ $TCA['tx_edfu_domain_model_place'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'translation,description,position,',
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Place.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_place.gif'
+		'searchFields' => 'transliteration,ortsbeschreibung',
+		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Ort.php',
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_ort.gif'
 	),
 );
 

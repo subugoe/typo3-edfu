@@ -3,13 +3,13 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_edfu_domain_model_place'] = array(
-	'ctrl' => $TCA['tx_edfu_domain_model_place']['ctrl'],
+$TCA['tx_edfu_domain_model_ort'] = array(
+	'ctrl' => $TCA['tx_edfu_domain_model_ort']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, translation, description, position',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, transliteration,uebersetzung, ortsbeschreibung, anmerkung',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, translation, description, position,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, transliteration, uebersetzung, ortsbeschreibung, anmerkung, position,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -37,8 +37,8 @@ $TCA['tx_edfu_domain_model_place'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_edfu_domain_model_place',
-				'foreign_table_where' => 'AND tx_edfu_domain_model_place.pid=###CURRENT_PID### AND tx_edfu_domain_model_place.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_edfu_domain_model_ort',
+				'foreign_table_where' => 'AND tx_edfu_domain_model_ort.pid=###CURRENT_PID### AND tx_edfu_domain_model_ort.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -93,60 +93,42 @@ $TCA['tx_edfu_domain_model_place'] = array(
 				),
 			),
 		),
-		'translation' => array(
+		'transliteration' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_place.translation',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_ort.transliteration',
 			'config' => array(
-				'type' => 'text',
-				'cols' => 40,
-				'rows' => 15,
+				'type' => 'input',
+				'size' => 40,
 				'eval' => 'trim'
 			),
 		),
-		'description' => array(
+		'uebersetzung' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_place.description',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_ort.uebersetzung',
 			'config' => array(
-				'type' => 'text',
-				'cols' => 40,
-				'rows' => 15,
+				'type' => 'input',
+				'size' => 40,
 				'eval' => 'trim'
 			),
 		),
-		'position' => array(
+		'ortsbeschreibung' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_place.position',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_ort.ortsbeschreibung',
 			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'tx_edfu_domain_model_position',
-				'MM' => 'tx_edfu_place_position_mm',
-				'size' => 10,
-				'autoSizeMax' => 30,
-				'maxitems' => 9999,
-				'multiple' => 0,
-				'wizards' => array(
-					'_PADDING' => 1,
-					'_VERTICAL' => 1,
-					'edit' => array(
-						'type' => 'popup',
-						'title' => 'Edit',
-						'script' => 'wizard_edit.php',
-						'icon' => 'edit2.gif',
-						'popup_onlyOpenIfSelected' => 1,
-						'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
-						),
-					'add' => Array(
-						'type' => 'script',
-						'title' => 'Create new',
-						'icon' => 'add.gif',
-						'params' => array(
-							'table' => 'tx_edfu_domain_model_position',
-							'pid' => '###CURRENT_PID###',
-							'setValue' => 'prepend'
-							),
-						'script' => 'wizard_add.php',
-					),
-				),
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 6,
+				'eval' => 'trim'
+			),
+		),
+		'anmerkung' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_ort.anmerkung',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 6,
+				'eval' => 'trim'
 			),
 		),
 	),
