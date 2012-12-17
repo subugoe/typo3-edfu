@@ -7,7 +7,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
 	'Edfu',
 	array(
-		'Word' => 'list, show',
+		'Wort' => 'list, show',
 		'Gott' => 'list, show',
 		'Formular' => 'list, show',
 		'Place' => 'list, show',
@@ -19,7 +19,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	),
 	// non-cacheable actions
 	array(
-		'Word' => '',
+		'Wort' => '',
 		'Gott' => '',
 		'Formular' => '',
 		'Place' => '',

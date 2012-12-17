@@ -3,13 +3,13 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_edfu_domain_model_word'] = array(
-	'ctrl' => $TCA['tx_edfu_domain_model_word']['ctrl'],
+$TCA['tx_edfu_domain_model_wort'] = array(
+	'ctrl' => $TCA['tx_edfu_domain_model_wort']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, transliteration, translation, notes, hieroglyph, berlin, position',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, transliteration, uebersetzung, anmerkung, hieroglyph, wb_berlin, position',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, transliteration, translation, notes, hieroglyph, berlin, position,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, transliteration, uebersetzung, anmerkung, hieroglyph, wb_berlin, position,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -37,8 +37,8 @@ $TCA['tx_edfu_domain_model_word'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_edfu_domain_model_word',
-				'foreign_table_where' => 'AND tx_edfu_domain_model_word.pid=###CURRENT_PID### AND tx_edfu_domain_model_word.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_edfu_domain_model_wort',
+				'foreign_table_where' => 'AND tx_edfu_domain_model_wort.pid=###CURRENT_PID### AND tx_edfu_domain_model_wort.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -95,7 +95,7 @@ $TCA['tx_edfu_domain_model_word'] = array(
 		),
 		'transliteration' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_word.transliteration',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wort.transliteration',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -103,9 +103,9 @@ $TCA['tx_edfu_domain_model_word'] = array(
 				'eval' => 'trim'
 			),
 		),
-		'translation' => array(
+		'uebersetzung' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_word.translation',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wort.translation',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -113,9 +113,9 @@ $TCA['tx_edfu_domain_model_word'] = array(
 				'eval' => 'trim'
 			),
 		),
-		'notes' => array(
+		'anmerkung' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_word.notes',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wort.notes',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -125,16 +125,16 @@ $TCA['tx_edfu_domain_model_word'] = array(
 		),
 		'hieroglyph' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_word.hieroglyph',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wort.hieroglyph',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
 			),
 		),
-		'berlin' => array(
+		'wb_berlin' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_word.berlin',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wort.berlin',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_edfu_domain_model_berlin',
@@ -170,7 +170,7 @@ $TCA['tx_edfu_domain_model_word'] = array(
 		),
 		'position' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_word.position',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wort.position',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_edfu_domain_model_position',

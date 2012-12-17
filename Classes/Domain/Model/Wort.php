@@ -32,7 +32,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Model_Word extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_Edfu_Domain_Model_Wort extends Tx_Extbase_DomainObject_AbstractEntity {
 
 	/**
 	 * Transliteration
@@ -46,14 +46,14 @@ class Tx_Edfu_Domain_Model_Word extends Tx_Extbase_DomainObject_AbstractEntity {
 	 *
 	 * @var string
 	 */
-	protected $translation;
+	protected $uebersetzung;
 
 	/**
 	 * Notes
 	 *
 	 * @var string
 	 */
-	protected $notes;
+	protected $anmerkung;
 
 	/**
 	 * Hieroglyph
@@ -128,8 +128,8 @@ class Tx_Edfu_Domain_Model_Word extends Tx_Extbase_DomainObject_AbstractEntity {
 	 *
 	 * @return string $translation
 	 */
-	public function getTranslation() {
-		return $this->translation;
+	public function getUebersetzung() {
+		return $this->uebersetzung;
 	}
 
 	/**
@@ -138,8 +138,8 @@ class Tx_Edfu_Domain_Model_Word extends Tx_Extbase_DomainObject_AbstractEntity {
 	 * @param string $translation
 	 * @return void
 	 */
-	public function setTranslation($translation) {
-		$this->translation = $translation;
+	public function setUebersetzung($translation) {
+		$this->uebersetzung = $translation;
 	}
 
 	/**
@@ -147,18 +147,18 @@ class Tx_Edfu_Domain_Model_Word extends Tx_Extbase_DomainObject_AbstractEntity {
 	 *
 	 * @return string $notes
 	 */
-	public function getNotes() {
-		return $this->notes;
+	public function getAnmerkung() {
+		return $this->anmerkung;
 	}
 
 	/**
 	 * Sets the notes
 	 *
-	 * @param string $notes
+	 * @param string $anmerkung
 	 * @return void
 	 */
-	public function setNotes($notes) {
-		$this->notes = $notes;
+	public function setAnmerkung($anmerkung) {
+		$this->anmerkung = $anmerkung;
 	}
 
 	/**

@@ -26,7 +26,7 @@
  ***************************************************************/
 
 /**
- * Test case for class Tx_Edfu_Domain_Model_Word.
+ * Test case for class Tx_Edfu_Domain_Model_Wort.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -38,14 +38,14 @@
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  * @author Sven-S. Porst <porst@sub.uni-goettingen.de>
  */
-class Tx_Edfu_Domain_Model_WordTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class Tx_Edfu_Domain_Model_WortTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var Tx_Edfu_Domain_Model_Word
+	 * @var Tx_Edfu_Domain_Model_Wort
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Edfu_Domain_Model_Word();
+		$this->fixture = new Tx_Edfu_Domain_Model_Wort();
 	}
 
 	public function tearDown() {

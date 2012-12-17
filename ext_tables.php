@@ -40,17 +40,16 @@ if (TYPO3_MODE === 'BE') {
 
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Edfu');
 
-t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_word', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_word.xlf');
-t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_word');
-$TCA['tx_edfu_domain_model_word'] = array(
+t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_wort', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_wort.xlf');
+t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_wort');
+$TCA['tx_edfu_domain_model_wort'] = array(
 	'ctrl' => array(
-		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_word',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wort',
 		'label' => 'transliteration',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => TRUE,
-		'sortby' => 'sorting',
 		'versioningWS' => 2,
 		'versioning_followPages' => TRUE,
 		'origUid' => 't3_origuid',
@@ -64,8 +63,8 @@ $TCA['tx_edfu_domain_model_word'] = array(
 			'endtime' => 'endtime',
 		),
 		'searchFields' => 'transliteration,translation,notes,hieroglyph,berlin,position,',
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Word.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_word.gif'
+		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Wort.php',
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_wort.gif'
 	),
 );
 

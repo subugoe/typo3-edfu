@@ -32,7 +32,35 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Repository_WordRepository extends Tx_Extbase_Persistence_Repository {
+class Tx_Edfu_Controller_WortController extends Tx_Extbase_MVC_Controller_ActionController {
+
+	/**
+	 * wordRepository
+	 *
+	 * @var Tx_Edfu_Domain_Repository_WortRepository
+	 * @inject
+	 */
+	protected $wordRepository;
+
+	/**
+	 * action list
+	 *
+	 * @return void
+	 */
+	public function listAction() {
+		$words = $this->wordRepository->findAll();
+		$this->view->assign('words', $words);
+	}
+
+	/**
+	 * action show
+	 *
+	 * @param Tx_Edfu_Domain_Model_Wort $word
+	 * @return void
+	 */
+	public function showAction(Tx_Edfu_Domain_Model_Wort $word) {
+		$this->view->assign('word', $word);
+	}
 
 }
 ?>

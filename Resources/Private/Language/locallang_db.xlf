@@ -4,25 +4,25 @@
 		<header/>
 		<body>
 
-			<trans-unit id="tx_edfu_domain_model_word">
+			<trans-unit id="tx_edfu_domain_model_wort">
 				<source>Word</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_word.transliteration">
+			<trans-unit id="tx_edfu_domain_model_wort.transliteration">
 				<source>Transliteration</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_word.translation">
+			<trans-unit id="tx_edfu_domain_model_wort.translation">
 				<source>Translation</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_word.notes">
+			<trans-unit id="tx_edfu_domain_model_wort.notes">
 				<source>Notes</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_word.hieroglyph">
+			<trans-unit id="tx_edfu_domain_model_wort.hieroglyph">
 				<source>Hieroglyph</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_word.berlin">
+			<trans-unit id="tx_edfu_domain_model_wort.berlin">
 				<source>Berlin</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_word.position">
+			<trans-unit id="tx_edfu_domain_model_wort.position">
 				<source>Position</source>
 			</trans-unit>
 
