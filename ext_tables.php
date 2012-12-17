@@ -26,7 +26,7 @@ if (TYPO3_MODE === 'BE') {
 			'Place' => 'list, show, new, create',
 			'Photo' => '',
 			'Berlin' => '',
-			'Literature' => '',
+			'Literatur' => '',
 			'Position' => '',
 		),
 		array(
@@ -212,12 +212,12 @@ $TCA['tx_edfu_domain_model_berlin'] = array(
 	),
 );
 
-t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_literature', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_literature.xlf');
-t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_literature');
-$TCA['tx_edfu_domain_model_literature'] = array(
+t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_literatur', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_literature.xlf');
+t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_literatur');
+$TCA['tx_edfu_domain_model_literatur'] = array(
 	'ctrl' => array(
-		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_literature',
-		'label' => 'description',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_literatur',
+		'label' => 'beschreibung',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -235,9 +235,9 @@ $TCA['tx_edfu_domain_model_literature'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'description,',
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Literature.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_literature.gif'
+		'searchFields' => 'beschreibung,',
+		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Literatur.php',
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_literatur.gif'
 	),
 );
 

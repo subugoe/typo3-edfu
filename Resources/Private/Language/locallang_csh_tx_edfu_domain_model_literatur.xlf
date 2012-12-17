@@ -4,7 +4,7 @@
 		<header/>
 		<body>
 
-			<trans-unit id="description.description">
+			<trans-unit id="description.beschreibung">
 				<source>Description</source>
 			</trans-unit>
 		</body>

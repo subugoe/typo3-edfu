@@ -176,7 +176,7 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function setLiteratureForObjectStorageContainingTx_Edfu_Domain_Model_LiteratureSetsLiterature() { 
-		$literature = new Tx_Edfu_Domain_Model_Literature();
+		$literature = new Tx_edfu_domain_model_literatur();
 		$objectStorageHoldingExactlyOneLiterature = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOneLiterature->attach($literature);
 		$this->fixture->setLiterature($objectStorageHoldingExactlyOneLiterature);
@@ -191,7 +191,7 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function addLiteratureToObjectStorageHoldingLiterature() {
-		$literature = new Tx_Edfu_Domain_Model_Literature();
+		$literature = new Tx_edfu_domain_model_literatur();
 		$objectStorageHoldingExactlyOneLiterature = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOneLiterature->attach($literature);
 		$this->fixture->addLiterature($literature);
@@ -206,7 +206,7 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function removeLiteratureFromObjectStorageHoldingLiterature() {
-		$literature = new Tx_Edfu_Domain_Model_Literature();
+		$literature = new Tx_edfu_domain_model_literatur();
 		$localObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$localObjectStorage->attach($literature);
 		$localObjectStorage->detach($literature);

@@ -164,7 +164,7 @@ $TCA['tx_edfu_domain_model_formular'] = array(
 			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_formular.literature',
 			'config' => array(
 				'type' => 'select',
-				'foreign_table' => 'tx_edfu_domain_model_literature',
+				'foreign_table' => 'tx_edfu_domain_model_literatur',
 				'MM' => 'tx_edfu_form_literature_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
@@ -186,7 +186,7 @@ $TCA['tx_edfu_domain_model_formular'] = array(
 						'title' => 'Create new',
 						'icon' => 'add.gif',
 						'params' => array(
-							'table' => 'tx_edfu_domain_model_literature',
+							'table' => 'tx_edfu_domain_model_literatur',
 							'pid' => '###CURRENT_PID###',
 							'setValue' => 'prepend'
 							),

@@ -32,7 +32,15 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Repository_LiteraturRepository extends Tx_Extbase_Persistence_Repository {
+class Tx_Edfu_Controller_LiteraturController extends Tx_Extbase_MVC_Controller_ActionController {
+
+	/**
+	 * literatureRepository
+	 *
+	 * @var Tx_Edfu_Domain_Repository_LiteraturRepository
+	 * @inject
+	 */
+	protected $literaturRepository;
 
 }
 ?>

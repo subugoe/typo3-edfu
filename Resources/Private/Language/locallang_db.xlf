@@ -112,10 +112,10 @@
 				<source>End Number</source>
 			</trans-unit>
 
-			<trans-unit id="tx_edfu_domain_model_literature">
+			<trans-unit id="tx_edfu_domain_model_literatur">
 				<source>Literature</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_literature.description">
+			<trans-unit id="tx_edfu_domain_model_literatur.description">
 				<source>Description</source>
 			</trans-unit>
 

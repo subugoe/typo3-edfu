@@ -3,13 +3,13 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_edfu_domain_model_literature'] = array(
-	'ctrl' => $TCA['tx_edfu_domain_model_literature']['ctrl'],
+$TCA['tx_edfu_domain_model_literatur'] = array(
+	'ctrl' => $TCA['tx_edfu_domain_model_literatur']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, description',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, beschreibung',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, description,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, beschreibung,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -37,8 +37,8 @@ $TCA['tx_edfu_domain_model_literature'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_edfu_domain_model_literature',
-				'foreign_table_where' => 'AND tx_edfu_domain_model_literature.pid=###CURRENT_PID### AND tx_edfu_domain_model_literature.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_edfu_domain_model_literatur',
+				'foreign_table_where' => 'AND tx_edfu_domain_model_literatur.pid=###CURRENT_PID### AND tx_edfu_domain_model_literatur.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -93,9 +93,9 @@ $TCA['tx_edfu_domain_model_literature'] = array(
 				),
 			),
 		),
-		'description' => array(
+		'beschreibung' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_literature.description',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_literatur.beschreibung',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,

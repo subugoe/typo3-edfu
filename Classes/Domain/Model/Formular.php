@@ -66,7 +66,7 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 	/**
 	 * Literature
 	 *
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Literature>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_edfu_domain_model_literatur>
 	 * @lazy
 	 */
 	protected $literature;
@@ -206,27 +206,27 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 	/**
 	 * Adds a Literature
 	 *
-	 * @param Tx_Edfu_Domain_Model_Literature $literature
+	 * @param Tx_edfu_domain_model_literatur $literature
 	 * @return void
 	 */
-	public function addLiterature(Tx_Edfu_Domain_Model_Literature $literature) {
+	public function addLiterature(Tx_edfu_domain_model_literatur $literature) {
 		$this->literature->attach($literature);
 	}
 
 	/**
 	 * Removes a Literature
 	 *
-	 * @param Tx_Edfu_Domain_Model_Literature $literatureToRemove The Literature to be removed
+	 * @param Tx_edfu_domain_model_literatur $literatureToRemove The Literature to be removed
 	 * @return void
 	 */
-	public function removeLiterature(Tx_Edfu_Domain_Model_Literature $literatureToRemove) {
+	public function removeLiterature(Tx_edfu_domain_model_literatur $literatureToRemove) {
 		$this->literature->detach($literatureToRemove);
 	}
 
 	/**
 	 * Returns the literature
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Literature> $literature
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_edfu_domain_model_literatur> $literature
 	 */
 	public function getLiterature() {
 		return $this->literature;
@@ -235,7 +235,7 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 	/**
 	 * Sets the literature
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Literature> $literature
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_edfu_domain_model_literatur> $literature
 	 * @return void
 	 */
 	public function setLiterature(Tx_Extbase_Persistence_ObjectStorage $literature) {
