@@ -3,13 +3,13 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_edfu_domain_model_berlin'] = array(
-	'ctrl' => $TCA['tx_edfu_domain_model_berlin']['ctrl'],
+$TCA['tx_edfu_domain_model_wb_berlin'] = array(
+	'ctrl' => $TCA['tx_edfu_domain_model_wb_berlin']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, volume, page_start, end_page, start_number, end_number',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, band, seite_start, seite_stop, zeile_start, zeile_stop',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, volume, page_start, end_page, start_number, end_number,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, volume, seite_start, seite_stop, zeile_start, zeile_stop,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -37,8 +37,8 @@ $TCA['tx_edfu_domain_model_berlin'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_edfu_domain_model_berlin',
-				'foreign_table_where' => 'AND tx_edfu_domain_model_berlin.pid=###CURRENT_PID### AND tx_edfu_domain_model_berlin.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_edfu_domain_model_wb_berlin',
+				'foreign_table_where' => 'AND tx_edfu_domain_model_wb_berlin.pid=###CURRENT_PID### AND tx_edfu_domain_model_wb_berlin.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -93,45 +93,45 @@ $TCA['tx_edfu_domain_model_berlin'] = array(
 				),
 			),
 		),
-		'volume' => array(
+		'band' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_berlin.volume',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wb_berlin.volume',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
 				'eval' => 'int'
 			),
 		),
-		'page_start' => array(
+		'seite_start' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_berlin.page_start',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wb_berlin.page_start',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
 				'eval' => 'int'
 			),
 		),
-		'end_page' => array(
+		'seite_stop' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_berlin.end_page',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wb_berlin.end_page',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
 				'eval' => 'int'
 			),
 		),
-		'start_number' => array(
+		'zeile_start' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_berlin.start_number',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wb_berlin.start_number',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
 				'eval' => 'int'
 			),
 		),
-		'end_number' => array(
+		'zeile_stop' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_berlin.end_number',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wb_berlin.end_number',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,

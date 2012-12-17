@@ -95,22 +95,22 @@
 				<source>Year</source>
 			</trans-unit>
 			
-			<trans-unit id="tx_edfu_domain_model_berlin">
+			<trans-unit id="tx_edfu_domain_model_wb_berlin">
 				<source>Berlin Dictionary</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_berlin.volume">
+			<trans-unit id="tx_edfu_domain_model_wb_berlin.volume">
 				<source>Volume</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_berlin.page_start">
+			<trans-unit id="tx_edfu_domain_model_wb_berlin.page_start">
 				<source>Start page</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_berlin.end_page">
+			<trans-unit id="tx_edfu_domain_model_wb_berlin.end_page">
 				<source>End page</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_berlin.start_number">
+			<trans-unit id="tx_edfu_domain_model_wb_berlin.start_number">
 				<source>Start number</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_berlin.end_number">
+			<trans-unit id="tx_edfu_domain_model_wb_berlin.end_number">
 				<source>End Number</source>
 			</trans-unit>
 			

@@ -12,7 +12,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'Formular' => 'list, show',
 		'Place' => 'list, show',
 		'Photo' => '',
-		'Berlin' => '',
+		'WbBerlin' => '',
 		'Literatur' => '',
 		'Position' => '',
 		
@@ -24,7 +24,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'Formular' => '',
 		'Place' => '',
 		'Photo' => '',
-		'Berlin' => '',
+		'WbBerlin' => '',
 		'Literatur' => '',
 		'Position' => '',
 		

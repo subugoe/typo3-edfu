@@ -22,10 +22,10 @@ if (TYPO3_MODE === 'BE') {
 		array(
 			'Formular' => 'list, show, new, create',
 			'Gott' => 'list, show ,new, create',
-			'Word' => 'list, show, new, create',
+			'Wort' => 'list, show, new, create',
 			'Place' => 'list, show, new, create',
 			'Photo' => '',
-			'Berlin' => '',
+			'WbBerlin' => '',
 			'Literatur' => '',
 			'Position' => '',
 		),
@@ -182,17 +182,18 @@ $TCA['tx_edfu_domain_model_photo'] = array(
 	),
 );
 
-t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_berlin', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_berlin.xlf');
-t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_berlin');
-$TCA['tx_edfu_domain_model_berlin'] = array(
+t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_wb_berlin', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_wb_berlin.xlf');
+t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_wb_berlin');
+$TCA['tx_edfu_domain_model_wb_berlin'] = array(
 	'ctrl' => array(
-		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_berlin',
-		'label' => 'volume',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wb_berlin',
+		'label' => 'band',
+		'label_alt' => 'band, seite_start, seite_stop',
+		'label_alt_force' => TRUE,
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => TRUE,
-
 		'versioningWS' => 2,
 		'versioning_followPages' => TRUE,
 		'origUid' => 't3_origuid',
@@ -205,9 +206,9 @@ $TCA['tx_edfu_domain_model_berlin'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'volume,page_start,end_page,start_number,end_number,',
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Berlin.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_berlin.gif'
+		'searchFields' => 'band',
+		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/WbBerlin.php',
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_wb_berlin.gif'
 	),
 );
 

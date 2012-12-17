@@ -32,50 +32,50 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Model_Berlin extends Tx_Extbase_DomainObject_AbstractValueObject {
+class Tx_Edfu_Domain_Model_WbBerlin extends Tx_Extbase_DomainObject_AbstractValueObject {
 
 	/**
 	 * Volume
 	 *
 	 * @var integer
 	 */
-	protected $volume;
+	protected $band;
 
 	/**
 	 * Start page
 	 *
 	 * @var integer
 	 */
-	protected $pageStart;
+	protected $seiteStart;
 
 	/**
 	 * End page
 	 *
 	 * @var integer
 	 */
-	protected $endPage;
+	protected $seiteStop;
 
 	/**
 	 * Start number
 	 *
 	 * @var integer
 	 */
-	protected $startNumber;
+	protected $zeileStart;
 
 	/**
 	 * End Number
 	 *
 	 * @var integer
 	 */
-	protected $endNumber;
+	protected $zeileStop;
 
 	/**
 	 * Returns the volume
 	 *
 	 * @return integer $volume
 	 */
-	public function getVolume() {
-		return $this->volume;
+	public function getBand() {
+		return $this->band;
 	}
 
 	/**
@@ -84,8 +84,8 @@ class Tx_Edfu_Domain_Model_Berlin extends Tx_Extbase_DomainObject_AbstractValueO
 	 * @param integer $volume
 	 * @return void
 	 */
-	public function setVolume($volume) {
-		$this->volume = $volume;
+	public function setBand($volume) {
+		$this->band = $volume;
 	}
 
 	/**
@@ -93,8 +93,8 @@ class Tx_Edfu_Domain_Model_Berlin extends Tx_Extbase_DomainObject_AbstractValueO
 	 *
 	 * @return integer $pageStart
 	 */
-	public function getPageStart() {
-		return $this->pageStart;
+	public function getSeiteStart() {
+		return $this->seiteStart;
 	}
 
 	/**
@@ -103,8 +103,8 @@ class Tx_Edfu_Domain_Model_Berlin extends Tx_Extbase_DomainObject_AbstractValueO
 	 * @param integer $pageStart
 	 * @return void
 	 */
-	public function setPageStart($pageStart) {
-		$this->pageStart = $pageStart;
+	public function setSeiteStart($pageStart) {
+		$this->seiteStart = $pageStart;
 	}
 
 	/**
@@ -112,8 +112,8 @@ class Tx_Edfu_Domain_Model_Berlin extends Tx_Extbase_DomainObject_AbstractValueO
 	 *
 	 * @return integer $endPage
 	 */
-	public function getEndPage() {
-		return $this->endPage;
+	public function getSeiteStop() {
+		return $this->seiteStop;
 	}
 
 	/**
@@ -122,8 +122,8 @@ class Tx_Edfu_Domain_Model_Berlin extends Tx_Extbase_DomainObject_AbstractValueO
 	 * @param integer $endPage
 	 * @return void
 	 */
-	public function setEndPage($endPage) {
-		$this->endPage = $endPage;
+	public function setSeiteStop($endPage) {
+		$this->seiteStop = $endPage;
 	}
 
 	/**
@@ -131,8 +131,8 @@ class Tx_Edfu_Domain_Model_Berlin extends Tx_Extbase_DomainObject_AbstractValueO
 	 *
 	 * @return integer $startNumber
 	 */
-	public function getStartNumber() {
-		return $this->startNumber;
+	public function getZeileStart() {
+		return $this->zeileStart;
 	}
 
 	/**
@@ -141,8 +141,8 @@ class Tx_Edfu_Domain_Model_Berlin extends Tx_Extbase_DomainObject_AbstractValueO
 	 * @param integer $startNumber
 	 * @return void
 	 */
-	public function setStartNumber($startNumber) {
-		$this->startNumber = $startNumber;
+	public function setZeileStart($startNumber) {
+		$this->zeileStart = $startNumber;
 	}
 
 	/**
@@ -150,8 +150,8 @@ class Tx_Edfu_Domain_Model_Berlin extends Tx_Extbase_DomainObject_AbstractValueO
 	 *
 	 * @return integer $endNumber
 	 */
-	public function getEndNumber() {
-		return $this->endNumber;
+	public function getZeileStop() {
+		return $this->zeileStop;
 	}
 
 	/**
@@ -160,8 +160,8 @@ class Tx_Edfu_Domain_Model_Berlin extends Tx_Extbase_DomainObject_AbstractValueO
 	 * @param integer $endNumber
 	 * @return void
 	 */
-	public function setEndNumber($endNumber) {
-		$this->endNumber = $endNumber;
+	public function setZeileStop($endNumber) {
+		$this->zeileStop = $endNumber;
 	}
 
 }

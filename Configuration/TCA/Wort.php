@@ -137,7 +137,7 @@ $TCA['tx_edfu_domain_model_wort'] = array(
 			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wort.berlin',
 			'config' => array(
 				'type' => 'select',
-				'foreign_table' => 'tx_edfu_domain_model_berlin',
+				'foreign_table' => 'tx_edfu_domain_model_wb_berlin',
 				'MM' => 'tx_edfu_word_berlin_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
@@ -159,7 +159,7 @@ $TCA['tx_edfu_domain_model_wort'] = array(
 						'title' => 'Create new',
 						'icon' => 'add.gif',
 						'params' => array(
-							'table' => 'tx_edfu_domain_model_berlin',
+							'table' => 'tx_edfu_domain_model_wb_berlin',
 							'pid' => '###CURRENT_PID###',
 							'setValue' => 'prepend'
 							),

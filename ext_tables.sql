@@ -186,47 +186,38 @@ CREATE TABLE tx_edfu_domain_model_photo (
 );
 
 #
-# Table structure for table 'tx_edfu_domain_model_berlin'
+# Table structure for table 'tx_edfu_domain_model_wb_berlin'
 #
-CREATE TABLE tx_edfu_domain_model_berlin (
-
-		uid INT(11) NOT NULL AUTO_INCREMENT,
-		pid INT(11) DEFAULT '0' NOT NULL,
-
-		volume INT(11) DEFAULT '0' NOT NULL,
-		page_start INT(11) DEFAULT '0' NOT NULL,
-		end_page INT(11) DEFAULT '0' NOT NULL,
-		start_number INT(11) DEFAULT '0' NOT NULL,
-		end_number INT(11) DEFAULT '0' NOT NULL,
-
-		tstamp INT(11) UNSIGNED DEFAULT '0' NOT NULL,
-		crdate INT(11) UNSIGNED DEFAULT '0' NOT NULL,
-		cruser_id INT(11) UNSIGNED DEFAULT '0' NOT NULL,
-		deleted TINYINT(4) UNSIGNED DEFAULT '0' NOT NULL,
-		hidden TINYINT(4) UNSIGNED DEFAULT '0' NOT NULL,
-		starttime INT(11) UNSIGNED DEFAULT '0' NOT NULL,
-		endtime INT(11) UNSIGNED DEFAULT '0' NOT NULL,
-
-		t3ver_oid INT(11) DEFAULT '0' NOT NULL,
-		t3ver_id INT(11) DEFAULT '0' NOT NULL,
-		t3ver_wsid INT(11) DEFAULT '0' NOT NULL,
-		t3ver_label VARCHAR(255) DEFAULT '' NOT NULL,
-		t3ver_state TINYINT(4) DEFAULT '0'  NOT NULL,
-		t3ver_stage INT(11) DEFAULT '0' NOT NULL,
-		t3ver_count INT(11) DEFAULT '0' NOT NULL,
-		t3ver_tstamp INT(11) DEFAULT '0' NOT NULL,
-		t3ver_move_id INT(11) DEFAULT '0' NOT NULL,
-
-		t3_origuid INT(11) DEFAULT '0' NOT NULL,
-		sys_language_uid INT(11) DEFAULT '0' NOT NULL,
-		l10n_parent INT(11) DEFAULT '0' NOT NULL,
-		l10n_diffsource MEDIUMBLOB,
-
-		PRIMARY KEY (uid),
-		KEY parent (pid),
-		KEY t3ver_oid (t3ver_oid, t3ver_wsid),
-		KEY language (l10n_parent, sys_language_uid)
-
+CREATE TABLE `tx_edfu_domain_model_wb_berlin` (
+  `uid` int(11) NOT NULL,
+		`pid` INT(11) DEFAULT '0' NOT NULL,
+  `band` int(11) DEFAULT NULL,
+  `seite_start` int(11) DEFAULT NULL,
+  `zeile_start` int(11) DEFAULT NULL,
+  `seite_stop` int(11) DEFAULT NULL,
+  `zeile_stop` int(11) DEFAULT NULL,
+  `zweifel` tinyint(4) DEFAULT NULL,
+  `tstamp` int(11) unsigned NOT NULL DEFAULT '0',
+  `crdate` int(11) unsigned NOT NULL DEFAULT '0',
+  `cruser_id` int(11) unsigned NOT NULL DEFAULT '0',
+  `deleted` tinyint(4) unsigned NOT NULL DEFAULT '0',
+  `hidden` tinyint(4) unsigned NOT NULL DEFAULT '0',
+  `starttime` int(11) unsigned NOT NULL DEFAULT '0',
+  `endtime` int(11) unsigned NOT NULL DEFAULT '0',
+  `t3ver_oid` int(11) NOT NULL DEFAULT '0',
+  `t3ver_id` int(11) NOT NULL DEFAULT '0',
+  `t3ver_wsid` int(11) NOT NULL DEFAULT '0',
+  `t3ver_label` varchar(255) NOT NULL DEFAULT '',
+  `t3ver_state` tinyint(4) NOT NULL DEFAULT '0',
+  `t3ver_stage` int(11) NOT NULL DEFAULT '0',
+  `t3ver_count` int(11) NOT NULL DEFAULT '0',
+  `t3ver_tstamp` int(11) NOT NULL DEFAULT '0',
+  `t3ver_move_id` int(11) NOT NULL DEFAULT '0',
+  `t3_origuid` int(11) NOT NULL DEFAULT '0',
+  `sys_language_uid` int(11) NOT NULL DEFAULT '0',
+  `l10n_parent` int(11) NOT NULL DEFAULT '0',
+  `l10n_diffsource` mediumblob,
+  PRIMARY KEY (`uid`)
 );
 
 #
