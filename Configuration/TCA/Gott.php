@@ -3,8 +3,8 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_edfu_domain_model_god'] = array(
-	'ctrl' => $TCA['tx_edfu_domain_model_god']['ctrl'],
+$TCA['tx_edfu_domain_model_gott'] = array(
+	'ctrl' => $TCA['tx_edfu_domain_model_gott']['ctrl'],
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, transliteration, place, eponym, relation, function, position',
 	),
@@ -37,8 +37,8 @@ $TCA['tx_edfu_domain_model_god'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_edfu_domain_model_god',
-				'foreign_table_where' => 'AND tx_edfu_domain_model_god.pid=###CURRENT_PID### AND tx_edfu_domain_model_god.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_edfu_domain_model_gott',
+				'foreign_table_where' => 'AND tx_edfu_domain_model_gott.pid=###CURRENT_PID### AND tx_edfu_domain_model_gott.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -95,7 +95,7 @@ $TCA['tx_edfu_domain_model_god'] = array(
 		),
 		'transliteration' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_god.transliteration',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_gott.transliteration',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -105,7 +105,7 @@ $TCA['tx_edfu_domain_model_god'] = array(
 		),
 		'place' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_god.place',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_gott.place',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -115,7 +115,7 @@ $TCA['tx_edfu_domain_model_god'] = array(
 		),
 		'eponym' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_god.eponym',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_gott.eponym',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -125,7 +125,7 @@ $TCA['tx_edfu_domain_model_god'] = array(
 		),
 		'relation' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_god.relation',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_gott.relation',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -135,7 +135,7 @@ $TCA['tx_edfu_domain_model_god'] = array(
 		),
 		'function' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_god.function',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_gott.function',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -145,7 +145,7 @@ $TCA['tx_edfu_domain_model_god'] = array(
 		),
 		'position' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_god.position',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_gott.position',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_edfu_domain_model_position',

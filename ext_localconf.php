@@ -8,7 +8,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	'Edfu',
 	array(
 		'Word' => 'list, show',
-		'God' => 'list, show',
+		'Gott' => 'list, show',
 		'Formular' => 'list, show',
 		'Place' => 'list, show',
 		'Photo' => '',
@@ -20,7 +20,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	// non-cacheable actions
 	array(
 		'Word' => '',
-		'God' => '',
+		'Gott' => '',
 		'Formular' => '',
 		'Place' => '',
 		'Photo' => '',

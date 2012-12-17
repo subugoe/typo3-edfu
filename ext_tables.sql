@@ -45,56 +45,45 @@ CREATE TABLE tx_edfu_domain_model_word (
 );
 
 #
-# Table structure for table 'tx_edfu_domain_model_god'
+# Table structure for table 'tx_edfu_domain_model_gott'
 #
-CREATE TABLE tx_edfu_domain_model_god (
-
-		uid              INT(11)                         NOT NULL AUTO_INCREMENT,
-		pid              INT(11) DEFAULT '0'             NOT NULL,
-
-		transliteration  TEXT                            NOT NULL,
-		place            TEXT                            NOT NULL,
-		eponym           TEXT                            NOT NULL,
-		relation         TEXT                            NOT NULL,
-		function         TEXT                            NOT NULL,
-		position         INT(11) UNSIGNED DEFAULT '0'    NOT NULL,
-
-		tstamp           INT(11) UNSIGNED DEFAULT '0'    NOT NULL,
-		crdate           INT(11) UNSIGNED DEFAULT '0'    NOT NULL,
-		cruser_id        INT(11) UNSIGNED DEFAULT '0'    NOT NULL,
-		deleted          TINYINT(4) UNSIGNED DEFAULT '0' NOT NULL,
-		hidden           TINYINT(4) UNSIGNED DEFAULT '0' NOT NULL,
-		starttime        INT(11) UNSIGNED DEFAULT '0'    NOT NULL,
-		endtime          INT(11) UNSIGNED DEFAULT '0'    NOT NULL,
-
-		t3ver_oid        INT(11) DEFAULT '0'             NOT NULL,
-		t3ver_id         INT(11) DEFAULT '0'             NOT NULL,
-		t3ver_wsid       INT(11) DEFAULT '0'             NOT NULL,
-		t3ver_label      VARCHAR(255) DEFAULT ''         NOT NULL,
-		t3ver_state      TINYINT(4) DEFAULT '0'          NOT NULL,
-		t3ver_stage      INT(11) DEFAULT '0'             NOT NULL,
-		t3ver_count      INT(11) DEFAULT '0'             NOT NULL,
-		t3ver_tstamp     INT(11) DEFAULT '0'             NOT NULL,
-		t3ver_move_id    INT(11) DEFAULT '0'             NOT NULL,
-
-		sorting          INT(11) DEFAULT '0'             NOT NULL,
-		t3_origuid       INT(11) DEFAULT '0'             NOT NULL,
-		sys_language_uid INT(11) DEFAULT '0'             NOT NULL,
-		l10n_parent      INT(11) DEFAULT '0'             NOT NULL,
-		l10n_diffsource  MEDIUMBLOB,
-
-		PRIMARY KEY (uid),
-		KEY parent (pid),
-		KEY t3ver_oid (t3ver_oid, t3ver_wsid),
-		KEY language (l10n_parent, sys_language_uid)
-
+CREATE TABLE `tx_edfu_domain_model_gott` (
+		`uid`              INT(11)                         NOT NULL AUTO_INCREMENT,
+		`pid`              INT(11) DEFAULT '0'             NOT NULL,
+		`transliteration`  TEXT                            NOT NULL,
+		`ort`              TEXT,
+		`eponym`           TEXT,
+		`beziehung`        TEXT,
+		`funktion`         TEXT,
+		`tstamp`           INT(11) UNSIGNED                NOT NULL DEFAULT '0',
+		`crdate`           INT(11) UNSIGNED                NOT NULL DEFAULT '0',
+		`cruser_id`        INT(11) UNSIGNED                NOT NULL DEFAULT '0',
+		`deleted`          TINYINT(4) UNSIGNED             NOT NULL DEFAULT '0',
+		`hidden`           TINYINT(4) UNSIGNED             NOT NULL DEFAULT '0',
+		`starttime`        INT(11) UNSIGNED                NOT NULL DEFAULT '0',
+		`endtime`          INT(11) UNSIGNED                NOT NULL DEFAULT '0',
+		`t3ver_oid`        INT(11)                         NOT NULL DEFAULT '0',
+		`t3ver_id`         INT(11)                         NOT NULL DEFAULT '0',
+		`t3ver_wsid`       INT(11)                         NOT NULL DEFAULT '0',
+		`t3ver_label`      VARCHAR(255)                    NOT NULL DEFAULT '',
+		`t3ver_state`      TINYINT(4)                      NOT NULL DEFAULT '0',
+		`t3ver_stage`      INT(11)                         NOT NULL DEFAULT '0',
+		`t3ver_count`      INT(11)                         NOT NULL DEFAULT '0',
+		`t3ver_tstamp`     INT(11)                         NOT NULL DEFAULT '0',
+		`t3ver_move_id`    INT(11)                         NOT NULL DEFAULT '0',
+		`t3_origuid`       INT(11)                         NOT NULL DEFAULT '0',
+		`sys_language_uid` INT(11)                         NOT NULL DEFAULT '0',
+		`l10n_parent`      INT(11)                         NOT NULL DEFAULT '0',
+		`l10n_diffsource`  MEDIUMBLOB,
+		PRIMARY KEY (`uid`)
 );
+
 
 CREATE TABLE `tx_edfu_domain_model_formular` (
 		`uid`              INT(11)                 NOT NULL AUTO_INCREMENT,
 		`pid`              INT(11) DEFAULT '0'     NOT NULL,
 		`stelle_uid`       INT(11)                 NOT NULL,
-		`transliteration`  TEXT  NOT NULL,
+		`transliteration`  TEXT                    NOT NULL,
 		`uebersetzung`     TEXT,
 		`texttyp`          TEXT,
 		`tstamp`           INT(11) UNSIGNED        NOT NULL DEFAULT '0',
@@ -107,7 +96,7 @@ CREATE TABLE `tx_edfu_domain_model_formular` (
 		`t3ver_oid`        INT(11)                 NOT NULL DEFAULT '0',
 		`t3ver_id`         INT(11)                 NOT NULL DEFAULT '0',
 		`t3ver_wsid`       INT(11)                 NOT NULL DEFAULT '0',
-		`t3ver_label`      VARCHAR(255) 					NOT NULL DEFAULT '',
+		`t3ver_label`      VARCHAR(255)            NOT NULL DEFAULT '',
 		`t3ver_state`      TINYINT(4)              NOT NULL DEFAULT '0',
 		`t3ver_stage`      INT(11)                 NOT NULL DEFAULT '0',
 		`t3ver_count`      INT(11)                 NOT NULL DEFAULT '0',

@@ -28,25 +28,25 @@
 			<trans-unit id="tx_edfu_domain_model_formular.form">
 				<source>Form</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_god">
+			<trans-unit id="tx_edfu_domain_model_gott">
 				<source>God list</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_god.transliteration">
+			<trans-unit id="tx_edfu_domain_model_gott.transliteration">
 				<source>Transliteration</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_god.place">
+			<trans-unit id="tx_edfu_domain_model_gott.place">
 				<source>Place</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_god.eponym">
+			<trans-unit id="tx_edfu_domain_model_gott.eponym">
 				<source>Eponym</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_god.relation">
+			<trans-unit id="tx_edfu_domain_model_gott.relation">
 				<source>Relation</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_god.function">
+			<trans-unit id="tx_edfu_domain_model_gott.function">
 				<source>Function</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_god.position">
+			<trans-unit id="tx_edfu_domain_model_gott.position">
 				<source>Position</source>
 			</trans-unit>
 			
