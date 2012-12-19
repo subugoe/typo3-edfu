@@ -104,7 +104,7 @@ $TCA['tx_edfu_domain_model_wb_berlin'] = array(
 		),
 		'seite_start' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wb_berlin.page_start',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wb_berlin.seite_start',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
@@ -113,7 +113,7 @@ $TCA['tx_edfu_domain_model_wb_berlin'] = array(
 		),
 		'seite_stop' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wb_berlin.end_page',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_wb_berlin.seite_stop',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,

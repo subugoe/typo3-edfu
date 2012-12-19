@@ -14,7 +14,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'Photo' => '',
 		'WbBerlin' => '',
 		'Literatur' => '',
-		'Position' => '',
+		'Stelle' => '',
 		
 	),
 	// non-cacheable actions
@@ -26,7 +26,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'Photo' => '',
 		'WbBerlin' => '',
 		'Literatur' => '',
-		'Position' => '',
+		'Stelle' => '',
 		
 	)
 );

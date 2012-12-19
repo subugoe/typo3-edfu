@@ -3,13 +3,13 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_edfu_domain_model_position'] = array(
-	'ctrl' => $TCA['tx_edfu_domain_model_position']['ctrl'],
+$TCA['tx_edfu_domain_model_band'] = array(
+	'ctrl' => $TCA['tx_edfu_domain_model_band']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, page_start, end_page, line_start, line_end, note, stop_doubtful',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, nummer, freigegeben',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, page_start, end_page, line_start, line_end, note, stop_doubtful,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, nummer, freigegeben, position,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -37,8 +37,8 @@ $TCA['tx_edfu_domain_model_position'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_edfu_domain_model_position',
-				'foreign_table_where' => 'AND tx_edfu_domain_model_position.pid=###CURRENT_PID### AND tx_edfu_domain_model_position.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_edfu_domain_model_band',
+				'foreign_table_where' => 'AND tx_edfu_domain_model_band.pid=###CURRENT_PID### AND tx_edfu_domain_model_band.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -93,58 +93,20 @@ $TCA['tx_edfu_domain_model_position'] = array(
 				),
 			),
 		),
-		'page_start' => array(
+		'nummer' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_position.page_start',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_band.nummer',
 			'config' => array(
 				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			),
-		),
-		'end_page' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_position.end_page',
-			'config' => array(
-				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			),
-		),
-		'line_start' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_position.line_start',
-			'config' => array(
-				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			),
-		),
-		'line_end' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_position.line_end',
-			'config' => array(
-				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			),
-		),
-		'note' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_position.note',
-			'config' => array(
-				'type' => 'text',
-				'cols' => 40,
-				'rows' => 15,
+				'size' => 2,
 				'eval' => 'trim'
 			),
 		),
-		'stop_doubtful' => array(
+		'freigegeben' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_position.stop_doubtful',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_band.freigegeben',
 			'config' => array(
 				'type' => 'check',
-				'default' => 0
 			),
 		),
 	),

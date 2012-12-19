@@ -4,23 +4,26 @@
 		<header/>
 		<body>
 
-			<trans-unit id="page_start.description">
+			<trans-unit id="seite_start.description">
 				<source>Start page</source>
 			</trans-unit>
-			<trans-unit id="end_page.description">
+			<trans-unit id="seite_stop.description">
 				<source>End page</source>
 			</trans-unit>
-			<trans-unit id="line_start.description">
+			<trans-unit id="zeile_start.description">
 				<source>Start line</source>
 			</trans-unit>
-			<trans-unit id="line_end.description">
+			<trans-unit id="zeile_stop.description">
 				<source>End line</source>
 			</trans-unit>
-			<trans-unit id="note.description">
+			<trans-unit id="anmerkung.description">
 				<source>Notes</source>
 			</trans-unit>
-			<trans-unit id="stop_doubtful.description">
+			<trans-unit id="stop_unsicher.description">
 				<source>Doubtful stop</source>
+			</trans-unit>
+			<trans-unit id="ort.description">
+				<source>Place</source>
 			</trans-unit>
 		</body>
 	</file>

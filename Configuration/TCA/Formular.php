@@ -200,7 +200,7 @@ $TCA['tx_edfu_domain_model_formular'] = array(
 			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_formular.position',
 			'config' => array(
 				'type' => 'select',
-				'foreign_table' => 'tx_edfu_domain_model_position',
+				'foreign_table' => 'tx_edfu_domain_model_stelle',
 				'MM' => 'tx_edfu_form_position_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
@@ -222,7 +222,7 @@ $TCA['tx_edfu_domain_model_formular'] = array(
 						'title' => 'Create new',
 						'icon' => 'add.gif',
 						'params' => array(
-							'table' => 'tx_edfu_domain_model_position',
+							'table' => 'tx_edfu_domain_model_stelle',
 							'pid' => '###CURRENT_PID###',
 							'setValue' => 'prepend'
 							),

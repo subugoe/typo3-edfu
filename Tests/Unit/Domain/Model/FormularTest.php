@@ -222,7 +222,7 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function getPositionReturnsInitialValueForObjectStorageContainingTx_Edfu_Domain_Model_Position() { 
+	public function getPositionReturnsInitialValueForObjectStorageContainingTx_Edfu_Domain_Model_Stelle() {
 		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
@@ -233,8 +233,8 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function setPositionForObjectStorageContainingTx_Edfu_Domain_Model_PositionSetsPosition() { 
-		$position = new Tx_Edfu_Domain_Model_Position();
+	public function setPositionForObjectStorageContainingTx_Edfu_Domain_Model_StelleSetsPosition() {
+		$position = new Tx_Edfu_Domain_Model_Stelle();
 		$objectStorageHoldingExactlyOnePosition = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOnePosition->attach($position);
 		$this->fixture->setPosition($objectStorageHoldingExactlyOnePosition);
@@ -249,7 +249,7 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function addPositionToObjectStorageHoldingPosition() {
-		$position = new Tx_Edfu_Domain_Model_Position();
+		$position = new Tx_Edfu_Domain_Model_Stelle();
 		$objectStorageHoldingExactlyOnePosition = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOnePosition->attach($position);
 		$this->fixture->addPosition($position);
@@ -264,7 +264,7 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function removePositionFromObjectStorageHoldingPosition() {
-		$position = new Tx_Edfu_Domain_Model_Position();
+		$position = new Tx_Edfu_Domain_Model_Stelle();
 		$localObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$localObjectStorage->attach($position);
 		$localObjectStorage->detach($position);

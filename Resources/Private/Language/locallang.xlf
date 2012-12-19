@@ -101,10 +101,10 @@
 			<trans-unit id="tx_edfu_domain_model_wb_berlin.volume">
 				<source>Volume</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_wb_berlin.page_start">
+			<trans-unit id="tx_edfu_domain_model_wb_berlin.seite_start">
 				<source>Start page</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_wb_berlin.end_page">
+			<trans-unit id="tx_edfu_domain_model_wb_berlin.seite_stop">
 				<source>End page</source>
 			</trans-unit>
 			<trans-unit id="tx_edfu_domain_model_wb_berlin.start_number">
@@ -121,25 +121,25 @@
 				<source>Description</source>
 			</trans-unit>
 			
-			<trans-unit id="tx_edfu_domain_model_position">
+			<trans-unit id="tx_edfu_domain_model_stelle">
 				<source>Position</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.page_start">
+			<trans-unit id="tx_edfu_domain_model_stelle.seite_start">
 				<source>Start page</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.end_page">
+			<trans-unit id="tx_edfu_domain_model_stelle.seite_stop">
 				<source>End page</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.line_start">
+			<trans-unit id="tx_edfu_domain_model_stelle.zeile_start">
 				<source>Start line</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.line_end">
+			<trans-unit id="tx_edfu_domain_model_stelle.zeile_stop">
 				<source>End line</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.note">
+			<trans-unit id="tx_edfu_domain_model_stelle.anmerkung">
 				<source>Notes</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.stop_doubtful">
+			<trans-unit id="tx_edfu_domain_model_stelle.stop_unsicher">
 				<source>Doubtful stop</source>
 			</trans-unit>
 			

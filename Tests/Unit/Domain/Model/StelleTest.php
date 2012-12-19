@@ -26,7 +26,7 @@
  ***************************************************************/
 
 /**
- * Test case for class Tx_Edfu_Domain_Model_Position.
+ * Test case for class Tx_Edfu_Domain_Model_Stelle.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -38,14 +38,14 @@
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  * @author Sven-S. Porst <porst@sub.uni-goettingen.de>
  */
-class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class Tx_Edfu_Domain_Model_StelleTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var Tx_Edfu_Domain_Model_Position
+	 * @var Tx_Edfu_Domain_Model_Stelle
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Edfu_Domain_Model_Position();
+		$this->fixture = new Tx_Edfu_Domain_Model_Stelle();
 	}
 
 	public function tearDown() {
@@ -58,7 +58,7 @@ class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCa
 	public function getPageStartReturnsInitialValueForInteger() { 
 		$this->assertSame(
 			0,
-			$this->fixture->getPageStart()
+			$this->fixture->getSeiteStart()
 		);
 	}
 
@@ -66,11 +66,11 @@ class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCa
 	 * @test
 	 */
 	public function setPageStartForIntegerSetsPageStart() { 
-		$this->fixture->setPageStart(12);
+		$this->fixture->setSeiteStart(12);
 
 		$this->assertSame(
 			12,
-			$this->fixture->getPageStart()
+			$this->fixture->getSeiteStart()
 		);
 	}
 	
@@ -80,7 +80,7 @@ class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCa
 	public function getEndPageReturnsInitialValueForInteger() { 
 		$this->assertSame(
 			0,
-			$this->fixture->getEndPage()
+			$this->fixture->getSeiteStop()
 		);
 	}
 
@@ -88,11 +88,11 @@ class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCa
 	 * @test
 	 */
 	public function setEndPageForIntegerSetsEndPage() { 
-		$this->fixture->setEndPage(12);
+		$this->fixture->setSeiteStop(12);
 
 		$this->assertSame(
 			12,
-			$this->fixture->getEndPage()
+			$this->fixture->getSeiteStop()
 		);
 	}
 	
@@ -102,7 +102,7 @@ class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCa
 	public function getLineStartReturnsInitialValueForInteger() { 
 		$this->assertSame(
 			0,
-			$this->fixture->getLineStart()
+			$this->fixture->getZeileStart()
 		);
 	}
 
@@ -110,11 +110,11 @@ class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCa
 	 * @test
 	 */
 	public function setLineStartForIntegerSetsLineStart() { 
-		$this->fixture->setLineStart(12);
+		$this->fixture->setZeileStart(12);
 
 		$this->assertSame(
 			12,
-			$this->fixture->getLineStart()
+			$this->fixture->getZeileStart()
 		);
 	}
 	
@@ -124,7 +124,7 @@ class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCa
 	public function getLineEndReturnsInitialValueForInteger() { 
 		$this->assertSame(
 			0,
-			$this->fixture->getLineEnd()
+			$this->fixture->getZeileStop()
 		);
 	}
 
@@ -132,11 +132,11 @@ class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCa
 	 * @test
 	 */
 	public function setLineEndForIntegerSetsLineEnd() { 
-		$this->fixture->setLineEnd(12);
+		$this->fixture->setZeileStop(12);
 
 		$this->assertSame(
 			12,
-			$this->fixture->getLineEnd()
+			$this->fixture->getZeileStop()
 		);
 	}
 	
@@ -149,11 +149,11 @@ class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCa
 	 * @test
 	 */
 	public function setNoteForStringSetsNote() { 
-		$this->fixture->setNote('Conceived at T3CON10');
+		$this->fixture->setAnmerkung('Conceived at T3CON10');
 
 		$this->assertSame(
 			'Conceived at T3CON10',
-			$this->fixture->getNote()
+			$this->fixture->getAnmerkung()
 		);
 	}
 	
@@ -163,7 +163,7 @@ class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCa
 	public function getStopDoubtfulReturnsInitialValueForBoolean() { 
 		$this->assertSame(
 			TRUE,
-			$this->fixture->getStopDoubtful()
+			$this->fixture->getStopUnsicher()
 		);
 	}
 
@@ -171,11 +171,11 @@ class Tx_Edfu_Domain_Model_PositionTest extends Tx_Extbase_Tests_Unit_BaseTestCa
 	 * @test
 	 */
 	public function setStopDoubtfulForBooleanSetsStopDoubtful() { 
-		$this->fixture->setStopDoubtful(TRUE);
+		$this->fixture->setStopUnsicher(TRUE);
 
 		$this->assertSame(
 			TRUE,
-			$this->fixture->getStopDoubtful()
+			$this->fixture->getStopUnsicher()
 		);
 	}
 	

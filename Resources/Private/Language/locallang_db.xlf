@@ -99,10 +99,10 @@
 			<trans-unit id="tx_edfu_domain_model_wb_berlin.volume">
 				<source>Volume</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_wb_berlin.page_start">
+			<trans-unit id="tx_edfu_domain_model_wb_berlin.seite_start">
 				<source>Page Start</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_wb_berlin.end_page">
+			<trans-unit id="tx_edfu_domain_model_wb_berlin.seite_stop">
 				<source>End Page</source>
 			</trans-unit>
 			<trans-unit id="tx_edfu_domain_model_wb_berlin.start_number">
@@ -119,28 +119,46 @@
 				<source>Description</source>
 			</trans-unit>
 
-			<trans-unit id="tx_edfu_domain_model_position">
-				<source>Position</source>
+			<trans-unit id="tx_edfu_domain_model_stelle">
+				<source>Stelle</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.page_start">
+			<trans-unit id="tx_edfu_domain_model_stelle.band_uid">
+				<source>Volume</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_stelle.seite_start">
 				<source>Page Start</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.end_page">
+			<trans-unit id="tx_edfu_domain_model_stelle.seite_stop">
 				<source>End Page</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.line_start">
+			<trans-unit id="tx_edfu_domain_model_stelle.zeile_start">
 				<source>Line Start</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.line_end">
+			<trans-unit id="tx_edfu_domain_model_stelle.zeile_stop">
 				<source>Line End</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.note">
+			<trans-unit id="tx_edfu_domain_model_stelle.anmerkung">
 				<source>Note</source>
 			</trans-unit>
-			<trans-unit id="tx_edfu_domain_model_position.stop_doubtful">
+			<trans-unit id="tx_edfu_domain_model_stelle.stop_unsicher">
 				<source>Stop Doubtful</source>
 			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_stelle.zerstoerung">
+				<source>Zerstoerung</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_stelle.ort">
+				<source>Ort</source>
+			</trans-unit>
 
+			<trans-unit id="tx_edfu_domain_model_band">
+				<source>Band</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_band.nummer">
+				<source>Number</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_band.freigegeben">
+				<source>Released</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

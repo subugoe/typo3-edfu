@@ -32,43 +32,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Controller_GottController extends Tx_Extbase_MVC_Controller_ActionController {
-
-	/**
-	 * godRepository
-	 *
-	 * @var Tx_Edfu_Domain_Repository_GottRepository
-	 * @inject
-	 */
-	protected $gottRepository;
-
-	/**
-	 * @var Tx_Edfu_Domain_Model_Stelle
-	 * @inject
-	 */
-	protected $position;
-
-	/**
-	 * action list
-	 *
-	 * @return void
-	 */
-	public function listAction() {
-		$gods = $this->gottRepository->findAll();
-		$this->view
-				->assign('gods', $gods)
-				->assign('position', $this->position);
-	}
-
-	/**
-	 * action show
-	 *
-	 * @param Tx_Edfu_Domain_Model_Gott $god
-	 * @return void
-	 */
-	public function showAction(Tx_Edfu_Domain_Model_Gott $god) {
-		$this->view->assign('god', $god);
-	}
+class Tx_Edfu_Domain_Repository_StelleRepository extends Tx_Extbase_Persistence_Repository {
 
 }
 ?>

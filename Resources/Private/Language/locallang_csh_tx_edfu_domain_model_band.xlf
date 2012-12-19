@@ -5,19 +5,19 @@
 		<body>
 
 			<trans-unit id="volume.description">
-				<source>Volume</source>
+				<source>Band</source>
 			</trans-unit>
 			<trans-unit id="seite_start.description">
-				<source>Start page</source>
+				<source>Start Seite</source>
 			</trans-unit>
 			<trans-unit id="seite_stop.description">
-				<source>End page</source>
+				<source>Seite Stop</source>
 			</trans-unit>
 			<trans-unit id="start_number.description">
-				<source>Start number</source>
+				<source>Zeile Start</source>
 			</trans-unit>
 			<trans-unit id="end_number.description">
-				<source>End Number</source>
+				<source>Zeile Stop</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -32,57 +32,86 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Model_Position extends Tx_Extbase_DomainObject_AbstractValueObject {
+class Tx_Edfu_Domain_Model_Stelle extends Tx_Extbase_DomainObject_AbstractValueObject {
+
+	/**
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Band>;
+	 */
+	protected $bandId;
 
 	/**
 	 * Start page
 	 *
 	 * @var integer
 	 */
-	protected $pageStart;
+	protected $seiteStart;
 
 	/**
 	 * End page
 	 *
 	 * @var integer
 	 */
-	protected $endPage;
+	protected $seiteStop;
 
 	/**
 	 * Start line
 	 *
 	 * @var integer
 	 */
-	protected $lineStart;
+	protected $zeileStart;
 
 	/**
 	 * End line
 	 *
 	 * @var integer
 	 */
-	protected $lineEnd;
+	protected $zeileStop;
 
 	/**
 	 * Notes
 	 *
 	 * @var string
 	 */
-	protected $note;
+	protected $anmerkung;
 
 	/**
 	 * Doubtful stop
 	 *
 	 * @var boolean
 	 */
-	protected $stopDoubtful = FALSE;
+	protected $stopUnsicher = FALSE;
+
+	/**
+	 * @var boolean
+	 */
+	protected $zerstoerung;
+
+
+	/**
+	 * __construct
+	 *
+	 * @return void
+	 */
+	public function __construct() {
+		$this->initStorageObjects();
+	}
+
+	/**
+	 * Initializes all Tx_Extbase_Persistence_ObjectStorage properties.
+	 *
+	 * @return void
+	 */
+	protected function initStorageObjects() {
+		$this->bandId = new Tx_Extbase_Persistence_ObjectStorage();
+	}
 
 	/**
 	 * Returns the pageStart
 	 *
 	 * @return integer $pageStart
 	 */
-	public function getPageStart() {
-		return $this->pageStart;
+	public function getSeiteStart() {
+		return $this->seiteStart;
 	}
 
 	/**
@@ -91,8 +120,8 @@ class Tx_Edfu_Domain_Model_Position extends Tx_Extbase_DomainObject_AbstractValu
 	 * @param integer $pageStart
 	 * @return void
 	 */
-	public function setPageStart($pageStart) {
-		$this->pageStart = $pageStart;
+	public function setSeiteStart($pageStart) {
+		$this->seiteStart = $pageStart;
 	}
 
 	/**
@@ -100,8 +129,8 @@ class Tx_Edfu_Domain_Model_Position extends Tx_Extbase_DomainObject_AbstractValu
 	 *
 	 * @return integer $endPage
 	 */
-	public function getEndPage() {
-		return $this->endPage;
+	public function getSeiteStop() {
+		return $this->seiteStop;
 	}
 
 	/**
@@ -110,8 +139,8 @@ class Tx_Edfu_Domain_Model_Position extends Tx_Extbase_DomainObject_AbstractValu
 	 * @param integer $endPage
 	 * @return void
 	 */
-	public function setEndPage($endPage) {
-		$this->endPage = $endPage;
+	public function setSeiteStop($endPage) {
+		$this->seiteStop = $endPage;
 	}
 
 	/**
@@ -119,8 +148,8 @@ class Tx_Edfu_Domain_Model_Position extends Tx_Extbase_DomainObject_AbstractValu
 	 *
 	 * @return integer $lineStart
 	 */
-	public function getLineStart() {
-		return $this->lineStart;
+	public function getZeileStart() {
+		return $this->zeileStart;
 	}
 
 	/**
@@ -129,8 +158,8 @@ class Tx_Edfu_Domain_Model_Position extends Tx_Extbase_DomainObject_AbstractValu
 	 * @param integer $lineStart
 	 * @return void
 	 */
-	public function setLineStart($lineStart) {
-		$this->lineStart = $lineStart;
+	public function setZeileStart($lineStart) {
+		$this->zeileStart = $lineStart;
 	}
 
 	/**
@@ -138,8 +167,8 @@ class Tx_Edfu_Domain_Model_Position extends Tx_Extbase_DomainObject_AbstractValu
 	 *
 	 * @return integer $lineEnd
 	 */
-	public function getLineEnd() {
-		return $this->lineEnd;
+	public function getZeileStop() {
+		return $this->zeileStop;
 	}
 
 	/**
@@ -148,27 +177,27 @@ class Tx_Edfu_Domain_Model_Position extends Tx_Extbase_DomainObject_AbstractValu
 	 * @param integer $lineEnd
 	 * @return void
 	 */
-	public function setLineEnd($lineEnd) {
-		$this->lineEnd = $lineEnd;
+	public function setZeileStop($lineEnd) {
+		$this->zeileStop = $lineEnd;
 	}
 
 	/**
-	 * Returns the note
+	 * Returns the anmerkung
 	 *
 	 * @return string $note
 	 */
-	public function getNote() {
-		return $this->note;
+	public function getAnmerkung() {
+		return $this->anmerkung;
 	}
 
 	/**
-	 * Sets the note
+	 * Sets the anmerkung
 	 *
 	 * @param string $note
 	 * @return void
 	 */
-	public function setNote($note) {
-		$this->note = $note;
+	public function setAnmerkung($note) {
+		$this->anmerkung = $note;
 	}
 
 	/**
@@ -176,8 +205,8 @@ class Tx_Edfu_Domain_Model_Position extends Tx_Extbase_DomainObject_AbstractValu
 	 *
 	 * @return boolean $stopDoubtful
 	 */
-	public function getStopDoubtful() {
-		return $this->stopDoubtful;
+	public function getStopUnsicher() {
+		return $this->stopUnsicher;
 	}
 
 	/**
@@ -186,8 +215,8 @@ class Tx_Edfu_Domain_Model_Position extends Tx_Extbase_DomainObject_AbstractValu
 	 * @param boolean $stopDoubtful
 	 * @return void
 	 */
-	public function setStopDoubtful($stopDoubtful) {
-		$this->stopDoubtful = $stopDoubtful;
+	public function setStopUnsicher($stopDoubtful) {
+		$this->stopUnsicher = $stopDoubtful;
 	}
 
 	/**
@@ -195,8 +224,22 @@ class Tx_Edfu_Domain_Model_Position extends Tx_Extbase_DomainObject_AbstractValu
 	 *
 	 * @return boolean
 	 */
-	public function isStopDoubtful() {
-		return $this->getStopDoubtful();
+	public function isStopUnsicher() {
+		return $this->getStopUnsicher();
+	}
+
+	/**
+	 * @param boolean $zerstoerung
+	 */
+	public function setZerstoerung($zerstoerung) {
+		$this->zerstoerung = $zerstoerung;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function getZerstoerung() {
+		return $this->zerstoerung;
 	}
 
 }

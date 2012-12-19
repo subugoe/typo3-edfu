@@ -148,13 +148,13 @@ Defining TypoScript reference can be achieved by using the "container" directive
 Admonitions
 ============
 
-Admonitions are specially marked "topics" such as "warning", "important", "tip", "note"::
+Admonitions are specially marked "topics" such as "warning", "important", "tip", "anmerkung"::
 
-	.. note:: This is a note admonition.
+	.. anmerkung:: This is a anmerkung admonition.
 
 		These notes are similar to tips, but usually contain information you should pay attention to. It might be details about a step that a whole operation hinges on or it may highlight an essential sequence of tasks.
 
-		- The note contains all indented body elements following.
+		- The anmerkung contains all indented body elements following.
 		- It includes this bullet list.
 
 	.. tip::

@@ -27,7 +27,7 @@ if (TYPO3_MODE === 'BE') {
 			'Photo' => '',
 			'WbBerlin' => '',
 			'Literatur' => '',
-			'Position' => '',
+			'Stelle' => '',
 		),
 		array(
 			'access' => 'user,group',
@@ -240,12 +240,12 @@ $TCA['tx_edfu_domain_model_literatur'] = array(
 	),
 );
 
-t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_position', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_position.xlf');
-t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_position');
-$TCA['tx_edfu_domain_model_position'] = array(
+t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_stelle', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_stelle.xlf');
+t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_stelle');
+$TCA['tx_edfu_domain_model_stelle'] = array(
 	'ctrl' => array(
-		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_position',
-		'label' => 'page_start',
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_stelle',
+		'label' => 'seite_start',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -263,10 +263,38 @@ $TCA['tx_edfu_domain_model_position'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'page_start,end_page,line_start,line_end,note,stop_doubtful,',
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Position.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_position.gif'
+		'searchFields' => 'seite_start,seite_stop,zeile_start,zeile_stop,anmerkung,stop_unsicher,',
+		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Stelle.php',
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_stelle.gif'
 	),
 );
+
+t3lib_extMgm::addLLrefForTCAdescr('tx_edfu_domain_model_band', 'EXT:edfu/Resources/Private/Language/locallang_csh_tx_edfu_domain_model_band.xlf');
+t3lib_extMgm::allowTableOnStandardPages('tx_edfu_domain_model_band');
+$TCA['tx_edfu_domain_model_band'] = array(
+	'ctrl' => array(
+		'title' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_band',
+		'label' => 'nummer',
+		'tstamp' => 'tstamp',
+		'crdate' => 'crdate',
+		'cruser_id' => 'cruser_id',
+		'dividers2tabs' => TRUE,
+		'versioningWS' => 2,
+		'versioning_followPages' => TRUE,
+		'origUid' => 't3_origuid',
+		'languageField' => 'sys_language_uid',
+		'transOrigPointerField' => 'l10n_parent',
+		'transOrigDiffSourceField' => 'l10n_diffsource',
+		'delete' => 'deleted',
+		'enablecolumns' => array(
+			'disabled' => 'hidden',
+			'starttime' => 'starttime',
+			'endtime' => 'endtime',
+		),
+		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Band.php',
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_edfu_domain_model_band.gif'
+	),
+);
+
 
 ?>

@@ -32,24 +32,15 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Controller_PositionController extends Tx_Extbase_MVC_Controller_ActionController {
+class Tx_Edfu_Controller_StelleController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
 	 * positionRepository
 	 *
-	 * @var Tx_Edfu_Domain_Repository_PositionRepository
+	 * @var Tx_Edfu_Domain_Repository_StelleRepository
+	 * @inject
 	 */
 	protected $positionRepository;
-
-	/**
-	 * injectPositionRepository
-	 *
-	 * @param Tx_Edfu_Domain_Repository_PositionRepository $positionRepository
-	 * @return void
-	 */
-	public function injectPositionRepository(Tx_Edfu_Domain_Repository_PositionRepository $positionRepository) {
-		$this->positionRepository = $positionRepository;
-	}
 
 }
 ?>
