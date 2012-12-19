@@ -1,5 +1,5 @@
 <?php
-if (!defined ('TYPO3_MODE')) {
+if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
@@ -177,7 +177,13 @@ $TCA['tx_edfu_domain_model_stelle'] = array(
 				'foreign_table_where' => ' AND sys_language_uid = 0 ORDER BY tx_edfu_domain_model_ort.ortsbeschreibung ASC',
 				'MM' => 'tx_edfu_ort_stelle_mm',
 				'maxitems' => 9999,
-				'size'=> 10,
+				'size' => 10,
+				'wizards' => array(
+					'suggest' => array(
+						'type' => 'suggest',
+						'maxItemsInResultList' => 25,
+					),
+				),
 				'appearance' => array(
 					'collapse' => 0,
 					'levelLinksPosition' => 'both',
