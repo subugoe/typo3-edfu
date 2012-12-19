@@ -86,7 +86,15 @@ class Tx_Edfu_Domain_Model_Stelle extends Tx_Extbase_DomainObject_AbstractValueO
 	 */
 	protected $zerstoerung;
 
+	/**
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Ort>;
+	 */
+	protected $ort;
 
+	/**
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Ort>;
+	 */
+	protected $szene;
 	/**
 	 * __construct
 	 *
@@ -103,6 +111,8 @@ class Tx_Edfu_Domain_Model_Stelle extends Tx_Extbase_DomainObject_AbstractValueO
 	 */
 	protected function initStorageObjects() {
 		$this->bandId = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->ort = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->szene = new Tx_Extbase_Persistence_ObjectStorage();
 	}
 
 	/**
@@ -240,6 +250,48 @@ class Tx_Edfu_Domain_Model_Stelle extends Tx_Extbase_DomainObject_AbstractValueO
 	 */
 	public function getZerstoerung() {
 		return $this->zerstoerung;
+	}
+
+	/**
+	 * @param \Tx_Extbase_Persistence_ObjectStorage $bandId
+	 */
+	public function setBandId($bandId) {
+		$this->bandId = $bandId;
+	}
+
+	/**
+	 * @return \Tx_Extbase_Persistence_ObjectStorage
+	 */
+	public function getBandId() {
+		return $this->bandId;
+	}
+
+	/**
+	 * @param \Tx_Extbase_Persistence_ObjectStorage $ort
+	 */
+	public function setOrt($ort) {
+		$this->ort = $ort;
+	}
+
+	/**
+	 * @return \Tx_Extbase_Persistence_ObjectStorage
+	 */
+	public function getOrt() {
+		return $this->ort;
+	}
+
+	/**
+	 * @param \Tx_Extbase_Persistence_ObjectStorage $szene
+	 */
+	public function setSzene($szene) {
+		$this->szene = $szene;
+	}
+
+	/**
+	 * @return \Tx_Extbase_Persistence_ObjectStorage
+	 */
+	public function getSzene() {
+		return $this->szene;
 	}
 
 }

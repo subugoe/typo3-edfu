@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $TCA['tx_edfu_domain_model_ort'] = array(
 	'ctrl' => $TCA['tx_edfu_domain_model_ort']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, transliteration,uebersetzung, ortsbeschreibung, anmerkung',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, transliteration,uebersetzung, ortsbeschreibung, anmerkung, stelle',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, transliteration, uebersetzung, ortsbeschreibung, anmerkung, position,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, transliteration, uebersetzung, ortsbeschreibung, anmerkung, position, stelle, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -129,6 +129,32 @@ $TCA['tx_edfu_domain_model_ort'] = array(
 				'cols' => 40,
 				'rows' => 6,
 				'eval' => 'trim'
+			),
+		),
+		'stelle' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_ort.stelle',
+			'config' => array(
+				'type' => 'select',
+				'foreign_table' => 'tx_edfu_domain_model_stelle',
+				'foreign_field' => 'seite_start',
+				'foreign_table_where' => ' AND sys_language_uid = 0 ORDER BY tx_edfu_domain_model_stelle.seite_start ASC',
+				'MM' => 'tx_edfu_ort_stelle_mm',
+				'maxitems' => 9999,
+				'size' => 10,
+				'wizards' => array(
+					'suggest' => array(
+						'type' => 'suggest',
+						'maxItemsInResultList' => 25,
+					),
+				),
+				'appearance' => array(
+					'collapse' => 0,
+					'levelLinksPosition' => 'both',
+					'showSynchronizationLink' => 1,
+					'showPossibleLocalizationRecords' => 1,
+					'showAllLocalizationLink' => 1
+				),
 			),
 		),
 	),

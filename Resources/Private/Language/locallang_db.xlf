@@ -159,6 +159,16 @@
 			<trans-unit id="tx_edfu_domain_model_band.freigegeben">
 				<source>Released</source>
 			</trans-unit>
+
+			<trans-unit id="tx_edfu_domain_model_szene">
+				<source>Scene</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_szene.nummer">
+				<source>Number</source>
+			</trans-unit>
+			<trans-unit id="tx_edfu_domain_model_szene.beschreibung">
+				<source>Description</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

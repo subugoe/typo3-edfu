@@ -266,6 +266,7 @@ CREATE TABLE `tx_edfu_domain_model_stelle` (
 		`stop_unsicher` TINYINT(4) DEFAULT NULL,
 		`zerstoerung` TINYINT(4) DEFAULT NULL,
 		`ort` INT(11) DEFAULT NULL,
+		`szene` INT(11) DEFAULT NULL,
 		`tstamp` INT(11) UNSIGNED NOT NULL DEFAULT '0',
 		`crdate` INT(11) UNSIGNED NOT NULL DEFAULT '0',
 		`cruser_id` INT(11) UNSIGNED NOT NULL DEFAULT '0',
@@ -316,7 +317,35 @@ CREATE TABLE `tx_edfu_domain_model_band` (
 		`l10n_parent` INT(11) NOT NULL DEFAULT '0',
 		`l10n_diffsource` MEDIUMBLOB,
 		PRIMARY KEY (`uid`)
-)
+);
+
+CREATE TABLE `tx_edfu_domain_model_szene` (
+  `uid` int(11) NOT NULL,
+  `pid` int(11) NOT NULL,
+  `nummer` int(11) DEFAULT NULL,
+  `beschreibung` text,
+  `tstamp` int(11) unsigned NOT NULL DEFAULT '0',
+  `crdate` int(11) unsigned NOT NULL DEFAULT '0',
+  `cruser_id` int(11) unsigned NOT NULL DEFAULT '0',
+  `deleted` tinyint(4) unsigned NOT NULL DEFAULT '0',
+  `hidden` tinyint(4) unsigned NOT NULL DEFAULT '0',
+  `starttime` int(11) unsigned NOT NULL DEFAULT '0',
+  `endtime` int(11) unsigned NOT NULL DEFAULT '0',
+  `t3ver_oid` int(11) NOT NULL DEFAULT '0',
+  `t3ver_id` int(11) NOT NULL DEFAULT '0',
+  `t3ver_wsid` int(11) NOT NULL DEFAULT '0',
+  `t3ver_label` varchar(255) NOT NULL DEFAULT '',
+  `t3ver_state` tinyint(4) NOT NULL DEFAULT '0',
+  `t3ver_stage` int(11) NOT NULL DEFAULT '0',
+  `t3ver_count` int(11) NOT NULL DEFAULT '0',
+  `t3ver_tstamp` int(11) NOT NULL DEFAULT '0',
+  `t3ver_move_id` int(11) NOT NULL DEFAULT '0',
+  `t3_origuid` int(11) NOT NULL DEFAULT '0',
+  `sys_language_uid` int(11) NOT NULL DEFAULT '0',
+  `l10n_parent` int(11) NOT NULL DEFAULT '0',
+  `l10n_diffsource` mediumblob,
+  PRIMARY KEY (`uid`)
+);
 
 
 #

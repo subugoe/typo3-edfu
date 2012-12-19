@@ -6,10 +6,10 @@ if (!defined('TYPO3_MODE')) {
 $TCA['tx_edfu_domain_model_stelle'] = array(
 	'ctrl' => $TCA['tx_edfu_domain_model_stelle']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, band_uid, seite_start, seite_stop, zeile_start, zeile_stop, anmerkung, stop_unsicher, zerstoerung, ort',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, band_uid, seite_start, seite_stop, zeile_start, zeile_stop, anmerkung, stop_unsicher, zerstoerung, ort, szene',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1,band_uid, seite_start, seite_stop, zeile_start, zeile_stop, anmerkung, stop_unsicher, zerstoerung, ort, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1,band_uid, seite_start, seite_stop, zeile_start, zeile_stop, anmerkung, stop_unsicher, zerstoerung, ort, szene, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -176,6 +176,32 @@ $TCA['tx_edfu_domain_model_stelle'] = array(
 				'foreign_field' => 'ortsbeschreibung',
 				'foreign_table_where' => ' AND sys_language_uid = 0 ORDER BY tx_edfu_domain_model_ort.ortsbeschreibung ASC',
 				'MM' => 'tx_edfu_ort_stelle_mm',
+				'maxitems' => 9999,
+				'size' => 10,
+				'wizards' => array(
+					'suggest' => array(
+						'type' => 'suggest',
+						'maxItemsInResultList' => 25,
+					),
+				),
+				'appearance' => array(
+					'collapse' => 0,
+					'levelLinksPosition' => 'both',
+					'showSynchronizationLink' => 1,
+					'showPossibleLocalizationRecords' => 1,
+					'showAllLocalizationLink' => 1
+				),
+			),
+		),
+		'szene' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_stelle.szene',
+			'config' => array(
+				'type' => 'select',
+				'foreign_table' => 'tx_edfu_domain_model_szene',
+				'foreign_field' => 'beschreibung',
+				'foreign_table_where' => ' AND sys_language_uid = 0 ORDER BY tx_edfu_domain_model_szene.beschreibung ASC',
+				'MM' => 'tx_edfu_szene_stelle_mm',
 				'maxitems' => 9999,
 				'size' => 10,
 				'wizards' => array(
