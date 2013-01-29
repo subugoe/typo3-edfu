@@ -75,7 +75,7 @@ class Tx_Edfu_Domain_Model_Gott extends Tx_Extbase_DomainObject_AbstractEntity {
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle>
 	 * @lazy
 	 */
-	protected $position;
+	protected $stelle;
 
 	/**
 	 * __construct
@@ -98,7 +98,7 @@ class Tx_Edfu_Domain_Model_Gott extends Tx_Extbase_DomainObject_AbstractEntity {
 		 * It will be rewritten on each save in the extension builder
 		 * You may modify the constructor of this class instead
 		 */
-		$this->position = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->stelle = new Tx_Extbase_Persistence_ObjectStorage();
 	}
 
 	/**
@@ -203,7 +203,7 @@ class Tx_Edfu_Domain_Model_Gott extends Tx_Extbase_DomainObject_AbstractEntity {
 	 * @return void
 	 */
 	public function addPosition(Tx_Edfu_Domain_Model_Stelle $position) {
-		$this->position->attach($position);
+		$this->stelle->attach($position);
 	}
 
 	/**
@@ -213,7 +213,7 @@ class Tx_Edfu_Domain_Model_Gott extends Tx_Extbase_DomainObject_AbstractEntity {
 	 * @return void
 	 */
 	public function removePosition(Tx_Edfu_Domain_Model_Stelle $positionToRemove) {
-		$this->position->detach($positionToRemove);
+		$this->stelle->detach($positionToRemove);
 	}
 
 	/**
@@ -221,18 +221,18 @@ class Tx_Edfu_Domain_Model_Gott extends Tx_Extbase_DomainObject_AbstractEntity {
 	 *
 	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle> $position
 	 */
-	public function getPosition() {
-		return $this->position;
+	public function getStelle() {
+		return $this->stelle;
 	}
 
 	/**
 	 * Sets the position
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle> $position
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle> $stelle
 	 * @return void
 	 */
-	public function setPosition(Tx_Extbase_Persistence_ObjectStorage $position) {
-		$this->position = $position;
+	public function setStelle(Tx_Extbase_Persistence_ObjectStorage $stelle) {
+		$this->stelle = $stelle;
 	}
 
 }

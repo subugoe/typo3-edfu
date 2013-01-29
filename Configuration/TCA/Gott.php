@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $TCA['tx_edfu_domain_model_gott'] = array(
 	'ctrl' => $TCA['tx_edfu_domain_model_gott']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, transliteration, place, eponym, relation, function, position',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, transliteration, place, eponym, relation, function, stelle',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, transliteration, place, eponym, relation, function, position,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, transliteration, place, eponym, relation, function, stelle,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -143,13 +143,13 @@ $TCA['tx_edfu_domain_model_gott'] = array(
 				'eval' => 'trim'
 			),
 		),
-		'position' => array(
+		'stelle' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_gott.position',
+			'label' => 'LLL:EXT:edfu/Resources/Private/Language/locallang_db.xlf:tx_edfu_domain_model_gott.stelle',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_edfu_domain_model_stelle',
-				'MM' => 'tx_edfu_god_position_mm',
+				'MM' => 'tx_edfu_gott_stelle_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
 				'maxitems' => 9999,

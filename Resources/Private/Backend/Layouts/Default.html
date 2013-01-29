@@ -1,6 +1,11 @@
+{namespace edfu = Tx_Edfu_ViewHelpers}
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+
 <f:be.container
 		addCssFile="{f:uri.resource(path:'Css/Edfu.css')}"
-		addJsFile="{f:uri.resource(path:'JavaScipt/Edfu.js')}">
+		addJsFile="{jQuery}"
+		enableClickMenu="false" loadPrototype="false" loadScriptaculous="false"
+		loadExtJsTheme="false" >
 	<div class="typo3-fullDoc">
 		<div id="typo3-docheader">
 			<div id="typo3-docheader-row1">
@@ -37,3 +42,7 @@
 		</div>
 	</div>
 </f:be.container>
+
+<script src="{jQuery}"></script>
+<script src="{f:uri.resource(path:'JavaScript/Edfu.js')}"></script>
+

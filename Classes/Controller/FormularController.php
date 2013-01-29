@@ -43,13 +43,29 @@ class Tx_Edfu_Controller_FormularController extends Tx_Extbase_MVC_Controller_Ac
 	protected $formRepository;
 
 	/**
+	 * @var string
+	 */
+	protected $jQueryPath;
+
+	public function initializeAction() {
+		if (t3lib_extMgm::isLoaded('t3jquery')) {
+			$this->jQueryPath = tx_t3jquery::getJqJSBE(TRUE);
+		} else {
+			throw new Exception('Please create your jQuery Library using EXT:t3jquery', 1359463747);
+		}
+
+	}
+
+	/**
 	 * action list
 	 *
 	 * @return void
 	 */
 	public function listAction() {
 		$forms = $this->formRepository->findAll();
-		$this->view->assign('forms', $forms);
+		$this->view
+				->assign('forms', $forms)
+				->assign('jQuery', $this->jQueryPath);
 	}
 
 	/**

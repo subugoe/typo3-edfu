@@ -16,8 +16,8 @@ module.exports = function(grunt) {
 						},
 						concat: {
 							dist: {
-								src: ['<banner:meta.banner>', '<file_strip_banner:lib/<%= pkg.name %>.js>'],
-								dest: 'dist/<%= pkg.name %>.js'
+								src: ['<banner:meta.banner>', '<file_strip_banner:Resources/Public/JavaScript/<%= pkg.name %>.js>'],
+								dest: 'Resources/Public/JavaScript/<%= pkg.name %>c.js'
 							}
 						},
 						watch:{
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 					});
 
 	// Default task.
-	grunt.registerTask('default', 'coffee compass lint concat');
+	grunt.registerTask('default', 'coffee compass concat');
 	grunt.loadNpmTasks('grunt-compass');
 	grunt.loadNpmTasks('grunt-coffee');
 };

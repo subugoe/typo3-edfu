@@ -144,7 +144,7 @@ class Tx_Edfu_Domain_Model_GottTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
-			$this->fixture->getPosition()
+			$this->fixture->getStelle()
 		);
 	}
 
@@ -155,11 +155,11 @@ class Tx_Edfu_Domain_Model_GottTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 		$position = new Tx_Edfu_Domain_Model_Stelle();
 		$objectStorageHoldingExactlyOnePosition = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOnePosition->attach($position);
-		$this->fixture->setPosition($objectStorageHoldingExactlyOnePosition);
+		$this->fixture->setStelle($objectStorageHoldingExactlyOnePosition);
 
 		$this->assertSame(
 			$objectStorageHoldingExactlyOnePosition,
-			$this->fixture->getPosition()
+			$this->fixture->getStelle()
 		);
 	}
 	
@@ -174,7 +174,7 @@ class Tx_Edfu_Domain_Model_GottTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 
 		$this->assertEquals(
 			$objectStorageHoldingExactlyOnePosition,
-			$this->fixture->getPosition()
+			$this->fixture->getStelle()
 		);
 	}
 
@@ -191,7 +191,7 @@ class Tx_Edfu_Domain_Model_GottTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 
 		$this->assertEquals(
 			$localObjectStorage,
-			$this->fixture->getPosition()
+			$this->fixture->getStelle()
 		);
 	}
 	
