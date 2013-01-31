@@ -8,11 +8,14 @@
 	<fieldset name="Stelle">
 		<legend>Stelle</legend>
 	<div class="formLine">
-		<p><span class="fakeLabel">Start</span> <f:form.textfield name="Band" placeholder="Band" class="smallInt"/> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/></p>
+		<p><span class="fakeLabel">Band</span> <f:form.textfield name="Band" placeholder="Band" class="smallInt"/>
+	</div>
+	<div class="formLine">
+		<p><span class="fakeLabel">Start</span> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/></p>
 	</div>
 	<div class="formLine">
 	<p>
-		<span class="fakeLabel">Stop</span> <f:form.textfield name="Band" placeholder="Band" class="smallInt" /> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/>
+		<span class="fakeLabel">Stop</span> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/>
 	</p>
 	</div>
 	</fieldset>
@@ -30,7 +33,9 @@
 	</div>
 	<div class="formLine ui-widget">
 		<label class="fakeLabel">Literatur</label> <f:form.textfield name="literatur" class="stringInput" id="edfu-literatur" />
-
+	</div>
+	<div class="formLine ui-widget">
+		<label class="fakeLabel">Photos</label> <f:form.textfield name="photos" class="stringInput" id="edfu-photos" />
 	</div>
 	<div class="formLine">
 		<f:form.submit value="Speichern" />
