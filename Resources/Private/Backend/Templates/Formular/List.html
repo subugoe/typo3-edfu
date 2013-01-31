@@ -8,7 +8,8 @@
 	<fieldset name="Stelle">
 		<legend>Stelle</legend>
 	<div class="formLine">
-		<p><span class="fakeLabel">Band</span> <f:form.textfield name="Band" placeholder="Band" class="smallInt"/>
+		<p><span class="fakeLabel">Band</span>
+			<f:form.select name="band" options="{baende}"></f:form.select>
 	</div>
 	<div class="formLine">
 		<p><span class="fakeLabel">Start</span> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/></p>

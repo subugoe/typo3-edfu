@@ -47,6 +47,12 @@ class Tx_Edfu_Controller_FormularController extends Tx_Extbase_MVC_Controller_Ac
 	 */
 	protected $jQueryPath;
 
+	/**
+	 * @var Tx_Edfu_Service_BandService
+	 * @inject
+	 */
+	protected $bandService;
+
 	public function initializeAction() {
 		if (t3lib_extMgm::isLoaded('t3jquery')) {
 			$this->jQueryPath = tx_t3jquery::getJqJSBE(TRUE);
@@ -63,8 +69,12 @@ class Tx_Edfu_Controller_FormularController extends Tx_Extbase_MVC_Controller_Ac
 	 */
 	public function listAction() {
 		$forms = $this->formRepository->findAll();
+
+		$baende = $this->bandService->getBaende();
+
 		$this->view
 				->assign('forms', $forms)
+				->assign('baende', $baende)
 				->assign('jQuery', $this->jQueryPath);
 	}
 
