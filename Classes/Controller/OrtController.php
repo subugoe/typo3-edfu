@@ -43,13 +43,24 @@ class Tx_Edfu_Controller_OrtController extends Tx_Extbase_MVC_Controller_ActionC
 	protected $ortRepository;
 
 	/**
+	 * @var Tx_Edfu_Service_BandService
+	 * @inject
+	 */
+	protected $bandService;
+
+	/**
 	 * action list
 	 *
 	 * @return void
 	 */
 	public function listAction() {
+
+		$baende = $this->bandService->getBaende();
 		$places = $this->ortRepository->findAll();
-		$this->view->assign('places', $places);
+		$this->view
+				->assign('places', $places)
+				->assign('baende', $baende)
+				->assign('position', $this->position);
 	}
 
 	/**
