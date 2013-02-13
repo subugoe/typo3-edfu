@@ -1,20 +1,20 @@
 
 jQuery(function($) {
-  var ajaxUrl, extractLast, literaturAjaxUrl, split;
+  var extractLast, literaturAjaxUrl, photoAjaxUrl, split, texttypAjaxUrl;
   extractLast = function(term) {
     return split(term).pop();
   };
   split = function(val) {
     return val.split(/,\s*/);
   };
-  ajaxUrl = 'ajax.php?ajaxID=edfu::formularTextTyp';
+  texttypAjaxUrl = 'ajax.php?ajaxID=edfu::formularTextTyp';
   $('#edfu-texttyp').bind("keydown", function(event) {
     if (event.keyCode === $.ui.keyCode.TAB && $(this).data("autocomplete").menu.active) {
       return event.preventDefault();
     }
   }).autocomplete({
     source: function(request, response) {
-      return $.getJSON(ajaxUrl, {
+      return $.getJSON(texttypAjaxUrl, {
         term: extractLast(request.term)
       }, response);
     }
@@ -29,6 +29,19 @@ jQuery(function($) {
     source: function(request, response) {
       return $.getJSON(literaturAjaxUrl, {
         term: extractLast(request.term)
+      }, response);
+    }
+  });
+  false;
+  photoAjaxUrl = 'ajax.php?ajaxID=edfu::formularPhoto';
+  $('#edfu-photos').bind("keydown", function(event) {
+    if (event.keyCode === $.ui.keyCode.TAB && $(this).data("autocomplete").menu.active) {
+      return event.preventDefault();
+    }
+  }).autocomplete({
+    source: function(request, response) {
+      return $.getJSON(photoAjaxUrl, {
+        term: request.term
       }, response);
     }
   });

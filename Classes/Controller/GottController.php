@@ -49,25 +49,28 @@ class Tx_Edfu_Controller_GottController extends Tx_Extbase_MVC_Controller_Action
 	protected $position;
 
 	/**
+	 * @var Tx_Edfu_Service_BandService
+	 * @inject
+	 */
+	protected $bandService;
+
+	/**
 	 * action list
 	 *
 	 * @return void
 	 */
 	public function listAction() {
+
+		$baende = $this->bandService->getBaende();
 		$gods = $this->gottRepository->findAll();
 		$this->view
 				->assign('gods', $gods)
+				->assign('baende', $baende)
 				->assign('position', $this->position);
 	}
 
-	/**
-	 * action show
-	 *
-	 * @param Tx_Edfu_Domain_Model_Gott $god
-	 * @return void
-	 */
-	public function showAction(Tx_Edfu_Domain_Model_Gott $god) {
-		$this->view->assign('god', $god);
+	public function createAction() {
+
 	}
 
 }

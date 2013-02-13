@@ -33,5 +33,6 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 
 $TYPO3_CONF_VARS['BE']['AJAX']['edfu::formularTextTyp'] = t3lib_extMgm::extPath('edfu') . 'Classes/Ajax/Formular.php:Tx_Edfu_Ajax_Formular->getTextTypSuggestions';
 $TYPO3_CONF_VARS['BE']['AJAX']['edfu::formularLiteratur'] = t3lib_extMgm::extPath('edfu') . 'Classes/Ajax/Formular.php:Tx_Edfu_Ajax_Formular->getLiteraturSuggestions';
+$TYPO3_CONF_VARS['BE']['AJAX']['edfu::formularPhoto'] = t3lib_extMgm::extPath('edfu') . 'Classes/Ajax/Formular.php:Tx_Edfu_Ajax_Formular->getPhotoSuggestions';
 
 ?>

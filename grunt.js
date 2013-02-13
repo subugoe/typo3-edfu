@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 						concat: {
 							dist: {
 								src: ['<banner:meta.banner>', '<file_strip_banner:Resources/Public/JavaScript/<%= pkg.name %>.js>'],
-								dest: 'Resources/Public/JavaScript/<%= pkg.name %>c.js'
+								dest: 'Resources/Public/JavaScript/<%= pkg.name %>.js'
 							}
 						},
 						watch:{
