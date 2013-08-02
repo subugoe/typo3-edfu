@@ -3,8 +3,8 @@ if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-Tx_Extbase_Utility_Extension::configurePlugin(
-	$_EXTKEY,
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Ipf.' . $_EXTKEY,
 	'Edfu',
 	array(
 		'Wort' => 'list, show',
@@ -31,8 +31,8 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	)
 );
 
-$TYPO3_CONF_VARS['BE']['AJAX']['edfu::formularTextTyp'] = t3lib_extMgm::extPath('edfu') . 'Classes/Ajax/Formular.php:Tx_Edfu_Ajax_Formular->getTextTypSuggestions';
-$TYPO3_CONF_VARS['BE']['AJAX']['edfu::formularLiteratur'] = t3lib_extMgm::extPath('edfu') . 'Classes/Ajax/Formular.php:Tx_Edfu_Ajax_Formular->getLiteraturSuggestions';
-$TYPO3_CONF_VARS['BE']['AJAX']['edfu::formularPhoto'] = t3lib_extMgm::extPath('edfu') . 'Classes/Ajax/Formular.php:Tx_Edfu_Ajax_Formular->getPhotoSuggestions';
+$TYPO3_CONF_VARS['BE']['AJAX']['edfu::formularTextTyp'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('edfu') . 'Classes/Ajax/Formular.php:Tx_Edfu_Ajax_Formular->getTextTypSuggestions';
+$TYPO3_CONF_VARS['BE']['AJAX']['edfu::formularLiteratur'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('edfu') . 'Classes/Ajax/Formular.php:Tx_Edfu_Ajax_Formular->getLiteraturSuggestions';
+$TYPO3_CONF_VARS['BE']['AJAX']['edfu::formularPhoto'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('edfu') . 'Classes/Ajax/Formular.php:Tx_Edfu_Ajax_Formular->getPhotoSuggestions';
 
 ?>

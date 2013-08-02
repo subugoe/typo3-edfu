@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -32,12 +33,12 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Controller_WortController extends Tx_Extbase_MVC_Controller_ActionController {
+class WortController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * wordRepository
 	 *
-	 * @var Tx_Edfu_Domain_Repository_WortRepository
+	 * @var \Ipf\Edfu\Domain\Repository\WortRepository
 	 * @inject
 	 */
 	protected $wordRepository;
@@ -55,10 +56,10 @@ class Tx_Edfu_Controller_WortController extends Tx_Extbase_MVC_Controller_Action
 	/**
 	 * action show
 	 *
-	 * @param Tx_Edfu_Domain_Model_Wort $word
+	 * @param \Ipf\Edfu\Domain\Model\Wort $word
 	 * @return void
 	 */
-	public function showAction(Tx_Edfu_Domain_Model_Wort $word) {
+	public function showAction(\Ipf\Edfu\Domain\Model\Wort $word) {
 		$this->view->assign('word', $word);
 	}
 

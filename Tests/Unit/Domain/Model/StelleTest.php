@@ -26,7 +26,7 @@
  ***************************************************************/
 
 /**
- * Test case for class Tx_Edfu_Domain_Model_Stelle.
+ * Test case for class \Ipf\Edfu\Domain\Model\Stelle.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -38,14 +38,14 @@
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  * @author Sven-S. Porst <porst@sub.uni-goettingen.de>
  */
-class Tx_Edfu_Domain_Model_StelleTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class \Ipf\Edfu\Domain\Model\StelleTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var Tx_Edfu_Domain_Model_Stelle
+	 * @var \Ipf\Edfu\Domain\Model\Stelle
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Edfu_Domain_Model_Stelle();
+		$this->fixture = new \Ipf\Edfu\Domain\Model\Stelle();
 	}
 
 	public function tearDown() {

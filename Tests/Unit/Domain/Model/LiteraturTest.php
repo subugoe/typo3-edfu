@@ -26,7 +26,7 @@
  ***************************************************************/
 
 /**
- * Test case for class Tx_Edfu_Domain_Model_Literatur.
+ * Test case for class \Ipf\Edfu\Domain\Model\Literatur.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -38,14 +38,14 @@
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  * @author Sven-S. Porst <porst@sub.uni-goettingen.de>
  */
-class Tx_Edfu_Domain_Model_LiteraturTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class \Ipf\Edfu\Domain\Model\LiteraturTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var Tx_edfu_domain_model_literatur
+	 * @var \Ipf\Edfu\Domain\Model\Literatur
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Edfu_Domain_Model_Literatur();
+		$this->fixture = new \Ipf\Edfu\Domain\Model\Literatur();
 	}
 
 	public function tearDown() {

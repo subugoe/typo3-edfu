@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -32,12 +33,12 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Controller_FormularController extends Tx_Extbase_MVC_Controller_ActionController {
+class FormularController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * formRepository
 	 *
-	 * @var Tx_Edfu_Domain_Repository_FormularRepository
+	 * @var \Ipf\Edfu\Domain\Repository\FormularRepository
 	 * @inject
 	 */
 	protected $formRepository;
@@ -48,14 +49,14 @@ class Tx_Edfu_Controller_FormularController extends Tx_Extbase_MVC_Controller_Ac
 	protected $jQueryPath;
 
 	/**
-	 * @var Tx_Edfu_Service_BandService
+	 * @var \Ipf\Edfu\Service\BandService
 	 * @inject
 	 */
 	protected $bandService;
 
 	public function initializeAction() {
-		if (t3lib_extMgm::isLoaded('t3jquery')) {
-			$this->jQueryPath = tx_t3jquery::getJqJSBE(TRUE);
+		if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('t3jquery')) {
+			$this->jQueryPath = \tx_t3jquery::getJqJSBE(TRUE);
 		} else {
 			throw new Exception('Please create your jQuery Library using EXT:t3jquery', 1359463747);
 		}
@@ -81,10 +82,10 @@ class Tx_Edfu_Controller_FormularController extends Tx_Extbase_MVC_Controller_Ac
 	/**
 	 * action show
 	 *
-	 * @param Tx_Edfu_Domain_Model_Formular $form
+	 * @param \Ipf\Edfu\Domain\Model\Formular $form
 	 * @return void
 	 */
-	public function showAction(Tx_Edfu_Domain_Model_Formular $form) {
+	public function showAction(\Ipf\Edfu\Domain\Model\Formular $form) {
 		$this->view->assign('form', $form);
 	}
 

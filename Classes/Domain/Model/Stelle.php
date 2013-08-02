@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -32,10 +33,10 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Model_Stelle extends Tx_Extbase_DomainObject_AbstractValueObject {
+class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 
 	/**
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Band>;
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Band>;
 	 */
 	protected $bandId;
 
@@ -87,12 +88,12 @@ class Tx_Edfu_Domain_Model_Stelle extends Tx_Extbase_DomainObject_AbstractValueO
 	protected $zerstoerung;
 
 	/**
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Ort>;
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Ort>;
 	 */
 	protected $ort;
 
 	/**
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Ort>;
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Ort>;
 	 */
 	protected $szene;
 	/**
@@ -105,14 +106,14 @@ class Tx_Edfu_Domain_Model_Stelle extends Tx_Extbase_DomainObject_AbstractValueO
 	}
 
 	/**
-	 * Initializes all Tx_Extbase_Persistence_ObjectStorage properties.
+	 * Initializes all \TYPO3\CMS\Extbase\Persistence\ObjectStorage properties.
 	 *
 	 * @return void
 	 */
 	protected function initStorageObjects() {
-		$this->bandId = new Tx_Extbase_Persistence_ObjectStorage();
-		$this->ort = new Tx_Extbase_Persistence_ObjectStorage();
-		$this->szene = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->bandId = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->ort = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->szene = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -253,42 +254,42 @@ class Tx_Edfu_Domain_Model_Stelle extends Tx_Extbase_DomainObject_AbstractValueO
 	}
 
 	/**
-	 * @param \Tx_Extbase_Persistence_ObjectStorage $bandId
+	 * @param \\TYPO3\CMS\Extbase\Persistence\ObjectStorage $bandId
 	 */
 	public function setBandId($bandId) {
 		$this->bandId = $bandId;
 	}
 
 	/**
-	 * @return \Tx_Extbase_Persistence_ObjectStorage
+	 * @return \\TYPO3\CMS\Extbase\Persistence\ObjectStorage
 	 */
 	public function getBandId() {
 		return $this->bandId;
 	}
 
 	/**
-	 * @param \Tx_Extbase_Persistence_ObjectStorage $ort
+	 * @param \\TYPO3\CMS\Extbase\Persistence\ObjectStorage $ort
 	 */
 	public function setOrt($ort) {
 		$this->ort = $ort;
 	}
 
 	/**
-	 * @return \Tx_Extbase_Persistence_ObjectStorage
+	 * @return \\TYPO3\CMS\Extbase\Persistence\ObjectStorage
 	 */
 	public function getOrt() {
 		return $this->ort;
 	}
 
 	/**
-	 * @param \Tx_Extbase_Persistence_ObjectStorage $szene
+	 * @param \\TYPO3\CMS\Extbase\Persistence\ObjectStorage $szene
 	 */
 	public function setSzene($szene) {
 		$this->szene = $szene;
 	}
 
 	/**
-	 * @return \Tx_Extbase_Persistence_ObjectStorage
+	 * @return \\TYPO3\CMS\Extbase\Persistence\ObjectStorage
 	 */
 	public function getSzene() {
 		return $this->szene;

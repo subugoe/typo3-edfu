@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -32,7 +33,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Model_Wort extends Tx_Extbase_DomainObject_AbstractEntity {
+class Wort extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * Transliteration
@@ -65,7 +66,7 @@ class Tx_Edfu_Domain_Model_Wort extends Tx_Extbase_DomainObject_AbstractEntity {
 	/**
 	 * Berlin dictionary
 	 *
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Berlin>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Berlin>
 	 * @lazy
 	 */
 	protected $berlin;
@@ -73,7 +74,7 @@ class Tx_Edfu_Domain_Model_Wort extends Tx_Extbase_DomainObject_AbstractEntity {
 	/**
 	 * Position in chassinat
 	 *
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle>
 	 * @lazy
 	 */
 	protected $position;
@@ -89,7 +90,7 @@ class Tx_Edfu_Domain_Model_Wort extends Tx_Extbase_DomainObject_AbstractEntity {
 	}
 
 	/**
-	 * Initializes all Tx_Extbase_Persistence_ObjectStorage properties.
+	 * Initializes all \TYPO3\CMS\Extbase\Persistence\ObjectStorage properties.
 	 *
 	 * @return void
 	 */
@@ -99,9 +100,9 @@ class Tx_Edfu_Domain_Model_Wort extends Tx_Extbase_DomainObject_AbstractEntity {
 		 * It will be rewritten on each save in the extension builder
 		 * You may modify the constructor of this class instead
 		 */
-		$this->berlin = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->berlin = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		
-		$this->position = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->position = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -183,27 +184,27 @@ class Tx_Edfu_Domain_Model_Wort extends Tx_Extbase_DomainObject_AbstractEntity {
 	/**
 	 * Adds a Berlin
 	 *
-	 * @param Tx_Edfu_Domain_Model_Berlin $berlin
+	 * @param Berlin $berlin
 	 * @return void
 	 */
-	public function addBerlin(Tx_Edfu_Domain_Model_Berlin $berlin) {
+	public function addBerlin(Berlin $berlin) {
 		$this->berlin->attach($berlin);
 	}
 
 	/**
 	 * Removes a Berlin
 	 *
-	 * @param Tx_Edfu_Domain_Model_Berlin $berlinToRemove The Berlin to be removed
+	 * @param Berlin $berlinToRemove The Berlin to be removed
 	 * @return void
 	 */
-	public function removeBerlin(Tx_Edfu_Domain_Model_Berlin $berlinToRemove) {
+	public function removeBerlin(Berlin $berlinToRemove) {
 		$this->berlin->detach($berlinToRemove);
 	}
 
 	/**
 	 * Returns the berlin
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Berlin> $berlin
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Berlin> $berlin
 	 */
 	public function getBerlin() {
 		return $this->berlin;
@@ -212,37 +213,37 @@ class Tx_Edfu_Domain_Model_Wort extends Tx_Extbase_DomainObject_AbstractEntity {
 	/**
 	 * Sets the berlin
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Berlin> $berlin
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Berlin> $berlin
 	 * @return void
 	 */
-	public function setBerlin(Tx_Extbase_Persistence_ObjectStorage $berlin) {
+	public function setBerlin(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $berlin) {
 		$this->berlin = $berlin;
 	}
 
 	/**
 	 * Adds a Position
 	 *
-	 * @param Tx_Edfu_Domain_Model_Stelle $position
+	 * @param Stelle $position
 	 * @return void
 	 */
-	public function addPosition(Tx_Edfu_Domain_Model_Stelle $position) {
+	public function addPosition(Stelle $position) {
 		$this->position->attach($position);
 	}
 
 	/**
 	 * Removes a Position
 	 *
-	 * @param Tx_Edfu_Domain_Model_Stelle $positionToRemove The Position to be removed
+	 * @param Stelle $positionToRemove The Position to be removed
 	 * @return void
 	 */
-	public function removePosition(Tx_Edfu_Domain_Model_Stelle $positionToRemove) {
+	public function removePosition(Stelle $positionToRemove) {
 		$this->position->detach($positionToRemove);
 	}
 
 	/**
 	 * Returns the position
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle> $position
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $position
 	 */
 	public function getPosition() {
 		return $this->position;
@@ -251,10 +252,10 @@ class Tx_Edfu_Domain_Model_Wort extends Tx_Extbase_DomainObject_AbstractEntity {
 	/**
 	 * Sets the position
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle> $position
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $position
 	 * @return void
 	 */
-	public function setPosition(Tx_Extbase_Persistence_ObjectStorage $position) {
+	public function setPosition(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $position) {
 		$this->position = $position;
 	}
 

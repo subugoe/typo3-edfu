@@ -26,7 +26,7 @@
  ***************************************************************/
 
 /**
- * Test case for class Tx_Edfu_Domain_Model_Photo.
+ * Test case for class \Ipf\Edfu\Domain\Model\Photo.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -38,14 +38,14 @@
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  * @author Sven-S. Porst <porst@sub.uni-goettingen.de>
  */
-class Tx_Edfu_Domain_Model_PhotoTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class \Ipf\Edfu\Domain\Model\PhotoTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var Tx_Edfu_Domain_Model_Photo
+	 * @var \Ipf\Edfu\Domain\Model\Photo
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Edfu_Domain_Model_Photo();
+		$this->fixture = new \Ipf\Edfu\Domain\Model\Photo();
 	}
 
 	public function tearDown() {

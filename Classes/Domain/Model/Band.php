@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Domain\Model;
 
 /* * *************************************************************
  *  Copyright notice
@@ -28,7 +29,7 @@
 /**
  * Band from chassinat
  */
-class Tx_Edfu_Domain_Model_Band extends Tx_Extbase_DomainObject_AbstractValueObject {
+class Band extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 
 	/**
 	 * @var int

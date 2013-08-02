@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -32,24 +33,24 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Controller_GottController extends Tx_Extbase_MVC_Controller_ActionController {
+class GottController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * godRepository
 	 *
-	 * @var Tx_Edfu_Domain_Repository_GottRepository
+	 * @var \Ipf\Edfu\Domain\Repository\GottRepository
 	 * @inject
 	 */
 	protected $gottRepository;
 
 	/**
-	 * @var Tx_Edfu_Domain_Model_Stelle
+	 * @var \Ipf\Edfu\Domain\Model\Stelle
 	 * @inject
 	 */
 	protected $position;
 
 	/**
-	 * @var Tx_Edfu_Service_BandService
+	 * @var \Ipf\Edfu\Service\BandService
 	 * @inject
 	 */
 	protected $bandService;

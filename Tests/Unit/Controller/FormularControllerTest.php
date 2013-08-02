@@ -38,14 +38,14 @@
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  * @author Sven-S. Porst <porst@sub.uni-goettingen.de>
  */
-class Tx_Edfu_Controller_FormularControllerTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class Tx_Edfu_Controller_FormularControllerTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	/**
-	 * @var Tx_Edfu_Domain_Model_Formular
+	 * @var \Ipf\Edfu\Domain\Model\Formular
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new tx_edfu_domain_model_formular();
+		$this->fixture = new \Ipf\Edfu\Domain\Model\Formular();
 	}
 
 	public function tearDown() {

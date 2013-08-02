@@ -1,4 +1,6 @@
 <?php
+namespace Ipf\Edfu\ViewHelpers\Be;
+
 /***************************************************************
  *  Copyright notice
  *
@@ -26,7 +28,7 @@
 /**
  * @author Kay Strobach <typo3@kay-strobach.de>
  */
-class Tx_Edfu_ViewHelpers_Be_AddJsFileViewHelper extends Tx_Fluid_ViewHelpers_Be_AbstractBackendViewHelper {
+class AddJsFileViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\Be\AbstractBackendViewHelper {
 
 	/**
 	 * add additional file

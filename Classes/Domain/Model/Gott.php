@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -32,7 +33,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Model_Gott extends Tx_Extbase_DomainObject_AbstractEntity {
+class Gott extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * Transliteration
@@ -72,7 +73,7 @@ class Tx_Edfu_Domain_Model_Gott extends Tx_Extbase_DomainObject_AbstractEntity {
 	/**
 	 * Position
 	 *
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle>
 	 * @lazy
 	 */
 	protected $stelle;
@@ -88,7 +89,7 @@ class Tx_Edfu_Domain_Model_Gott extends Tx_Extbase_DomainObject_AbstractEntity {
 	}
 
 	/**
-	 * Initializes all Tx_Extbase_Persistence_ObjectStorage properties.
+	 * Initializes all \TYPO3\CMS\Extbase\Persistence\ObjectStorage properties.
 	 *
 	 * @return void
 	 */
@@ -98,7 +99,7 @@ class Tx_Edfu_Domain_Model_Gott extends Tx_Extbase_DomainObject_AbstractEntity {
 		 * It will be rewritten on each save in the extension builder
 		 * You may modify the constructor of this class instead
 		 */
-		$this->stelle = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->stelle = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -199,27 +200,27 @@ class Tx_Edfu_Domain_Model_Gott extends Tx_Extbase_DomainObject_AbstractEntity {
 	/**
 	 * Adds a Position
 	 *
-	 * @param Tx_Edfu_Domain_Model_Stelle $position
+	 * @param Stelle $position
 	 * @return void
 	 */
-	public function addPosition(Tx_Edfu_Domain_Model_Stelle $position) {
+	public function addPosition(Stelle $position) {
 		$this->stelle->attach($position);
 	}
 
 	/**
 	 * Removes a Position
 	 *
-	 * @param Tx_Edfu_Domain_Model_Stelle $positionToRemove The Position to be removed
+	 * @param Stelle $positionToRemove The Position to be removed
 	 * @return void
 	 */
-	public function removePosition(Tx_Edfu_Domain_Model_Stelle $positionToRemove) {
+	public function removePosition(Stelle $positionToRemove) {
 		$this->stelle->detach($positionToRemove);
 	}
 
 	/**
 	 * Returns the position
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle> $position
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $position
 	 */
 	public function getStelle() {
 		return $this->stelle;
@@ -228,10 +229,10 @@ class Tx_Edfu_Domain_Model_Gott extends Tx_Extbase_DomainObject_AbstractEntity {
 	/**
 	 * Sets the position
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle> $stelle
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $stelle
 	 * @return void
 	 */
-	public function setStelle(Tx_Extbase_Persistence_ObjectStorage $stelle) {
+	public function setStelle(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $stelle) {
 		$this->stelle = $stelle;
 	}
 

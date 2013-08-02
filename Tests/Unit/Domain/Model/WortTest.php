@@ -26,7 +26,7 @@
  ***************************************************************/
 
 /**
- * Test case for class Tx_Edfu_Domain_Model_Wort.
+ * Test case for class \Ipf\Edfu\Domain\Model\Wort.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -38,14 +38,14 @@
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  * @author Sven-S. Porst <porst@sub.uni-goettingen.de>
  */
-class Tx_Edfu_Domain_Model_WortTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class \Ipf\Edfu\Domain\Model\WortTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var Tx_Edfu_Domain_Model_Wort
+	 * @var \Ipf\Edfu\Domain\Model\Wort
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Edfu_Domain_Model_Wort();
+		$this->fixture = new \Ipf\Edfu\Domain\Model\Wort();
 	}
 
 	public function tearDown() {
@@ -123,7 +123,7 @@ class Tx_Edfu_Domain_Model_WortTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function getBerlinReturnsInitialValueForObjectStorageContainingTx_Edfu_Domain_Model_Berlin() { 
+	public function getBerlinReturnsInitialValueForObjectStorageContaining\Ipf\Edfu\Domain\Model\Berlin() {
 		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
@@ -134,8 +134,8 @@ class Tx_Edfu_Domain_Model_WortTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function setBerlinForObjectStorageContainingTx_Edfu_Domain_Model_BerlinSetsBerlin() { 
-		$berlin = new Tx_Edfu_Domain_Model_Berlin();
+	public function setBerlinForObjectStorageContaining\Ipf\Edfu\Domain\Model\BerlinSetsBerlin() {
+		$berlin = new \Ipf\Edfu\Domain\Model\Berlin();
 		$objectStorageHoldingExactlyOneBerlin = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOneBerlin->attach($berlin);
 		$this->fixture->setBerlin($objectStorageHoldingExactlyOneBerlin);
@@ -150,7 +150,7 @@ class Tx_Edfu_Domain_Model_WortTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function addBerlinToObjectStorageHoldingBerlin() {
-		$berlin = new Tx_Edfu_Domain_Model_Berlin();
+		$berlin = new \Ipf\Edfu\Domain\Model\Berlin();
 		$objectStorageHoldingExactlyOneBerlin = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOneBerlin->attach($berlin);
 		$this->fixture->addBerlin($berlin);
@@ -165,7 +165,7 @@ class Tx_Edfu_Domain_Model_WortTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function removeBerlinFromObjectStorageHoldingBerlin() {
-		$berlin = new Tx_Edfu_Domain_Model_Berlin();
+		$berlin = new \Ipf\Edfu\Domain\Model\Berlin();
 		$localObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$localObjectStorage->attach($berlin);
 		$localObjectStorage->detach($berlin);
@@ -181,7 +181,7 @@ class Tx_Edfu_Domain_Model_WortTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function getPositionReturnsInitialValueForObjectStorageContainingTx_Edfu_Domain_Model_Stelle() {
+	public function getPositionReturnsInitialValueForObjectStorageContaining\Ipf\Edfu\Domain\Model\Stelle() {
 		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
@@ -192,8 +192,8 @@ class Tx_Edfu_Domain_Model_WortTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function setPositionForObjectStorageContainingTx_Edfu_Domain_Model_StelleSetsPosition() {
-		$position = new Tx_Edfu_Domain_Model_Stelle();
+	public function setPositionForObjectStorageContaining\Ipf\Edfu\Domain\Model\StelleSetsPosition() {
+		$position = new \Ipf\Edfu\Domain\Model\Stelle();
 		$objectStorageHoldingExactlyOnePosition = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOnePosition->attach($position);
 		$this->fixture->setPosition($objectStorageHoldingExactlyOnePosition);
@@ -208,7 +208,7 @@ class Tx_Edfu_Domain_Model_WortTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function addPositionToObjectStorageHoldingPosition() {
-		$position = new Tx_Edfu_Domain_Model_Stelle();
+		$position = new \Ipf\Edfu\Domain\Model\Stelle();
 		$objectStorageHoldingExactlyOnePosition = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOnePosition->attach($position);
 		$this->fixture->addPosition($position);
@@ -223,7 +223,7 @@ class Tx_Edfu_Domain_Model_WortTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function removePositionFromObjectStorageHoldingPosition() {
-		$position = new Tx_Edfu_Domain_Model_Stelle();
+		$position = new \Ipf\Edfu\Domain\Model\Stelle();
 		$localObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$localObjectStorage->attach($position);
 		$localObjectStorage->detach($position);

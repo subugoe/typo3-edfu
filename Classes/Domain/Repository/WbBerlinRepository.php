@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Domain\Repository;
 
 /***************************************************************
  *  Copyright notice
@@ -32,7 +33,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Repository_WbBerlinRepository extends Tx_Extbase_Persistence_Repository {
+class WbBerlinRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 }
 ?>

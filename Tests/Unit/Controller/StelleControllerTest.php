@@ -38,14 +38,14 @@
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  * @author Sven-S. Porst <porst@sub.uni-goettingen.de>
  */
-class Tx_Edfu_Controller_StelleControllerTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class Tx_Edfu_Controller_StelleControllerTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	/**
-	 * @var Tx_Edfu_Domain_Model_Stelle
+	 * @var \Ipf\Edfu\Domain\Model\Stelle
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Edfu_Domain_Model_Stelle();
+		$this->fixture = new \Ipf\Edfu\Domain\Model\Stelle();
 	}
 
 	public function tearDown() {

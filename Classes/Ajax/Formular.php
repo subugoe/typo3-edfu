@@ -1,6 +1,9 @@
 <?php
+namespace Ipf\Edfu\Ajax;
 
-class Tx_Edfu_Ajax_Formular {
+use \TYPO3\CMS\Core\Utility\GeneralUtility;
+
+class Formular {
 
 	/**
 	 * @var string
@@ -69,14 +72,14 @@ class Tx_Edfu_Ajax_Formular {
 		$path = '/solr/edfu/';
 
 		/** @var tx_solr_ConnectionManager $solrConnection  */
-		$solrConnection = t3lib_div::makeInstance('tx_solr_ConnectionManager')->getConnection($host, $port, $path);
+		$solrConnection = GeneralUtility::makeInstance('tx_solr_ConnectionManager')->getConnection($host, $port, $path);
 
 		/** @var tx_solr_Search $search  */
-		$search = t3lib_div::makeInstance('tx_solr_Search', $solrConnection);
+		$search = GeneralUtility::makeInstance('tx_solr_Search', $solrConnection);
 
 
 		/** @var tx_solr_Query $query  */
-	 	$query = t3lib_div::makeInstance('tx_solr_Query');
+	 	$query = GeneralUtility::makeInstance('tx_solr_Query');
 		$query->setQueryString('typ:formular AND photo_collection: '. $this->term);
 		$query->useRawQueryString(TRUE);
 		$search->search($query);

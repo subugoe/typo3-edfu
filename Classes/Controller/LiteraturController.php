@@ -1,5 +1,5 @@
 <?php
-
+namespace Ipf\Edfu\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -32,12 +32,12 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Controller_LiteraturController extends Tx_Extbase_MVC_Controller_ActionController {
+class LiteraturController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * literatureRepository
 	 *
-	 * @var Tx_Edfu_Domain_Repository_LiteraturRepository
+	 * @var \Ipf\Edfu\Domain\Repository\LiteraturRepository
 	 * @inject
 	 */
 	protected $literaturRepository;

@@ -38,14 +38,14 @@
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  * @author Sven-S. Porst <porst@sub.uni-goettingen.de>
  */
-class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var tx_edfu_domain_model_formular
+	 * @var \Ipf\Edfu\Domain\Model\Formular
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new tx_edfu_domain_model_formular();
+		$this->fixture = new \Ipf\Edfu\Domain\Model\Formular();
 	}
 
 	public function tearDown() {
@@ -106,8 +106,8 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function getPhotosReturnsInitialValueForObjectStorageContainingTx_Edfu_Domain_Model_Photo() { 
-		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+	public function getPhotosReturnsInitialValueForObjectStorageContainingPhoto() {
+		$newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
 			$this->fixture->getPhotos()
@@ -117,9 +117,9 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function setPhotosForObjectStorageContainingTx_Edfu_Domain_Model_PhotoSetsPhotos() { 
-		$photo = new Tx_Edfu_Domain_Model_Photo();
-		$objectStorageHoldingExactlyOnePhotos = new Tx_Extbase_Persistence_ObjectStorage();
+	public function setPhotosForObjectStorageContainingPhotos() {
+		$photo = new \Ipf\Edfu\Domain\Model\Photo();
+		$objectStorageHoldingExactlyOnePhotos = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$objectStorageHoldingExactlyOnePhotos->attach($photo);
 		$this->fixture->setPhotos($objectStorageHoldingExactlyOnePhotos);
 
@@ -133,8 +133,8 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function addPhotoToObjectStorageHoldingPhotos() {
-		$photo = new Tx_Edfu_Domain_Model_Photo();
-		$objectStorageHoldingExactlyOnePhoto = new Tx_Extbase_Persistence_ObjectStorage();
+		$photo = new \Ipf\Edfu\Domain\Model\Photo();
+		$objectStorageHoldingExactlyOnePhoto = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$objectStorageHoldingExactlyOnePhoto->attach($photo);
 		$this->fixture->addPhoto($photo);
 
@@ -148,8 +148,8 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function removePhotoFromObjectStorageHoldingPhotos() {
-		$photo = new Tx_Edfu_Domain_Model_Photo();
-		$localObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+		$photo = new \Ipf\Edfu\Domain\Model\Photo();
+		$localObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$localObjectStorage->attach($photo);
 		$localObjectStorage->detach($photo);
 		$this->fixture->addPhoto($photo);
@@ -164,8 +164,8 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function getLiteratureReturnsInitialValueForObjectStorageContainingTx_Edfu_Domain_Model_Literature() { 
-		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+	public function getLiteratureReturnsInitialValueForObjectStorageContainingLiterature() {
+		$newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
 			$this->fixture->getLiterature()
@@ -175,9 +175,9 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function setLiteratureForObjectStorageContainingTx_Edfu_Domain_Model_LiteratureSetsLiterature() { 
-		$literature = new Tx_edfu_domain_model_literatur();
-		$objectStorageHoldingExactlyOneLiterature = new Tx_Extbase_Persistence_ObjectStorage();
+	public function setLiteratureForObjectStorageContainingLiteratureSetsLiterature() {
+		$literature = new \Ipf\Edfu\Domain\Model\Literatur();
+		$objectStorageHoldingExactlyOneLiterature = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$objectStorageHoldingExactlyOneLiterature->attach($literature);
 		$this->fixture->setLiterature($objectStorageHoldingExactlyOneLiterature);
 
@@ -191,8 +191,8 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function addLiteratureToObjectStorageHoldingLiterature() {
-		$literature = new Tx_edfu_domain_model_literatur();
-		$objectStorageHoldingExactlyOneLiterature = new Tx_Extbase_Persistence_ObjectStorage();
+		$literature = new \Ipf\Edfu\Domain\Model\Literatur();
+		$objectStorageHoldingExactlyOneLiterature = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$objectStorageHoldingExactlyOneLiterature->attach($literature);
 		$this->fixture->addLiterature($literature);
 
@@ -206,8 +206,8 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function removeLiteratureFromObjectStorageHoldingLiterature() {
-		$literature = new Tx_edfu_domain_model_literatur();
-		$localObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+		$literature = new \Ipf\Edfu\Domain\Model\Literatur();
+		$localObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$localObjectStorage->attach($literature);
 		$localObjectStorage->detach($literature);
 		$this->fixture->addLiterature($literature);
@@ -222,8 +222,8 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function getPositionReturnsInitialValueForObjectStorageContainingTx_Edfu_Domain_Model_Stelle() {
-		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+	public function getPositionReturnsInitialValueForObjectStorageContainingStelle() {
+		$newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
 			$this->fixture->getPosition()
@@ -233,9 +233,9 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function setPositionForObjectStorageContainingTx_Edfu_Domain_Model_StelleSetsPosition() {
-		$position = new Tx_Edfu_Domain_Model_Stelle();
-		$objectStorageHoldingExactlyOnePosition = new Tx_Extbase_Persistence_ObjectStorage();
+	public function setPositionForObjectStorageContainingStelleSetsPosition() {
+		$position = new \Ipf\Edfu\Domain\Model\Stelle();
+		$objectStorageHoldingExactlyOnePosition = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$objectStorageHoldingExactlyOnePosition->attach($position);
 		$this->fixture->setPosition($objectStorageHoldingExactlyOnePosition);
 
@@ -249,8 +249,8 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function addPositionToObjectStorageHoldingPosition() {
-		$position = new Tx_Edfu_Domain_Model_Stelle();
-		$objectStorageHoldingExactlyOnePosition = new Tx_Extbase_Persistence_ObjectStorage();
+		$position = new \Ipf\Edfu\Domain\Model\Stelle();
+		$objectStorageHoldingExactlyOnePosition = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$objectStorageHoldingExactlyOnePosition->attach($position);
 		$this->fixture->addPosition($position);
 
@@ -264,8 +264,8 @@ class Tx_Edfu_Domain_Model_FormTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	 * @test
 	 */
 	public function removePositionFromObjectStorageHoldingPosition() {
-		$position = new Tx_Edfu_Domain_Model_Stelle();
-		$localObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+		$position = new \Ipf\Edfu\Domain\Model\Stelle();
+		$localObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$localObjectStorage->attach($position);
 		$localObjectStorage->detach($position);
 		$this->fixture->addPosition($position);

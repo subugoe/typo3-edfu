@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -32,7 +33,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEntity {
+class Formular extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * Transliteration
@@ -58,7 +59,7 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 	/**
 	 * Photos
 	 *
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Photo>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Photo>
 	 * @lazy
 	 */
 	protected $photos;
@@ -66,7 +67,7 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 	/**
 	 * Literature
 	 *
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_edfu_domain_model_literatur>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ipf\Edfu\Domain\Model\Literatur>
 	 * @lazy
 	 */
 	protected $literature;
@@ -74,7 +75,7 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 	/**
 	 * Position
 	 *
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle>
 	 * @lazy
 	 */
 	protected $position;
@@ -90,7 +91,7 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 	}
 
 	/**
-	 * Initializes all Tx_Extbase_Persistence_ObjectStorage properties.
+	 * Initializes all \TYPO3\CMS\Extbase\Persistence\ObjectStorage properties.
 	 *
 	 * @return void
 	 */
@@ -100,11 +101,11 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 		 * It will be rewritten on each save in the extension builder
 		 * You may modify the constructor of this class instead
 		 */
-		$this->photos = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->photos = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		
-		$this->literature = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->literature = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		
-		$this->position = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->position = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -167,27 +168,27 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 	/**
 	 * Adds a Photo
 	 *
-	 * @param Tx_Edfu_Domain_Model_Photo $photo
+	 * @param Photo $photo
 	 * @return void
 	 */
-	public function addPhoto(Tx_Edfu_Domain_Model_Photo $photo) {
+	public function addPhoto(Photo $photo) {
 		$this->photos->attach($photo);
 	}
 
 	/**
 	 * Removes a Photo
 	 *
-	 * @param Tx_Edfu_Domain_Model_Photo $photoToRemove The Photo to be removed
+	 * @param Photo $photoToRemove The Photo to be removed
 	 * @return void
 	 */
-	public function removePhoto(Tx_Edfu_Domain_Model_Photo $photoToRemove) {
+	public function removePhoto(Photo $photoToRemove) {
 		$this->photos->detach($photoToRemove);
 	}
 
 	/**
 	 * Returns the photos
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Photo> $photos
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Photo> $photos
 	 */
 	public function getPhotos() {
 		return $this->photos;
@@ -196,37 +197,37 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 	/**
 	 * Sets the photos
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Photo> $photos
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Photo> $photos
 	 * @return void
 	 */
-	public function setPhotos(Tx_Extbase_Persistence_ObjectStorage $photos) {
+	public function setPhotos(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $photos) {
 		$this->photos = $photos;
 	}
 
 	/**
 	 * Adds a Literature
 	 *
-	 * @param Tx_edfu_domain_model_literatur $literature
+	 * @param \Ipf\Edfu\Domain\Model\Literatur $literature
 	 * @return void
 	 */
-	public function addLiterature(Tx_edfu_domain_model_literatur $literature) {
+	public function addLiterature(\Ipf\Edfu\Domain\Model\Literatur $literature) {
 		$this->literature->attach($literature);
 	}
 
 	/**
 	 * Removes a Literature
 	 *
-	 * @param Tx_edfu_domain_model_literatur $literatureToRemove The Literature to be removed
+	 * @param \Ipf\Edfu\Domain\Model\Literatur $literatureToRemove The Literature to be removed
 	 * @return void
 	 */
-	public function removeLiterature(Tx_edfu_domain_model_literatur $literatureToRemove) {
+	public function removeLiterature(\Ipf\Edfu\Domain\Model\Literatur $literatureToRemove) {
 		$this->literature->detach($literatureToRemove);
 	}
 
 	/**
 	 * Returns the literature
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_edfu_domain_model_literatur> $literature
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ipf\Edfu\Domain\Model\Literatur> $literature
 	 */
 	public function getLiterature() {
 		return $this->literature;
@@ -235,37 +236,37 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 	/**
 	 * Sets the literature
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_edfu_domain_model_literatur> $literature
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ipf\Edfu\Domain\Model\Literatur> $literature
 	 * @return void
 	 */
-	public function setLiterature(Tx_Extbase_Persistence_ObjectStorage $literature) {
+	public function setLiterature(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $literature) {
 		$this->literature = $literature;
 	}
 
 	/**
 	 * Adds a Position
 	 *
-	 * @param Tx_Edfu_Domain_Model_Stelle $position
+	 * @param Stelle $position
 	 * @return void
 	 */
-	public function addPosition(Tx_Edfu_Domain_Model_Stelle $position) {
+	public function addPosition(Stelle $position) {
 		$this->position->attach($position);
 	}
 
 	/**
 	 * Removes a Position
 	 *
-	 * @param Tx_Edfu_Domain_Model_Stelle $positionToRemove The Position to be removed
+	 * @param Stelle $positionToRemove The Position to be removed
 	 * @return void
 	 */
-	public function removePosition(Tx_Edfu_Domain_Model_Stelle $positionToRemove) {
+	public function removePosition(Stelle $positionToRemove) {
 		$this->position->detach($positionToRemove);
 	}
 
 	/**
 	 * Returns the position
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle> $position
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $position
 	 */
 	public function getPosition() {
 		return $this->position;
@@ -274,10 +275,10 @@ class Tx_Edfu_Domain_Model_Formular extends Tx_Extbase_DomainObject_AbstractEnti
 	/**
 	 * Sets the position
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_Edfu_Domain_Model_Stelle> $position
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $position
 	 * @return void
 	 */
-	public function setPosition(Tx_Extbase_Persistence_ObjectStorage $position) {
+	public function setPosition(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $position) {
 		$this->position = $position;
 	}
 

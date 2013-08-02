@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Domain\Model;
 
 /* * *************************************************************
  *  Copyright notice
@@ -28,7 +29,7 @@
 /**
  * Szene
  */
-class Tx_Edfu_Domain_Model_Szene extends Tx_Extbase_DomainObject_AbstractValueObject {
+class Szene extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 
 	/**
 	 * @var int

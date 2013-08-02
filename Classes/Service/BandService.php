@@ -1,5 +1,5 @@
 <?php
-
+namespace Ipf\Edfu\Service;
 /* * *************************************************************
  *  Copyright notice
  *
@@ -28,7 +28,7 @@
 /**
  * Description 
  */
-class Tx_Edfu_Service_BandService {
+class BandService {
 
 	/**
 	 * @var array

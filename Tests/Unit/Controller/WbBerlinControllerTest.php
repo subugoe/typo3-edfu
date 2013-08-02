@@ -38,14 +38,14 @@
  * @author Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  * @author Sven-S. Porst <porst@sub.uni-goettingen.de>
  */
-class Tx_Edfu_Controller_WbBerlinControllerTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class Tx_Edfu_Controller_WbBerlinControllerTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	/**
-	 * @var Tx_Edfu_Domain_Model_WbBerlin
+	 * @var \Ipf\Edfu\Domain\Model\WbBerlin
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Edfu_Domain_Model_WbBerlin();
+		$this->fixture = new \Ipf\Edfu\Domain\Model\WbBerlin();
 	}
 
 	public function tearDown() {

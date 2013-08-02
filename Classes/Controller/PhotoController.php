@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -32,22 +33,22 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Controller_PhotoController extends Tx_Extbase_MVC_Controller_ActionController {
+class PhotoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * photoRepository
 	 *
-	 * @var Tx_Edfu_Domain_Repository_PhotoRepository
+	 * @var \Ipf\Edfu\Domain\Repository\PhotoRepository
 	 */
 	protected $photoRepository;
 
 	/**
 	 * injectPhotoRepository
 	 *
-	 * @param Tx_Edfu_Domain_Repository_PhotoRepository $photoRepository
+	 * @param \Ipf\Edfu\Domain\Repository\PhotoRepository $photoRepository
 	 * @return void
 	 */
-	public function injectPhotoRepository(Tx_Edfu_Domain_Repository_PhotoRepository $photoRepository) {
+	public function injectPhotoRepository(\Ipf\Edfu\Domain\Repository\PhotoRepository $photoRepository) {
 		$this->photoRepository = $photoRepository;
 	}
 

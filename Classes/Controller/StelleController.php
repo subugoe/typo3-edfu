@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -32,12 +33,12 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Controller_StelleController extends Tx_Extbase_MVC_Controller_ActionController {
+class StelleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * positionRepository
 	 *
-	 * @var Tx_Edfu_Domain_Repository_StelleRepository
+	 * @var \Ipf\Edfu\Domain\Repository\StelleRepository
 	 * @inject
 	 */
 	protected $positionRepository;

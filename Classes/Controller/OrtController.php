@@ -1,4 +1,5 @@
 <?php
+namespace Ipf\Edfu\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -32,18 +33,18 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Edfu_Controller_OrtController extends Tx_Extbase_MVC_Controller_ActionController {
+class OrtController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * placeRepository
 	 *
-	 * @var Tx_Edfu_Domain_Repository_OrtRepository
+	 * @var \Ipf\Edfu\Domain\Repository\OrtRepository
 	 * @inject
 	 */
 	protected $ortRepository;
 
 	/**
-	 * @var Tx_Edfu_Service_BandService
+	 * @var \Ipf\Edfu\Service\BandService
 	 * @inject
 	 */
 	protected $bandService;
@@ -66,10 +67,10 @@ class Tx_Edfu_Controller_OrtController extends Tx_Extbase_MVC_Controller_ActionC
 	/**
 	 * action show
 	 *
-	 * @param Tx_Edfu_Domain_Model_Ort $place
+	 * @param \Ipf\Edfu\Domain\Model\Ort $place
 	 * @return void
 	 */
-	public function showAction(Tx_Edfu_Domain_Model_Ort $place) {
+	public function showAction(\Ipf\Edfu\Domain\Model\Ort $place) {
 		$this->view->assign('place', $place);
 	}
 
