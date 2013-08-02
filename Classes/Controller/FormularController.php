@@ -4,9 +4,8 @@ namespace Ipf\Edfu\Controller;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2012 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
- *  Sven-S. Porst <porst@sub.uni-goettingen.de>
- *  
+ *  (c) 2013 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
+ *
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is

@@ -3,7 +3,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2012 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
+ *  (c) 2013 Ingo Pfennigstorf <pfennigstorf@sub.uni-goettingen.de>
  *  			Sven-S. Porst <porst@sub.uni-goettingen.de>
  *  			
  *  All rights reserved
