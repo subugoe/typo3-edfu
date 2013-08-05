@@ -35,7 +35,7 @@ namespace Ipf\Edfu\Domain\Model;
 class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 
 	/**
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Band>;
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ipf\Edfu\Domain\Model\Band>;
 	 */
 	protected $bandId;
 
@@ -87,12 +87,12 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	protected $zerstoerung;
 
 	/**
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Ort>;
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ipf\Edfu\Domain\Model\Ort>;
 	 */
 	protected $ort;
 
 	/**
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Ort>;
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ipf\Edfu\Domain\Model\Ort>;
 	 */
 	protected $szene;
 	/**
@@ -253,42 +253,42 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	}
 
 	/**
-	 * @param \\TYPO3\CMS\Extbase\Persistence\ObjectStorage $bandId
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $bandId
 	 */
 	public function setBandId($bandId) {
 		$this->bandId = $bandId;
 	}
 
 	/**
-	 * @return \\TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
 	 */
 	public function getBandId() {
 		return $this->bandId;
 	}
 
 	/**
-	 * @param \\TYPO3\CMS\Extbase\Persistence\ObjectStorage $ort
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $ort
 	 */
 	public function setOrt($ort) {
 		$this->ort = $ort;
 	}
 
 	/**
-	 * @return \\TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
 	 */
 	public function getOrt() {
 		return $this->ort;
 	}
 
 	/**
-	 * @param \\TYPO3\CMS\Extbase\Persistence\ObjectStorage $szene
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $szene
 	 */
 	public function setSzene($szene) {
 		$this->szene = $szene;
 	}
 
 	/**
-	 * @return \\TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
 	 */
 	public function getSzene() {
 		return $this->szene;

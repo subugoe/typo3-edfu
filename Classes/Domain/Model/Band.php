@@ -41,6 +41,9 @@ class Band extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	 */
 	protected $freigegeben;
 
+	public function __construct() {
+ 	}
+
 	/**
 	 * @param int $freigegeben
 	 */

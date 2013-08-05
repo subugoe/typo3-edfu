@@ -61,7 +61,7 @@ class Ort extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Stelle
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ipf\Edfu\Domain\Model\Stelle>
 	 * @lazy
 	 */
 	protected $stelle;
@@ -131,27 +131,27 @@ class Ort extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Adds a Stelle
 	 *
-	 * @param Stelle $stelle
+	 * @param \Ipf\Edfu\Domain\Model\Stelle $stelle
 	 * @return void
 	 */
-	public function addStelle(Stelle $stelle) {
+	public function addStelle(\Ipf\Edfu\Domain\Model\Stelle $stelle) {
 		$this->stelle->attach($stelle);
 	}
 
 	/**
 	 * Removes a Stelle
 	 *
-	 * @param Stelle $stelleToRemove The Stelle to be removed
+	 * @param \Ipf\Edfu\Domain\Model\Stelle $stelleToRemove The Stelle to be removed
 	 * @return void
 	 */
-	public function removeStelle(Stelle $stelleToRemove) {
+	public function removeStelle(\Ipf\Edfu\Domain\Model\Stelle $stelleToRemove) {
 		$this->stelle->detach($stelleToRemove);
 	}
 
 	/**
 	 * Returns the stelle
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $stelle
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ipf\Edfu\Domain\Model\Stelle> $stelle
 	 */
 	public function getStelle() {
 		return $this->stelle;
@@ -160,7 +160,7 @@ class Ort extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the stelle
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $stelle
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ipf\Edfu\Domain\Model\Stelle> $stelle
 	 * @return void
 	 */
 	public function setStelle(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $stelle) {
