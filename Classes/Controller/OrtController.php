@@ -50,17 +50,17 @@ class OrtController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * action list
-	 *
+	 * @param \Ipf\Edfu\Domain\Model\Ort $ort
+	 * @dontvalidate $ort
 	 * @return void
 	 */
-	public function listAction() {
-
+	public function listAction(\Ipf\Edfu\Domain\Model\Ort $ort = NULL) {
 		$baende = $this->bandService->getBaende();
 		$places = $this->ortRepository->findAll();
 		$this->view
+				->assign('ort', $ort)
 				->assign('places', $places)
-				->assign('baende', $baende)
-				->assign('position', $this->position);
+				->assign('baende', $baende);
 	}
 
 	/**
@@ -71,6 +71,21 @@ class OrtController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 	 */
 	public function showAction(\Ipf\Edfu\Domain\Model\Ort $place) {
 		$this->view->assign('place', $place);
+	}
+
+
+	/**
+	 * @param \Ipf\Edfu\Domain\Model\Ort $ort
+	 */
+	public function createAction(\Ipf\Edfu\Domain\Model\Ort $ort) {
+		\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->arguments, __CLASS__ . ' @ ' . __LINE__);
+		$this->ortRepository->add($ort);
+		$this->controllerContext->getFlashMessageQueue()->addMessage(
+			new \TYPO3\CMS\Core\Messaging\FlashMessage(
+				$ort->getUebersetzung() . ' gespeichert', '', \TYPO3\CMS\Core\Messaging\FlashMessage::INFO
+			)
+		);
+		$this->forward('list');
 	}
 
 }

@@ -109,9 +109,12 @@ CREATE TABLE tx_edfu_domain_model_ort (
 		uid INT(11) NOT NULL AUTO_INCREMENT,
 		pid INT(11) DEFAULT '0' NOT NULL,
 
-		translation TEXT NOT NULL,
-		description TEXT NOT NULL,
-		position INT(11) UNSIGNED DEFAULT '0' NOT NULL,
+		`transliteration` TEXT NOT NULL,
+		`uebersetzung` TEXT,
+		`ortsbeschreibung` TEXT,
+		`anmerkung` TEXT,
+		`description` TEXT NOT NULL,
+		`position` INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 
 		tstamp INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		crdate INT(11) UNSIGNED DEFAULT '0' NOT NULL,
@@ -189,7 +192,7 @@ CREATE TABLE tx_edfu_domain_model_photo (
 # Table structure for table 'tx_edfu_domain_model_wb_berlin'
 #
 CREATE TABLE `tx_edfu_domain_model_wb_berlin` (
-		`uid` INT(11) NOT NULL,
+		`uid` INT(11) NOT NULL AUTO_INCREMENT,
 		`pid` INT(11) DEFAULT '0' NOT NULL,
 		`band` INT(11) DEFAULT NULL,
 		`seite_start` INT(11) DEFAULT NULL,
@@ -224,7 +227,7 @@ CREATE TABLE `tx_edfu_domain_model_wb_berlin` (
 # Table structure for table 'tx_edfu_domain_model_literatur'
 #
 CREATE TABLE `tx_edfu_domain_model_literatur` (
-		`uid` INT(11) NOT NULL,
+		`uid` INT(11) NOT NULL AUTO_INCREMENT,
 		`pid` INT(11) DEFAULT '0' NOT NULL,
 		`beschreibung` TEXT,
 		`tstamp` INT(11) UNSIGNED NOT NULL DEFAULT '0',
@@ -255,7 +258,7 @@ CREATE TABLE `tx_edfu_domain_model_literatur` (
 # Table structure for table 'tx_edfu_domain_model_stelle'
 #
 CREATE TABLE `tx_edfu_domain_model_stelle` (
-		`uid` INT(11) NOT NULL,
+		`uid` INT(11) NOT NULL AUTO_INCREMENT,
 		`pid` INT(11) DEFAULT '0' NOT NULL,
 		`band_uid` INT(11) NOT NULL,
 		`seite_start` INT(11) DEFAULT NULL,
@@ -292,7 +295,7 @@ CREATE TABLE `tx_edfu_domain_model_stelle` (
 );
 
 CREATE TABLE `tx_edfu_domain_model_band` (
-		`uid` INT(11) NOT NULL,
+		`uid` INT(11) NOT NULL AUTO_INCREMENT,
 		`pid` INT(11) DEFAULT '0' NOT NULL,
 		`nummer` INT(11) DEFAULT NULL,
 		`freigegeben` TINYINT(4) DEFAULT NULL,
@@ -320,7 +323,7 @@ CREATE TABLE `tx_edfu_domain_model_band` (
 );
 
 CREATE TABLE `tx_edfu_domain_model_szene` (
-  `uid` int(11) NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL,
   `nummer` int(11) DEFAULT NULL,
   `beschreibung` text,

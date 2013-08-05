@@ -4,36 +4,36 @@
 <h1><f:translate key="tx_edfu_domain_model_ort" /></h1>
 
 <f:flashMessages />
-<f:form name="hrdr" action="create">
+<f:form action="create" object="{ort}" name="ort">
+
 	<fieldset name="Stelle">
 		<legend>Stelle</legend>
-	<div class="formLine">
-		<p><span class="fakeLabel">Band</span>
-			<f:form.select name="band" options="{baende}"></f:form.select>
-	</div>
-	<div class="formLine">
-		<p><span class="fakeLabel">Start</span> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/></p>
-	</div>
-	<div class="formLine">
-	<p>
-		<span class="fakeLabel">Stop</span> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/>
-	</p>
-	</div>
+		<span class="fakeLabel">Band</span>
+		<f:form.select name="band" options="{baende}" property="stelle."></f:form.select>
+		<div class="formLine">
+			<p><span class="fakeLabel">Start</span> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/></p>
+		</div>
+		<div class="formLine">
+			<p>
+				<span class="fakeLabel">Stop</span> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/>
+			</p>
+		</div>
 	</fieldset>
+
 	<div class="formLine">
-		<label class="fakeLabel">Transliteration</label> <f:form.textfield name="transliteration" class="transliteration stringInput"/>
+		<label class="fakeLabel">Transliteration</label> <f:form.textfield property="transliteration" name="transliteration" class="transliteration stringInput"/>
 		<br />
 	</div>
 	<div class="formLine">
-		<label class="fakeLabel">Übersetzung</label> <f:form.textfield name="uebersetzunh" class="stringInput"/>
+		<label class="fakeLabel">Übersetzung</label> <f:form.textfield name="uebersetzung" class="stringInput" property="uebersetzung" />
 		<br />
 	</div>
 	<div class="formLine">
-		<label class="fakeLabel">Ortsbeschreibung</label> <f:form.textfield name="ortsbeschreibung" class="stringInput" id="edfu-ortsbeschreibung" />
+		<label class="fakeLabel">Ortsbeschreibung</label> <f:form.textfield name="ortsbeschreibung" class="stringInput" id="edfu-ortsbeschreibung" property="ortsbeschreibung" />
 		<br />
 	</div>
 	<div class="formLine">
-		<label class="fakeLabel">Anmerkung</label> <f:form.textarea name="beziehung" class="stringInput" id="edfu-beziehung" rows="5" cols="40" />
+		<label class="fakeLabel">Anmerkung</label> <f:form.textarea name="anmerkung" class="stringInput" id="edfu-anmerkung" rows="5" cols="40" property="anmerkung" />
 	</div>
 	<div class="formLine">
 		<f:form.submit value="Speichern" />

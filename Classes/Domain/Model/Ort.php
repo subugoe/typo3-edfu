@@ -59,12 +59,12 @@ class Ort extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $anmerkung;
 
 	/**
-	 * Position
+	 * Stelle
 	 *
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle>
 	 * @lazy
 	 */
-	protected $position;
+	protected $stelle;
 
 	/**
 	 * __construct
@@ -87,7 +87,7 @@ class Ort extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		 * It will be rewritten on each save in the extension builder
 		 * You may modify the constructor of this class instead
 		 */
-		$this->position = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->stelle = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -129,42 +129,42 @@ class Ort extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * Adds a Position
+	 * Adds a Stelle
 	 *
-	 * @param Stelle $position
+	 * @param Stelle $stelle
 	 * @return void
 	 */
-	public function addPosition(Stelle $position) {
-		$this->position->attach($position);
+	public function addStelle(Stelle $stelle) {
+		$this->stelle->attach($stelle);
 	}
 
 	/**
-	 * Removes a Position
+	 * Removes a Stelle
 	 *
-	 * @param Stelle $positionToRemove The Position to be removed
+	 * @param Stelle $stelleToRemove The Stelle to be removed
 	 * @return void
 	 */
-	public function removePosition(Stelle $positionToRemove) {
-		$this->position->detach($positionToRemove);
+	public function removeStelle(Stelle $stelleToRemove) {
+		$this->stelle->detach($stelleToRemove);
 	}
 
 	/**
-	 * Returns the position
+	 * Returns the stelle
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $position
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $stelle
 	 */
-	public function getPosition() {
-		return $this->position;
+	public function getStelle() {
+		return $this->stelle;
 	}
 
 	/**
-	 * Sets the position
+	 * Sets the stelle
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $position
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<Stelle> $stelle
 	 * @return void
 	 */
-	public function setPosition(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $position) {
-		$this->position = $position;
+	public function setStelle(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $stelle) {
+		$this->stelle = $stelle;
 	}
 
 	/**
