@@ -42,11 +42,26 @@ class OrtController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 	 */
 	protected $ortRepository;
 
+
+	/**
+	 * @var string
+	 */
+	protected $jQueryPath;
+
 	/**
 	 * @var \Ipf\Edfu\Service\BandService
 	 * @inject
 	 */
 	protected $bandService;
+
+	public function initializeAction() {
+		if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('t3jquery')) {
+			$this->jQueryPath = \tx_t3jquery::getJqJSBE(TRUE);
+		} else {
+			throw new Exception('Please create your jQuery Library using EXT:t3jquery', 1359463747);
+		}
+
+	}
 
 	/**
 	 * action list
@@ -60,6 +75,7 @@ class OrtController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 		$this->view
 				->assign('ort', $ort)
 				->assign('places', $places)
+				->assign('jQuery', $this->jQueryPath)
 				->assign('baende', $baende);
 	}
 

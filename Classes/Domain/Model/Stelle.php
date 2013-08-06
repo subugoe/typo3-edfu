@@ -37,33 +37,33 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ipf\Edfu\Domain\Model\Band>;
 	 */
-	protected $bandId;
+	protected $bandUid;
 
 	/**
 	 * Start page
 	 *
-	 * @var integer
+	 * @var int
 	 */
-	protected $seiteStart;
+	protected $seiteStart = 0;
 
 	/**
 	 * End page
 	 *
-	 * @var integer
+	 * @var int
 	 */
 	protected $seiteStop;
 
 	/**
 	 * Start line
 	 *
-	 * @var integer
+	 * @var int
 	 */
 	protected $zeileStart;
 
 	/**
 	 * End line
 	 *
-	 * @var integer
+	 * @var int
 	 */
 	protected $zeileStop;
 
@@ -110,7 +110,7 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	 * @return void
 	 */
 	protected function initStorageObjects() {
-		$this->bandId = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->bandUid = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->ort = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->szene = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
@@ -118,7 +118,7 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	/**
 	 * Returns the pageStart
 	 *
-	 * @return integer $pageStart
+	 * @return int $pageStart
 	 */
 	public function getSeiteStart() {
 		return $this->seiteStart;
@@ -132,12 +132,13 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	 */
 	public function setSeiteStart($pageStart) {
 		$this->seiteStart = $pageStart;
+		return $this;
 	}
 
 	/**
 	 * Returns the endPage
 	 *
-	 * @return integer $endPage
+	 * @return int $endPage
 	 */
 	public function getSeiteStop() {
 		return $this->seiteStop;
@@ -151,12 +152,13 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	 */
 	public function setSeiteStop($endPage) {
 		$this->seiteStop = $endPage;
+		return $this;
 	}
 
 	/**
 	 * Returns the lineStart
 	 *
-	 * @return integer $lineStart
+	 * @return int $lineStart
 	 */
 	public function getZeileStart() {
 		return $this->zeileStart;
@@ -165,17 +167,18 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	/**
 	 * Sets the lineStart
 	 *
-	 * @param integer $lineStart
+	 * @param int $lineStart
 	 * @return void
 	 */
 	public function setZeileStart($lineStart) {
 		$this->zeileStart = $lineStart;
+		return $this;
 	}
 
 	/**
 	 * Returns the lineEnd
 	 *
-	 * @return integer $lineEnd
+	 * @return int $lineEnd
 	 */
 	public function getZeileStop() {
 		return $this->zeileStop;
@@ -184,11 +187,12 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	/**
 	 * Sets the lineEnd
 	 *
-	 * @param integer $lineEnd
+	 * @param int $lineEnd
 	 * @return void
 	 */
 	public function setZeileStop($lineEnd) {
 		$this->zeileStop = $lineEnd;
+		return $this;
 	}
 
 	/**
@@ -208,6 +212,7 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	 */
 	public function setAnmerkung($note) {
 		$this->anmerkung = $note;
+		return $this;
 	}
 
 	/**
@@ -227,6 +232,7 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	 */
 	public function setStopUnsicher($stopDoubtful) {
 		$this->stopUnsicher = $stopDoubtful;
+		return $this;
 	}
 
 	/**
@@ -243,6 +249,7 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	 */
 	public function setZerstoerung($zerstoerung) {
 		$this->zerstoerung = $zerstoerung;
+		return $this;
 	}
 
 	/**
@@ -253,17 +260,18 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	}
 
 	/**
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $bandId
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $bandUid
 	 */
-	public function setBandId($bandId) {
-		$this->bandId = $bandId;
+	public function setBandUid($bandUid) {
+		$this->bandUid = $bandUid;
+		return $this;
 	}
 
 	/**
 	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
 	 */
-	public function getBandId() {
-		return $this->bandId;
+	public function getBandUid() {
+		return $this->bandUid;
 	}
 
 	/**
@@ -271,6 +279,7 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	 */
 	public function setOrt($ort) {
 		$this->ort = $ort;
+		return $this;
 	}
 
 	/**
@@ -285,6 +294,7 @@ class Stelle extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	 */
 	public function setSzene($szene) {
 		$this->szene = $szene;
+		return $this;
 	}
 
 	/**

@@ -114,7 +114,7 @@ CREATE TABLE tx_edfu_domain_model_ort (
 		`ortsbeschreibung` TEXT,
 		`anmerkung` TEXT,
 		`description` TEXT NOT NULL,
-		`position` INT(11) UNSIGNED DEFAULT '0' NOT NULL,
+		`stelle` INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 
 		tstamp INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		crdate INT(11) UNSIGNED DEFAULT '0' NOT NULL,

@@ -4,21 +4,27 @@
 <h1><f:translate key="tx_edfu_domain_model_ort" /></h1>
 
 <f:flashMessages />
-<f:form action="create" object="{ort}" name="ort">
 <f:debug>{_all}</f:debug>
+	<f:form name="stelle">
 	<fieldset name="Stelle">
 		<legend>Stelle</legend>
 		<span class="fakeLabel">Band</span>
-		<f:form.select name="band" options="{baende}" property="stelle.bandId.nummer"></f:form.select>
+		<f:form.select name="band" options="{baende}" property="stelle.bandId" id="band"></f:form.select>
 		<div class="formLine">
-			<p><span class="fakeLabel">Start</span> <f:form.textfield name="seiteStart" placeholder="Seite" class="smallInt" property="stelle.seiteStart"/> <f:form.textfield name="zeileStart" property="stelle.zeileStart" placeholder="Zeile" class="smallInt"/></p>
+			<p><span class="fakeLabel">Start</span> <f:form.textfield name="seiteStart" id="seiteStart" placeholder="Seite" class="smallInt" property="stelle.seiteStart"/>
+				<f:form.textfield name="zeileStart" property="stelle.zeileStart" id="zeileStart" placeholder="Zeile" class="smallInt"/></p>
 		</div>
 		<div class="formLine">
 			<p>
-				<span class="fakeLabel">Stop</span> <f:form.textfield name="seiteStop" placeholder="Seite" class="smallInt" property="stelle.seiteStop"/> <f:form.textfield name="zeileStop" property="stelle.zeileStop" placeholder="Zeile" class="smallInt"/>
+				<span class="fakeLabel">Stop</span> <f:form.textfield name="seiteStop" placeholder="Seite" class="smallInt" property="stelle.seiteStop" id="seiteStop"/>
+				<f:form.textfield name="zeileStop" id="zeileStop" property="stelle.zeileStop" placeholder="Zeile" class="smallInt"/>
 			</p>
 		</div>
 	</fieldset>
+	</f:form>
+
+	<div class="expand">
+	<f:form action="create" object="{ort}" name="ort">
 
 	<div class="formLine">
 		<label class="fakeLabel">Transliteration</label> <f:form.textfield property="transliteration" name="transliteration" class="transliteration stringInput"/>
@@ -39,6 +45,6 @@
 		<f:form.submit value="Speichern" />
 	</div>
 </f:form>
-
+	</div>
 <a href="">Reload</a>
 </f:section>
