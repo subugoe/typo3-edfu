@@ -69,7 +69,10 @@ class StelleRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 			'band_uid' => $stelle['bandUid'],
 			'seite_start' => $stelle['seiteStart'],
 			'zeile_stop' => $stelle['zeileStop'],
-			'seite_stop' => $stelle['seiteStop']
+			'seite_stop' => $stelle['seiteStop'],
+			'crdate' => time(),
+			'tstamp' => time(),
+			'cruser_id' => $GLOBALS['BE_USER']->user['uid']
 		);
 
 		return $GLOBALS['TYPO3_DB']->exec_INSERTquery(
