@@ -50,7 +50,9 @@ jQuery ($) ->
 			zeileStop: zeileStop
 			},
 		(data) ->
-			if (data.length > 0)
-				$('#stelleChecked').html(data);
+			jsonData = $.parseJSON(data)
+			if jsonData.length > 2
+				$('#stelleChecked').text("Stelle mit der Id " + $.parseJSON(jsonData)[0].uid + " vorhanden");
 		)
+
 	)
