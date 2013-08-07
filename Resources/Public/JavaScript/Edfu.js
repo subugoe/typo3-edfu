@@ -64,7 +64,9 @@ jQuery(function($) {
       var jsonData;
       jsonData = $.parseJSON(data);
       if (jsonData.length > 2) {
-        return $('#stelleChecked').text("Stelle mit der Id " + $.parseJSON(jsonData)[0].uid + " vorhanden");
+        return $('#stelleChecked').text("Stelle mit der Id " + $.parseJSON(jsonData)[0].uid + " ist vorhanden");
+      } else {
+        return $('#stelleChecked').html($('<input>').attr('type', 'submit').attr('value', 'Anlegen'));
       }
     });
   });

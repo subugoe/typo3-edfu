@@ -52,7 +52,9 @@ jQuery ($) ->
 		(data) ->
 			jsonData = $.parseJSON(data)
 			if jsonData.length > 2
-				$('#stelleChecked').text("Stelle mit der Id " + $.parseJSON(jsonData)[0].uid + " vorhanden");
+				$('#stelleChecked').text("Stelle mit der Id " + $.parseJSON(jsonData)[0].uid + " ist vorhanden")
+			else
+				$('#stelleChecked').html($('<input>').attr('type', 'submit').attr('value', 'Anlegen'))
 		)
 
 	)
