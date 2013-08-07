@@ -132,7 +132,26 @@ class Formular {
 	protected function checkExistingStelle($stelle) {
 		/** @var \Ipf\Edfu\Domain\Repository\StelleRepository $stelleRepository */
 		$stelleRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Ipf\Edfu\Domain\Repository\StelleRepository');
-		return json_encode($stelleRepository->findStelleByLiteratureParameters($stelle));
+		return $stelleRepository->findStelleByLiteratureParameters($stelle);
+	}
+
+	/**
+	 * adds a stelle to the repository
+	 */
+	public function addStelle() {
+		if ($_POST) {
+			$stelle = array();
+			$stelle['bandUid'] = (intval($_POST['bandUid'])) + 1;
+			$stelle['seiteStart'] = intval($_POST['seiteStart']);
+			$stelle['seiteStop'] = intval($_POST['seiteStop']);
+			$stelle['zeileStart'] = intval($_POST['zeileStart']);
+			$stelle['zeileStop'] = intval($_POST['zeileStop']);
+
+			/** @var \Ipf\Edfu\Domain\Repository\StelleRepository $stelleRepository */
+			$stelleRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Ipf\Edfu\Domain\Repository\StelleRepository');
+
+			echo json_encode($stelleRepository->addNewStelle($stelle));
+		}
 	}
 
 }

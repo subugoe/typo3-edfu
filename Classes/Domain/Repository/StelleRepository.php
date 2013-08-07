@@ -34,9 +34,11 @@ namespace Ipf\Edfu\Domain\Repository;
  */
 class StelleRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
+	const TABLE_NAME = 'tx_edfu_domain_model_stelle';
+
 	public function initializeObject() {
-		$querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
-		$querySettings->setRespectStoragePage(FALSE);
+		//$querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+		//$querySettings->setRespectStoragePage(FALSE);
 	}
 
 	/**
@@ -47,7 +49,7 @@ class StelleRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 		$locations = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
 				'*',
-				'tx_edfu_domain_model_stelle',
+				self::TABLE_NAME,
 				'zeile_start = ' . $stelle['zeileStart'] .
 				' AND band_uid = ' . $stelle['bandUid'] .
 				' AND seite_start = ' . $stelle['seiteStart'] .
@@ -57,6 +59,24 @@ class StelleRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 		return $locations;
 		}
+
+	/**
+	 * @param array $stelle
+	 */
+	public function addNewStelle($stelle) {
+		$stelleData = array(
+			'zeile_start' => $stelle['zeileStart'],
+			'band_uid' => $stelle['bandUid'],
+			'seite_start' => $stelle['seiteStart'],
+			'zeile_stop' => $stelle['zeileStop'],
+			'seite_stop' => $stelle['seiteStop']
+		);
+
+		return $GLOBALS['TYPO3_DB']->exec_INSERTquery(
+			self::TABLE_NAME,
+			$stelleData
+		);
+	}
 
 }
 

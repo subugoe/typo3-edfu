@@ -51,10 +51,32 @@ jQuery ($) ->
 			},
 		(data) ->
 			jsonData = $.parseJSON(data)
-			if jsonData.length > 2
-				$('#stelleChecked').text("Stelle mit der Id " + $.parseJSON(jsonData)[0].uid + " ist vorhanden")
+			if jsonData.length > 0
+				$('#stelleChecked').text("Stelle mit der Id " + jsonData[0].uid + " ist vorhanden")
 			else
 				$('#stelleChecked').html($('<input>').attr('type', 'submit').attr('value', 'Anlegen'))
 		)
 
 	)
+
+	addStelleUrl = 'ajax.php?ajaxID=edfu::addStelle'
+	$('form[name="stelle"]').submit ->
+		console.log "Submitted"
+		bandUid = $('#band').val()
+		seiteStart = $('#seiteStart').val()
+		zeileStart = $('#zeileStart').val()
+		zeileStop = $('#zeileStop').val()
+		seiteStop = $('#seiteStop').val()
+		$.post(
+			addStelleUrl,
+			{bandUid: bandUid,
+			seiteStart: seiteStart,
+			seiteStop: seiteStop,
+			zeileStart: zeileStart,
+			zeileStop: zeileStop
+			},
+				(data) ->
+					if data is "true"
+						$('#stelleChecked').text("Stelle wurde in der Datenbank angelegt")
+		)
+		false
