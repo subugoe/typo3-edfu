@@ -150,7 +150,12 @@ class Formular {
 			/** @var \Ipf\Edfu\Domain\Repository\StelleRepository $stelleRepository */
 			$stelleRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Ipf\Edfu\Domain\Repository\StelleRepository');
 
-			echo json_encode($stelleRepository->addNewStelle($stelle));
+			echo json_encode(
+				array(
+					"inserted" => $stelleRepository->addNewStelle($stelle),
+					"insertedId" => $GLOBALS['TYPO3_DB']->sql_insert_id()
+				)
+			);
 		}
 	}
 

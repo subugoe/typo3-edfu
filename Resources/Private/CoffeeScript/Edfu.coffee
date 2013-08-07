@@ -76,7 +76,8 @@ jQuery ($) ->
 			zeileStop: zeileStop
 			},
 				(data) ->
-					if data is "true"
-						$('#stelleChecked').text("Stelle wurde in der Datenbank angelegt")
+					jsonData = $.parseJSON(data)
+					if jsonData.inserted is true
+						$('#stelleChecked').text("Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt")
 		)
 		false

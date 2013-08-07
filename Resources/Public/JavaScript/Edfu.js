@@ -86,8 +86,10 @@ jQuery(function($) {
       zeileStart: zeileStart,
       zeileStop: zeileStop
     }, function(data) {
-      if (data === "true") {
-        return $('#stelleChecked').text("Stelle wurde in der Datenbank angelegt");
+      var jsonData;
+      jsonData = $.parseJSON(data);
+      if (jsonData.inserted === true) {
+        return $('#stelleChecked').text("Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt");
       }
     });
     return false;
