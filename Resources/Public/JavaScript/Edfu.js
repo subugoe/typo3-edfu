@@ -48,20 +48,22 @@ jQuery(function($) {
   false;
   stelleUrl = 'ajax.php?ajaxID=edfu::checkStelle';
   return $('form[name="stelle"]').bind("keydown", function(event) {
-    var band, seiteStart, seiteStop, zeileStart, zeileStop;
-    band = $('#band').val();
+    var bandUid, seiteStart, seiteStop, zeileStart, zeileStop;
+    bandUid = $('#band').val();
     seiteStart = $('#seiteStart').val();
     zeileStart = $('#zeileStart').val();
     zeileStop = $('#zeileStop').val();
     seiteStop = $('#seiteStop').val();
     return $.post(stelleUrl, {
-      band: band,
+      bandUid: bandUid,
       seiteStart: seiteStart,
       seiteStop: seiteStop,
       zeileStart: zeileStart,
       zeileStop: zeileStop
     }, function(data) {
-      return console.log(data);
+      if (data.length > 0) {
+        return $('#stelleChecked').html(data);
+      }
     });
   });
 });

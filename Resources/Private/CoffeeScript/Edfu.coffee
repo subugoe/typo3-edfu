@@ -36,20 +36,21 @@ jQuery ($) ->
 	# check if a stelle already exists - if not it is being saved
 	stelleUrl = 'ajax.php?ajaxID=edfu::checkStelle'
 	$('form[name="stelle"]').bind("keydown", (event) ->
-		band = $('#band').val()
+		bandUid = $('#band').val()
 		seiteStart = $('#seiteStart').val()
 		zeileStart = $('#zeileStart').val()
 		zeileStop = $('#zeileStop').val()
 		seiteStop = $('#seiteStop').val()
 		$.post(
 			stelleUrl,
-			{band: band,
+			{bandUid: bandUid,
 			seiteStart: seiteStart,
 			seiteStop: seiteStop,
 			zeileStart: zeileStart,
 			zeileStop: zeileStop
 			},
 		(data) ->
-					console.log(data)
+			if (data.length > 0)
+				$('#stelleChecked').html(data);
 		)
 	)

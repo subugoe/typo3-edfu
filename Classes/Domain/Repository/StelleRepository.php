@@ -41,20 +41,22 @@ class StelleRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 	/**
 	 * @param array $stelle
-	 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+	 * @return array
 	 */
 	public function findStelleByLiteratureParameters($stelle) {
-		$query = $this->createQuery();
-		return $query->matching(
-			$query->logicalAnd(
-				$query->equals('bandUid', $stelle['band']),
-				$query->equals('seiteStart', $stelle['seiteStart']),
-				$query->equals('seiteStop', $stelle['seiteStop']),
-				$query->equals('zeileStart', $stelle['zeileStart']),
-				$query->equals('zeileStop', $stelle['zeileStop'])
-			)
-		)->execute();
-	}
+
+		$locations = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
+				'*',
+				'tx_edfu_domain_model_stelle',
+				'zeile_start = ' . $stelle['zeileStart'] .
+				' AND band_uid = ' . $stelle['bandUid'] .
+				' AND seite_start = ' . $stelle['seiteStart'] .
+				' AND zeile_stop = ' . $stelle['zeileStop'] .
+				' AND seite_stop = ' . $stelle['seiteStop']
+			);
+
+		return $locations;
+		}
 
 }
 

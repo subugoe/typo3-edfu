@@ -115,7 +115,7 @@ class Formular {
 	public function checkStelle() {
 		if ($_POST) {
 			$stelle = array();
-			$stelle['bandId'] = intval($_POST['band']);
+			$stelle['bandUid'] = (intval($_POST['bandUid'])) + 1;
 			$stelle['seiteStart'] = intval($_POST['seiteStart']);
 			$stelle['seiteStop'] = intval($_POST['seiteStop']);
 			$stelle['zeileStart'] = intval($_POST['zeileStart']);
@@ -125,13 +125,14 @@ class Formular {
 		}
 	}
 
+	/**
+	 * @param array $stelle
+	 * @return string
+	 */
 	protected function checkExistingStelle($stelle) {
-		/** @var \Ipf\Edfu\Domain\Model\Stelle $stelleModel */
-		$stelleModel = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Ipf\Edfu\Domain\Model\Stelle');
-
 		/** @var \Ipf\Edfu\Domain\Repository\StelleRepository $stelleRepository */
 		$stelleRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Ipf\Edfu\Domain\Repository\StelleRepository');
-		return $stelleRepository->findStelleByLiteratureParameters($stelle)->count();
+		return json_encode($stelleRepository->findStelleByLiteratureParameters($stelle));
 	}
 
 }
