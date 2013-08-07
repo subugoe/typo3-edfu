@@ -86,10 +86,12 @@ jQuery(function($) {
       zeileStart: zeileStart,
       zeileStop: zeileStop
     }, function(data) {
-      var jsonData;
+      var jsonData, stelleId;
       jsonData = $.parseJSON(data);
       if (jsonData.inserted === true) {
-        return $('#stelleChecked').text("Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt");
+        $('#stelleChecked').text("Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt");
+        stelleId = $('<input/>').attr('type', 'hidden').attr('name', 'position').attr('value', jsonData.insertedId);
+        return $('.edfuForm').append(stelleId);
       }
     });
     return false;
