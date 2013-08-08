@@ -61,10 +61,13 @@ jQuery(function($) {
       zeileStart: zeileStart,
       zeileStop: zeileStop
     }, function(data) {
-      var jsonData;
+      var jsonData, message, title;
       jsonData = $.parseJSON(data);
       if (jsonData.length > 0) {
-        $('#stelleChecked').text("Stelle mit der Id " + jsonData[0].uid + " ist vorhanden");
+        title = "Stelle";
+        message = "Stelle mit der Id " + jsonData[0].uid + " ist vorhanden";
+        TYPO3.Flashmessage.display(TYPO3.Severity.information, title, message, 5);
+        $('#stelleChecked').text("");
         return $('input.hiddenStelle').attr('value', jsonData[0].uid);
       } else {
         return $('#stelleChecked').html($('<input>').attr('type', 'submit').attr('value', 'Anlegen'));
@@ -74,7 +77,6 @@ jQuery(function($) {
   addStelleUrl = 'ajax.php?ajaxID=edfu::addStelle';
   return $('form[name="stelle"]').submit(function() {
     var bandUid, seiteStart, seiteStop, zeileStart, zeileStop;
-    console.log("Submitted");
     bandUid = $('#band').val();
     seiteStart = $('#seiteStart').val();
     zeileStart = $('#zeileStart').val();
@@ -87,10 +89,13 @@ jQuery(function($) {
       zeileStart: zeileStart,
       zeileStop: zeileStop
     }, function(data) {
-      var jsonData;
+      var jsonData, message, title;
       jsonData = $.parseJSON(data);
       if (jsonData.inserted === true) {
-        $('#stelleChecked').text("Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt");
+        title = "Stelle";
+        message = "Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt";
+        TYPO3.Flashmessage.display(TYPO3.Severity.ok, title, message, 5);
+        $('#stelleChecked').empty();
         return $('input.hiddenStelle').attr('value', jsonData.insertedId);
       }
     });

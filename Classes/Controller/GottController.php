@@ -43,18 +43,6 @@ class GottController extends EdfuController {
 	protected $gottRepository;
 
 	/**
-	 * @var \Ipf\Edfu\Domain\Model\Stelle
-	 * @inject
-	 */
-	protected $position;
-
-	/**
-	 * @var \Ipf\Edfu\Service\BandService
-	 * @inject
-	 */
-	protected $bandService;
-
-	/**
 	 * action list
 	 *
 	 * @return void
@@ -66,8 +54,7 @@ class GottController extends EdfuController {
 		$this->view
 				->assign('gods', $gods)
 				->assign('baende', $baende)
-				->assign('jQuery', $this->jQueryPath)
-				->assign('position', $this->position);
+				->assign('jQuery', $this->jQueryPath);
 	}
 
 	public function createAction() {

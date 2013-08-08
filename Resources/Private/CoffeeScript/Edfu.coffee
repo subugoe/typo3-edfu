@@ -52,7 +52,10 @@ jQuery ($) ->
 		(data) ->
 			jsonData = $.parseJSON(data)
 			if jsonData.length > 0
-				$('#stelleChecked').text("Stelle mit der Id " + jsonData[0].uid + " ist vorhanden")
+				title = "Stelle"
+				message = "Stelle mit der Id " + jsonData[0].uid + " ist vorhanden"
+				TYPO3.Flashmessage.display(TYPO3.Severity.information, title, message, 5)
+				$('#stelleChecked').text("")
 				$('input.hiddenStelle').attr('value', jsonData[0].uid)
 			else
 				$('#stelleChecked').html($('<input>').attr('type', 'submit').attr('value', 'Anlegen'))
@@ -62,7 +65,6 @@ jQuery ($) ->
 
 	addStelleUrl = 'ajax.php?ajaxID=edfu::addStelle'
 	$('form[name="stelle"]').submit ->
-		console.log "Submitted"
 		bandUid = $('#band').val()
 		seiteStart = $('#seiteStart').val()
 		zeileStart = $('#zeileStart').val()
@@ -79,7 +81,10 @@ jQuery ($) ->
 				(data) ->
 					jsonData = $.parseJSON(data)
 					if jsonData.inserted is true
-						$('#stelleChecked').text("Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt")
+						title = "Stelle"
+						message = "Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt"
+						TYPO3.Flashmessage.display(TYPO3.Severity.ok, title, message, 5)
+						$('#stelleChecked').empty()
 						$('input.hiddenStelle').attr('value', jsonData.insertedId)
 		)
 		false

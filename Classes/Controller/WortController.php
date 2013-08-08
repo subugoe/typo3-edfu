@@ -32,7 +32,7 @@ namespace Ipf\Edfu\Controller;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class WortController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class WortController extends EdfuController {
 
 	/**
 	 * wordRepository

@@ -32,7 +32,7 @@ namespace Ipf\Edfu\Controller;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class FormularController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class FormularController extends EdfuController {
 
 	/**
 	 * formRepository
@@ -41,26 +41,6 @@ class FormularController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 * @inject
 	 */
 	protected $formRepository;
-
-	/**
-	 * @var string
-	 */
-	protected $jQueryPath;
-
-	/**
-	 * @var \Ipf\Edfu\Service\BandService
-	 * @inject
-	 */
-	protected $bandService;
-
-	public function initializeAction() {
-		if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('t3jquery')) {
-			$this->jQueryPath = \tx_t3jquery::getJqJSBE(TRUE);
-		} else {
-			throw new Exception('Please create your jQuery Library using EXT:t3jquery', 1359463747);
-		}
-
-	}
 
 	/**
 	 * action list
