@@ -1,47 +1,35 @@
 <f:layout name="Default" />
 
 <f:section name="content">
-<h1><f:translate key="tx_edfu_domain_model_gott" /></h1>
+	<h1><f:translate key="tx_edfu_domain_model_gott" /></h1>
 
-<f:flashMessages />
-<f:form name="hrdr" action="create">
-	<fieldset name="Stelle">
-		<legend>Stelle</legend>
-	<div class="formLine">
-		<p><span class="fakeLabel">Band</span>
-			<f:form.select name="band" options="{baende}"></f:form.select>
-	</div>
-	<div class="formLine">
-		<p><span class="fakeLabel">Start</span> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/></p>
-	</div>
-	<div class="formLine">
-	<p>
-		<span class="fakeLabel">Stop</span> <f:form.textfield name="seite" placeholder="Seite" class="smallInt"/> <f:form.textfield name="Zeile" placeholder="Zeile" class="smallInt"/>
-	</p>
-	</div>
-	</fieldset>
-	<div class="formLine">
-		<label class="fakeLabel">Transliteration</label> <f:form.textfield name="transliteration" class="transliteration stringInput"/>
-		<br />
-	</div>
-	<div class="formLine">
-		<label class="fakeLabel">Ort</label> <f:form.textfield name="ort" class="stringInput"/>
-		<br />
-	</div>
-	<div class="formLine">
-		<label class="fakeLabel">Eponym</label> <f:form.textfield name="eponym" class="stringInput" id="edfu-eponym" />
-		<br />
-	</div>
-	<div class="formLine">
-		<label class="fakeLabel">Beziehung</label> <f:form.textfield name="beziehung" class="stringInput" id="edfu-beziehung" />
-	</div>
-	<div class="formLine">
-		<label class="fakeLabel">Funktion</label> <f:form.textfield name="funktion" class="stringInput" id="edfu-funktion" />
-	</div>
-	<div class="formLine">
-		<f:form.submit value="Speichern" />
-	</div>
-</f:form>
-
-<a href="">Reload</a>
+	<f:flashMessages />
+		<f:render partial="Stelle" arguments="{_all}" />
+		<div class="expand">
+			<f:form name="hrdr" action="create">
+				<div class="formLine">
+					<label class="fakeLabel">Transliteration</label> <f:form.textfield name="transliteration" class="transliteration stringInput"/>
+					<br />
+				</div>
+				<div class="formLine">
+					<label class="fakeLabel">Ort</label> <f:form.textfield name="ort" class="stringInput"/>
+					<br />
+				</div>
+				<div class="formLine">
+					<label class="fakeLabel">Eponym</label> <f:form.textfield name="eponym" class="stringInput" id="edfu-eponym" />
+					<br />
+				</div>
+				<div class="formLine">
+					<label class="fakeLabel">Beziehung</label> <f:form.textfield name="beziehung" class="stringInput" id="edfu-beziehung" />
+				</div>
+				<div class="formLine">
+					<label class="fakeLabel">Funktion</label> <f:form.textfield name="funktion" class="stringInput" id="edfu-funktion" />
+				</div>
+				<f:form.hidden name="stelle" class="hiddenStelle" property="stelle.uid"/>
+				<div class="formLine">
+					<f:form.submit value="Speichern" />
+				</div>
+			</f:form>
+		</div>
+	<a href="">Reload</a>
 </f:section>

@@ -1,0 +1,18 @@
+<f:form name="stelle">
+	<fieldset name="Stelle">
+		<legend>Stelle</legend>
+		<span class="fakeLabel">Band</span>
+		<f:form.select name="band" options="{baende}" property="stelle.bandId" id="band"></f:form.select>
+		<div class="formLine">
+			<p><span class="fakeLabel">Start</span> <f:form.textfield name="seiteStart" id="seiteStart" placeholder="Seite" class="smallInt" property="stelle.seiteStart"/>
+				<f:form.textfield name="zeileStart" property="stelle.zeileStart" id="zeileStart" placeholder="Zeile" class="smallInt"/></p>
+		</div>
+		<div class="formLine">
+			<p>
+				<span class="fakeLabel">Stop</span> <f:form.textfield name="seiteStop" placeholder="Seite" class="smallInt" property="stelle.seiteStop" id="seiteStop"/>
+				<f:form.textfield name="zeileStop" id="zeileStop" property="stelle.zeileStop" placeholder="Zeile" class="smallInt"/>
+			</p>
+		</div>
+	</fieldset>
+	<div id="stelleChecked"></div>
+</f:form>

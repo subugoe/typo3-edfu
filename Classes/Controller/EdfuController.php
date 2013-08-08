@@ -32,54 +32,25 @@ namespace Ipf\Edfu\Controller;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class OrtController extends EdfuController {
+class EdfuController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
-	 * placeRepository
-	 *
-	 * @var \Ipf\Edfu\Domain\Repository\OrtRepository
+	 * @var string
+	 */
+	protected $jQueryPath;
+
+	/**
+	 * @var \Ipf\Edfu\Service\BandService
 	 * @inject
 	 */
-	protected $ortRepository;
+	protected $bandService;
 
-	/**
-	 * action list
-	 * @param \Ipf\Edfu\Domain\Model\Ort $ort
-	 * @dontvalidate $ort
-	 * @return void
-	 */
-	public function listAction(\Ipf\Edfu\Domain\Model\Ort $ort = NULL) {
-		$baende = $this->bandService->getBaende();
-		$places = $this->ortRepository->findAll();
-		$this->view
-				->assign('ort', $ort)
-				->assign('places', $places)
-				->assign('jQuery', $this->jQueryPath)
-				->assign('baende', $baende);
-	}
-
-	/**
-	 * action show
-	 *
-	 * @param \Ipf\Edfu\Domain\Model\Ort $place
-	 * @return void
-	 */
-	public function showAction(\Ipf\Edfu\Domain\Model\Ort $place) {
-		$this->view->assign('place', $place);
-	}
-
-
-	/**
-	 * @param \Ipf\Edfu\Domain\Model\Ort $ort
-	 */
-	public function createAction(\Ipf\Edfu\Domain\Model\Ort $ort) {
-		$this->ortRepository->add($ort);
-		$this->controllerContext->getFlashMessageQueue()->addMessage(
-			new \TYPO3\CMS\Core\Messaging\FlashMessage(
-				$ort->getUebersetzung() . ' gespeichert', '', \TYPO3\CMS\Core\Messaging\FlashMessage::INFO
-			)
-		);
-		$this->forward('list');
+	public function initializeAction() {
+		if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('t3jquery')) {
+			$this->jQueryPath = \tx_t3jquery::getJqJSBE(TRUE);
+		} else {
+			throw new Exception('Please create your jQuery Library using EXT:t3jquery', 1359463747);
+		}
 	}
 
 }
