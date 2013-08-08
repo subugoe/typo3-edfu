@@ -75,18 +75,24 @@ jQuery(function($) {
   });
   addStelleUrl = 'ajax.php?ajaxID=edfu::addStelle';
   return $('form[name="stelle"]').submit(function() {
-    var bandUid, seiteStart, seiteStop, zeileStart, zeileStop;
+    var anmerkung, bandUid, seiteStart, seiteStop, stopUnsicher, zeileStart, zeileStop, zerstoerung;
     bandUid = $('#band').val();
     seiteStart = $('#seiteStart').val();
     zeileStart = $('#zeileStart').val();
     zeileStop = $('#zeileStop').val();
     seiteStop = $('#seiteStop').val();
+    stopUnsicher = $('#edfuStelleStopUnsicher').is(':checked');
+    zerstoerung = $('#edfuStelleZerstoerung').is(':checked');
+    anmerkung = $('#edfuStelleAnmerkung').val();
     $.post(addStelleUrl, {
       bandUid: bandUid,
       seiteStart: seiteStart,
       seiteStop: seiteStop,
       zeileStart: zeileStart,
-      zeileStop: zeileStop
+      zeileStop: zeileStop,
+      stopUnsicher: stopUnsicher,
+      zerstoerung: zerstoerung,
+      anmerkung: anmerkung
     }, function(data) {
       var jsonData, message, title;
       jsonData = $.parseJSON(data);
@@ -95,7 +101,7 @@ jQuery(function($) {
         message = "Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt";
         TYPO3.Flashmessage.display(TYPO3.Severity.ok, title, message, 5);
         $('#stelleChecked').empty();
-        $('form[name=stelle] input[type=text], form[name=stelle] select').attr('disabled', 'disabled');
+        $('form[name=stelle] input[type=text], form[name=stelle] select, form[name=stelle] textarea, form[name=stelle] input[type=check]').attr('disabled', 'disabled');
         return $('input.hiddenStelle').attr('value', jsonData.insertedId);
       }
     });

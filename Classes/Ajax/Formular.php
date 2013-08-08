@@ -146,6 +146,9 @@ class Formular {
 			$stelle['seiteStop'] = intval($_POST['seiteStop']);
 			$stelle['zeileStart'] = intval($_POST['zeileStart']);
 			$stelle['zeileStop'] = intval($_POST['zeileStop']);
+			$stelle['stopUnsicher'] = $_POST['stopUnsicher'] === 'true'? 1 : 0;
+			$stelle['zerstoerung'] = $_POST['zerstoerung'] === 'true'? 1 : 0;
+			$stelle['anmerkung'] = filter_var($_POST['anmerkung'], FILTER_SANITIZE_STRING);
 
 			/** @var \Ipf\Edfu\Domain\Repository\StelleRepository $stelleRepository */
 			$stelleRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Ipf\Edfu\Domain\Repository\StelleRepository');

@@ -1,9 +1,23 @@
+.hrdr .edfuStelle {
+  width: 60%;
+  float: left;
+  border-bottom: 1px solid #cccccc;
+}
+.hrdr .edfuStelle .edfuStellePosition {
+  width: 40%;
+  float: left;
+}
+.hrdr .edfuStelle .edfuStelleMeta {
+  float: right;
+}
+.hrdr .edfuForm {
+  float: left;
+}
 .hrdr h1 {
   text-align: left;
 }
 .hrdr fieldset {
   border: 0;
-  border-bottom: 1px solid #cccccc;
   width: 60%;
 }
 .hrdr fieldset legend {

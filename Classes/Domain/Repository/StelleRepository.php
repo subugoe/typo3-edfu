@@ -70,6 +70,9 @@ class StelleRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 			'seite_start' => $stelle['seiteStart'],
 			'zeile_stop' => $stelle['zeileStop'],
 			'seite_stop' => $stelle['seiteStop'],
+			'anmerkung' => $stelle['anmerkung'],
+			'stop_unsicher' => $stelle['stopUnsicher'],
+			'zerstoerung' => $stelle['zerstoerung'],
 			'crdate' => time(),
 			'tstamp' => time(),
 			'cruser_id' => $GLOBALS['BE_USER']->user['uid']

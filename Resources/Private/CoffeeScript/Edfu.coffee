@@ -70,13 +70,19 @@ jQuery ($) ->
 		zeileStart = $('#zeileStart').val()
 		zeileStop = $('#zeileStop').val()
 		seiteStop = $('#seiteStop').val()
+		stopUnsicher = $('#edfuStelleStopUnsicher').is(':checked')
+		zerstoerung = $('#edfuStelleZerstoerung').is(':checked')
+		anmerkung = $('#edfuStelleAnmerkung').val()
 		$.post(
 			addStelleUrl,
 			{bandUid: bandUid,
 			seiteStart: seiteStart,
 			seiteStop: seiteStop,
 			zeileStart: zeileStart,
-			zeileStop: zeileStop
+			zeileStop: zeileStop,
+			stopUnsicher: stopUnsicher,
+			zerstoerung: zerstoerung,
+			anmerkung: anmerkung
 			},
 				(data) ->
 					jsonData = $.parseJSON(data)
@@ -85,7 +91,7 @@ jQuery ($) ->
 						message = "Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt"
 						TYPO3.Flashmessage.display(TYPO3.Severity.ok, title, message, 5)
 						$('#stelleChecked').empty()
-						$('form[name=stelle] input[type=text], form[name=stelle] select').attr('disabled', 'disabled')
+						$('form[name=stelle] input[type=text], form[name=stelle] select, form[name=stelle] textarea, form[name=stelle] input[type=check]').attr('disabled', 'disabled')
 						$('input.hiddenStelle').attr('value', jsonData.insertedId)
 		)
 		false

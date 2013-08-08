@@ -1,5 +1,5 @@
-<f:form name="stelle">
-	<fieldset name="Stelle">
+<f:form name="stelle" class="edfuStelle">
+	<fieldset name="Stelle" class="edfuStellePosition">
 		<legend>Stelle</legend>
 		<span class="fakeLabel">Band</span>
 		<f:form.select name="band" options="{baende}" property="stelle.bandId" id="band"></f:form.select>
@@ -12,6 +12,21 @@
 				<span class="fakeLabel">Stop</span> <f:form.textfield name="seiteStop" placeholder="Seite" class="smallInt" property="stelle.seiteStop" id="seiteStop"/>
 				<f:form.textfield name="zeileStop" id="zeileStop" property="stelle.zeileStop" placeholder="Zeile" class="smallInt"/>
 			</p>
+		</div>
+	</fieldset>
+	<fieldset name="meta" class="edfuStelleMeta">
+		<legend>Meta</legend>
+		<div class="formLine">
+			<f:form.checkbox name="stopUnsicher" property="stopUnsicher" value="" id="edfuStelleStopUnsicher" />
+			<label for="edfuStelleStopUnsicher">Unsicher</label>
+		</div>
+		<div class="formLine">
+			<f:form.checkbox name="zerstoerung" property="zerstoerung" value="" id="edfuStelleZerstoerung" />
+			<label for="edfuStelleZerstoerung">Zerstoerung</label>
+		</div>
+		<div class="formLine">
+			<label for="edfuStelleAnmerkung" class="fakeLabel">Anmerkung</label>
+			<f:form.textarea name="anmerkung" property="anmerkung" id="edfuStelleAnmerkung" cols="40" rows="6" />
 		</div>
 	</fieldset>
 	<div id="stelleChecked"></div>
