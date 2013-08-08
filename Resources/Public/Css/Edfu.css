@@ -3,7 +3,7 @@
 }
 .hrdr fieldset {
   border: 0;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #cccccc;
   width: 60%;
 }
 .hrdr fieldset legend {
@@ -25,7 +25,12 @@
   font-size: 14px;
 }
 .hrdr .fakeLabel {
-  width: 100px;
+  width: 120px;
   float: left;
   clear: left;
+  padding: 3px 0;
+}
+.hrdr input, .hrdr textarea, .hrdr select {
+  border: 1px solid #cccccc;
+  padding: 3px;
 }

@@ -1,11 +1,12 @@
 {
-	"name": "Edfu",
-	"version": "0.1.0",
-	"description": "Edfu Project",
-	"author": "Ingo Pfennigstorf <i.pfennigstorf@gmail.com>",
-	"dependencies": {
-		"grunt-coffee": ">= 0.0.6",
-		"grunt-compass": ">= 0.3.7"
-	},
-	"engine": "node >= 0.8.1"
+  "name": "Edfu",
+  "version": "0.1.0",
+  "description": "Edfu Project",
+  "author": "Ingo Pfennigstorf <i.pfennigstorf@gmail.com>",
+  "engine": "node >= 0.8.1",
+  "devDependencies": {
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-compass": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.1"
+  }
 }
