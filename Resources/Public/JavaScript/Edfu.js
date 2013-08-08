@@ -64,7 +64,8 @@ jQuery(function($) {
       var jsonData;
       jsonData = $.parseJSON(data);
       if (jsonData.length > 0) {
-        return $('#stelleChecked').text("Stelle mit der Id " + jsonData[0].uid + " ist vorhanden");
+        $('#stelleChecked').text("Stelle mit der Id " + jsonData[0].uid + " ist vorhanden");
+        return $('input.hiddenStelle').attr('value', jsonData[0].uid);
       } else {
         return $('#stelleChecked').html($('<input>').attr('type', 'submit').attr('value', 'Anlegen'));
       }
@@ -86,12 +87,11 @@ jQuery(function($) {
       zeileStart: zeileStart,
       zeileStop: zeileStop
     }, function(data) {
-      var jsonData, stelleId;
+      var jsonData;
       jsonData = $.parseJSON(data);
       if (jsonData.inserted === true) {
         $('#stelleChecked').text("Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt");
-        stelleId = $('input.hiddenStelle').attr('value', jsonData.insertedId);
-        return $('.edfuForm').append(stelleId);
+        return $('input.hiddenStelle').attr('value', jsonData.insertedId);
       }
     });
     return false;

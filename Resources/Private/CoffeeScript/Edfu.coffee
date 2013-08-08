@@ -53,6 +53,7 @@ jQuery ($) ->
 			jsonData = $.parseJSON(data)
 			if jsonData.length > 0
 				$('#stelleChecked').text("Stelle mit der Id " + jsonData[0].uid + " ist vorhanden")
+				$('input.hiddenStelle').attr('value', jsonData[0].uid)
 			else
 				$('#stelleChecked').html($('<input>').attr('type', 'submit').attr('value', 'Anlegen'))
 		)
@@ -79,7 +80,6 @@ jQuery ($) ->
 					jsonData = $.parseJSON(data)
 					if jsonData.inserted is true
 						$('#stelleChecked').text("Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt")
-						stelleId = $('input.hiddenStelle').attr('value', jsonData.insertedId)
-						$('.edfuForm').append(stelleId)
+						$('input.hiddenStelle').attr('value', jsonData.insertedId)
 		)
 		false
