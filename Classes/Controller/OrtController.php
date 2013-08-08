@@ -94,7 +94,6 @@ class OrtController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 	 * @param \Ipf\Edfu\Domain\Model\Ort $ort
 	 */
 	public function createAction(\Ipf\Edfu\Domain\Model\Ort $ort) {
-		\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->arguments, __CLASS__ . ' @ ' . __LINE__);
 		$this->ortRepository->add($ort);
 		$this->controllerContext->getFlashMessageQueue()->addMessage(
 			new \TYPO3\CMS\Core\Messaging\FlashMessage(

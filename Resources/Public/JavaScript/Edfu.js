@@ -90,7 +90,7 @@ jQuery(function($) {
       jsonData = $.parseJSON(data);
       if (jsonData.inserted === true) {
         $('#stelleChecked').text("Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt");
-        stelleId = $('<input/>').attr('type', 'hidden').attr('name', 'position').attr('value', jsonData.insertedId);
+        stelleId = $('input.hiddenStelle').attr('value', jsonData.insertedId);
         return $('.edfuForm').append(stelleId);
       }
     });

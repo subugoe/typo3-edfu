@@ -4,7 +4,6 @@
 <h1><f:translate key="tx_edfu_domain_model_ort" /></h1>
 
 <f:flashMessages />
-<f:debug>{_all}</f:debug>
 	<f:form name="stelle">
 	<fieldset name="Stelle">
 		<legend>Stelle</legend>
@@ -42,6 +41,7 @@
 	<div class="formLine">
 		<label class="fakeLabel">Anmerkung</label> <f:form.textarea name="anmerkung" class="stringInput" id="edfu-anmerkung" rows="5" cols="40" property="anmerkung" />
 	</div>
+		<f:form.hidden name="stelle" class="hiddenStelle" property="stelle.uid"/>
 	<div class="formLine">
 		<f:form.submit value="Speichern" />
 	</div>

@@ -352,9 +352,9 @@ CREATE TABLE `tx_edfu_domain_model_szene` (
 
 
 #
-# Table structure for table 'tx_edfu_word_berlin_mm'
+# Table structure for table 'tx_edfu_wort_berlin_mm'
 #
-CREATE TABLE tx_edfu_word_berlin_mm (
+CREATE TABLE tx_edfu_wort_berlin_mm (
 		uid_local INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		uid_foreign INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		sorting INT(11) UNSIGNED DEFAULT '0' NOT NULL,
@@ -365,9 +365,9 @@ CREATE TABLE tx_edfu_word_berlin_mm (
 );
 
 #
-# Table structure for table 'tx_edfu_word_position_mm'
+# Table structure for table 'tx_edfu_wort_stelle_mm'
 #
-CREATE TABLE tx_edfu_word_position_mm (
+CREATE TABLE tx_edfu_wort_stelle_mm (
 		uid_local INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		uid_foreign INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		sorting INT(11) UNSIGNED DEFAULT '0' NOT NULL,
@@ -378,9 +378,9 @@ CREATE TABLE tx_edfu_word_position_mm (
 );
 
 #
-# Table structure for table 'tx_edfu_god_position_mm'
+# Table structure for table 'tx_edfu_gott_stelle_mm'
 #
-CREATE TABLE tx_edfu_god_position_mm (
+CREATE TABLE tx_edfu_gott_stelle_mm (
 		uid_local INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		uid_foreign INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		sorting INT(11) UNSIGNED DEFAULT '0' NOT NULL,
@@ -417,9 +417,9 @@ CREATE TABLE tx_edfu_form_literature_mm (
 );
 
 #
-# Table structure for table 'tx_edfu_form_position_mm'
+# Table structure for table 'tx_edfu_formular_stelle_mm'
 #
-CREATE TABLE tx_edfu_form_position_mm (
+CREATE TABLE tx_edfu_formular_stelle_mm (
 		uid_local INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		uid_foreign INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		sorting INT(11) UNSIGNED DEFAULT '0' NOT NULL,
@@ -430,9 +430,9 @@ CREATE TABLE tx_edfu_form_position_mm (
 );
 
 #
-# Table structure for table 'tx_edfu_place_position_mm'
+# Table structure for table 'tx_edfu_ort_stelle_mm'
 #
-CREATE TABLE tx_edfu_place_position_mm (
+CREATE TABLE tx_edfu_ort_stelle_mm (
 		uid_local INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		uid_foreign INT(11) UNSIGNED DEFAULT '0' NOT NULL,
 		sorting INT(11) UNSIGNED DEFAULT '0' NOT NULL,
