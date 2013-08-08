@@ -32,7 +32,7 @@ namespace Ipf\Edfu\Controller;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class GottController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class GottController extends EdfuController {
 
 	/**
 	 * godRepository
@@ -66,6 +66,7 @@ class GottController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->view
 				->assign('gods', $gods)
 				->assign('baende', $baende)
+				->assign('jQuery', $this->jQueryPath)
 				->assign('position', $this->position);
 	}
 
