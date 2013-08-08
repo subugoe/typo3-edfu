@@ -35,7 +35,7 @@
 				<source>Transliteration</source>
 			</trans-unit>
 			<trans-unit id="tx_edfu_domain_model_gott.place">
-				<source>Place</source>
+				<source>Ort</source>
 			</trans-unit>
 			<trans-unit id="tx_edfu_domain_model_gott.eponym">
 				<source>Eponym</source>
@@ -73,7 +73,7 @@
 			</trans-unit>
 			
 			<trans-unit id="tx_edfu_domain_model_ort">
-				<source>Place</source>
+				<source>Ort</source>
 			</trans-unit>
 			<trans-unit id="tx_edfu_domain_model_ort.translation">
 				<source>Translation</source>
