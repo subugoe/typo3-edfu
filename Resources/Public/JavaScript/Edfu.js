@@ -101,7 +101,7 @@ jQuery(function($) {
         message = "Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt";
         TYPO3.Flashmessage.display(TYPO3.Severity.ok, title, message, 5);
         $('#stelleChecked').empty();
-        $('form[name=stelle] input[type=text], form[name=stelle] select, form[name=stelle] textarea, form[name=stelle] input[type=check]').attr('disabled', 'disabled');
+        $('form[name=stelle] input[type=text], form[name=stelle] select, form[name=stelle] textarea, form[name=stelle] input[type=checkbox]').attr('disabled', 'disabled');
         return $('input.hiddenStelle').attr('value', jsonData.insertedId);
       }
     });
