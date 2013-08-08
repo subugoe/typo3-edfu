@@ -391,9 +391,9 @@ CREATE TABLE tx_edfu_gott_stelle_mm (
 );
 
 #
-# Table structure for table 'tx_edfu_form_photo_mm'
+# Table structure for table 'tx_edfu_formular_photo_mm'
 #
-CREATE TABLE tx_edfu_form_photo_mm (
+CREATE TABLE tx_edfu_formular_photo_mm (
 		uid_local int(11) unsigned DEFAULT '0' NOT NULL,
 		uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 		sorting int(11) unsigned DEFAULT '0' NOT NULL,
@@ -404,9 +404,9 @@ CREATE TABLE tx_edfu_form_photo_mm (
 );
 
 #
-# Table structure for table 'tx_edfu_form_literature_mm'
+# Table structure for table 'tx_edfu_formular_literatur_mm'
 #
-CREATE TABLE tx_edfu_form_literature_mm (
+CREATE TABLE tx_edfu_formular_literatur_mm (
 		uid_local int(11) unsigned DEFAULT '0' NOT NULL,
 		uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 		sorting int(11) unsigned DEFAULT '0' NOT NULL,
@@ -433,6 +433,19 @@ CREATE TABLE tx_edfu_formular_stelle_mm (
 # Table structure for table 'tx_edfu_ort_stelle_mm'
 #
 CREATE TABLE tx_edfu_ort_stelle_mm (
+		uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+		uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+		sorting int(11) unsigned DEFAULT '0' NOT NULL,
+		sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+		KEY uid_local (uid_local),
+		KEY uid_foreign (uid_foreign)
+);
+
+#
+# Table structure for table 'tx_edfu_szene_stelle_mm'
+#
+CREATE TABLE tx_edfu_szene_stelle_mm (
 		uid_local int(11) unsigned DEFAULT '0' NOT NULL,
 		uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 		sorting int(11) unsigned DEFAULT '0' NOT NULL,
