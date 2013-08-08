@@ -85,6 +85,7 @@ jQuery ($) ->
 						message = "Stelle wurde in der Datenbank mit der id " + jsonData.insertedId + " angelegt"
 						TYPO3.Flashmessage.display(TYPO3.Severity.ok, title, message, 5)
 						$('#stelleChecked').empty()
+						$('form[name=stelle] input[type=text], form[name=stelle] select').attr('disabled', 'disabled')
 						$('input.hiddenStelle').attr('value', jsonData.insertedId)
 		)
 		false
