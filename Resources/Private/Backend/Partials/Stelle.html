@@ -1,33 +1,81 @@
 <f:form name="stelle" class="edfuStelle">
+
 	<fieldset name="Stelle" class="edfuStellePosition">
 		<legend>Stelle</legend>
-		<span class="fakeLabel">Band</span>
-		<f:form.select name="band" options="{baende}" property="stelle.bandId" id="band"></f:form.select>
-		<div class="formLine">
-			<p><span class="fakeLabel">Start</span> <f:form.textfield name="seiteStart" id="seiteStart" placeholder="Seite" class="smallInt" property="stelle.seiteStart"/>
-				<f:form.textfield name="zeileStart" property="stelle.zeileStart" id="zeileStart" placeholder="Zeile" class="smallInt"/></p>
+
+		<div class="row">
+			<div class="large-3 columns">
+				<div class="row">
+					<div class="large-3 columns">
+						<label for="band" class="left inline">Band</label>
+					</div>
+					<div class="large-3 columns">
+						<f:form.select name="band" options="{baende}" property="stelle.bandId" id="band"></f:form.select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-3 columns">
+						<label for="seiteStart" class="left inline">Start</label>
+					</div>
+					<div class="large-3 columns">
+						<f:form.textfield name="seiteStart" id="seiteStart" placeholder="Seite" class="smallInt" property="stelle.seiteStart"/>
+					</div>
+					<div class="large-3 columns">
+						<f:form.textfield name="zeileStart" property="stelle.zeileStart" id="zeileStart" placeholder="Zeile" class="smallInt"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-3 columns">
+						<label for="seiteStop" class="left inline">Start</label>
+					</div>
+					<div class="large-3 columns">
+						<f:form.textfield name="seiteStop" placeholder="Seite" class="smallInt" property="stelle.seiteStop" id="seiteStop"/>
+					</div>
+					<div class="large-3 columns">
+						<f:form.textfield name="zeileStop" id="zeileStop" property="stelle.zeileStop" placeholder="Zeile" class="smallInt"/>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="formLine">
-			<p>
-				<span class="fakeLabel">Stop</span> <f:form.textfield name="seiteStop" placeholder="Seite" class="smallInt" property="stelle.seiteStop" id="seiteStop"/>
-				<f:form.textfield name="zeileStop" id="zeileStop" property="stelle.zeileStop" placeholder="Zeile" class="smallInt"/>
-			</p>
-		</div>
+
 	</fieldset>
+
 	<fieldset name="meta" class="edfuStelleMeta">
 		<legend>Meta</legend>
-		<div class="formLine">
-			<f:form.checkbox name="stopUnsicher" property="stopUnsicher" value="" id="edfuStelleStopUnsicher" />
-			<label for="edfuStelleStopUnsicher"><f:translate id="edfuStelleStopUnsicher" /></label>
-		</div>
-		<div class="formLine">
-			<f:form.checkbox name="zerstoerung" property="zerstoerung" value="" id="edfuStelleZerstoerung" />
-			<label for="edfuStelleZerstoerung"><f:translate id="edfuStelleZerstoerung" /></label>
-		</div>
-		<div class="formLine">
-			<label for="edfuStelleAnmerkung" class="fakeLabel">Anmerkung</label>
-			<f:form.textarea name="anmerkung" property="anmerkung" id="edfuStelleAnmerkung" cols="40" rows="6" />
+
+		<div class="row">
+			<div class="large-2 colums">
+				<div class="row">
+					<div class="large-2 columns">
+						<f:form.checkbox name="stopUnsicher" property="stopUnsicher" value="" id="edfuStelleStopUnsicher" />
+					</div>
+					<div class="large-2 columns">
+						<label for="edfuStelleStopUnsicher" class="right inline"><f:translate id="edfuStelleStopUnsicher" /></label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-2 columns">
+						<f:form.checkbox name="zerstoerung" property="zerstoerung" value="" id="edfuStelleZerstoerung" />
+					</div>
+					<div class="large-2 columns">
+						<label for="edfuStelleZerstoerung" class="right inline"><f:translate id="edfuStelleZerstoerung" /></label>
+					</div>
+				</div>
+			</div>
+			<div class="large-6 columns">
+				<div class="row">
+					<div class="large-8 columns">
+
+					<label for="edfuStelleAnmerkung" class="fakeLabel">Anmerkung</label>
+					<f:form.textarea name="anmerkung" property="anmerkung" id="edfuStelleAnmerkung" cols="40" rows="6" />
+						</div>
+				</div>
+				</div>
+				<div class="row">
+					<div id="stelleChecked"></div>
+				</div>
+			</div>
 		</div>
 	</fieldset>
-	<div id="stelleChecked"></div>
+
 </f:form>

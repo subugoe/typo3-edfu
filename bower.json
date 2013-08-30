@@ -1,0 +1,18 @@
+{
+  "name": "edfu",
+  "version": "0.0.0",
+  "homepage": "https://github.com/subugoe/typo3-edfu",
+  "authors": [
+    "Ingo Pfennigstorf <i.pfennigstorf@gmail.com>"
+  ],
+  "description": "TYPO3 Extension for edfu",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -35,13 +35,36 @@
 		</div>
 		<div id="typo3-docbody">
 			<div id="typo3-inner-docbody" class="hrdr">
-				<f:flashMessages renderMode="div" />
-				<f:render section="content" />
+				<div class="large-8 columns">
+					<div class="row">
+						<f:flashMessages renderMode="div" />
+						<f:render section="content" />
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </f:be.container>
 
 <script src="{jQuery}"></script>
+
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.alerts.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.clearing.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.cookie.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.dropdown.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.forms.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.joyride.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.magellan.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.orbit.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.placeholder.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.reveal.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.section.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.tooltips.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.topbar.js"></script>
+ <script src="{f:uri.resource(path:'JavaScript')}/foundation/foundation.interchange.js"></script>
+ <script>
+   $(document).foundation();
+ </script>
 <script src="{f:uri.resource(path:'JavaScript/Edfu.js')}"></script>
 

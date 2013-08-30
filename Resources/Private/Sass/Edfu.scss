@@ -1,56 +1,17 @@
 @import 'Settings';
 
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
 .hrdr {
-	.edfuStelle {
-		width: 80%;
-		float: left;
-		border-bottom: 1px solid $borderColor;
-		.edfuStellePosition {
-			width: 40%;
-			float: left;
-		}
-		.edfuStelleMeta {
-			float: right;
-		}
-	}
-	.edfuForm {
-		float: left;
-	}
 	h1 {
 		text-align: left;
-	}
-	fieldset {
-		border: 0;
-		width: 60%;
-		legend {
-			font-weight: bold;
-			padding: 0;
-			margin: 10px 0;
-		}
-	}
-	input {
-		&.smallInt {
-			width: 50px;
-		}
-		&.stringInput {
-			width: 400px;
-		}
-	}
-	.formLine {
-		margin: 10px 0;
 	}
 	.transliteration {
 		font-family: 'Transliteration Times Italic';
 		font-size: 14px;
-	}
-	.fakeLabel {
-		width: 120px;
-		float: left;
-		clear: left;
-		padding: 3px 0;
-	}
-	input, textarea, select {
-		border: 1px solid $borderColor;
-		padding: 3px;
 	}
 }
