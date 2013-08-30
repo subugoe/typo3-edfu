@@ -31,19 +31,32 @@ namespace Ipf\Edfu\Service;
 class BandService {
 
 	/**
+	 * Name of the table
+	 */
+	const TABLE_NAME = 'tx_edfu_domain_model_band';
+
+	/**
 	 * @var array
 	 */
 	protected $baende;
 
+	/**
+	 * @param $baende
+	 * @return void
+	 */
 	public function setBaende($baende) {
 		$this->baende = $baende;
 	}
 
+	/**
+	 * @return array
+	 */
 	public function getBaende() {
 
 		$query = $GLOBALS['TYPO3_DB']->exec_SELECTQuery(
 			'*',
-			'tx_edfu_domain_model_band'
+			self::TABLE_NAME,
+			'deleted = 0 AND hidden = 0'
 		);
 
 		$baende = array();

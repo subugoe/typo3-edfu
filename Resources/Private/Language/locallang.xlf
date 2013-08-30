@@ -142,7 +142,13 @@
 			<trans-unit id="tx_edfu_domain_model_stelle.stop_unsicher">
 				<source>Doubtful stop</source>
 			</trans-unit>
-			
+
+			<trans-unit id="edfuStelleStopUnsicher">
+				<source>Unsicher</source>
+			</trans-unit>
+			<trans-unit id="edfuStelleZerstoerung">
+				<source>Zerstörung</source>
+			</trans-unit>
 		</body>
 	</file>
 	<file source-language="en" datatype="plaintext" original="messages" date="2012-11-22T11:44:22Z" product-name="edfu">
